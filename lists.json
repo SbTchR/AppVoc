@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2025-11-26T11:45:06.824Z",
+  "updatedAt": "2025-11-26T20:17:28.194Z",
   "lists": [
     {
       "id": "default-9h-voc1",
@@ -16,12 +16,464 @@
           "german": "die Schulen"
         },
         {
-          "french": "le professeur",
+          "french": "nouveau-elle",
+          "german": "neu"
+        },
+        {
+          "french": "le prof",
           "german": "der Lehrer"
         },
         {
-          "french": "la professeur",
+          "french": "les profs",
+          "german": "die Lehrer"
+        },
+        {
+          "french": "la prof",
           "german": "die Lehrerin"
+        },
+        {
+          "french": "les profs femmes",
+          "german": "die Lehrerinnen"
+        },
+        {
+          "french": "l'élève",
+          "german": "der Schüler"
+        },
+        {
+          "french": "les élèves",
+          "german": "die Schüler"
+        },
+        {
+          "french": "l'élève",
+          "german": "die Schülerin"
+        },
+        {
+          "french": "les élèves (filles)",
+          "german": "die Schülerinnen"
+        },
+        {
+          "french": "Quelle est ta matière préférée ?",
+          "german": "Was ist dein Lieblingsfach?"
+        },
+        {
+          "french": "Comment peut-on dire cela en allemand ?",
+          "german": "Wie kann man das auf Deutsch sagen?"
+        },
+        {
+          "french": "Je ne comprends pas.",
+          "german": "Ich verstehe das nicht."
+        },
+        {
+          "french": "Pouvez-vous répéter",
+          "german": "s'il vous plaît?"
+        },
+        {
+          "french": "Qui est-ce ?",
+          "german": "Wer ist das ?"
+        },
+        {
+          "french": "Qu'est-ce que c'est ?",
+          "german": "Was ist das?"
+        },
+        {
+          "french": "Pas des problème !",
+          "german": "Kein Problem."
+        },
+        {
+          "french": "Puis-je aller aux toilettes ?",
+          "german": "Darf ich auf die Toilette?"
+        },
+        {
+          "french": "Quand... ?",
+          "german": "Wạnn…?"
+        },
+        {
+          "french": "C'est quand la récréation ?",
+          "german": "Wann ist Pause?"
+        },
+        {
+          "french": "Combien (de)... ?",
+          "german": "Wie viele...?"
+        },
+        {
+          "french": "Combien d'heures as-tu le lundi ?",
+          "german": "Wie viele Stunden hast du am Montag?"
+        },
+        {
+          "french": "Quelles langues parles-tu ?",
+          "german": "Welche Sprachen sprichst du?"
+        },
+        {
+          "french": "Je parle...",
+          "german": "Ich spreche..."
+        },
+        {
+          "french": "As-tu un animal domestique ?",
+          "german": "Hast du ein Haustier?"
+        },
+        {
+          "french": "Oui",
+          "german": "j'ai un chien"
+        },
+        {
+          "french": "Non",
+          "german": "je n'en ai pas."
+        },
+        {
+          "french": "les loisirs",
+          "german": "die Freizeit"
+        },
+        {
+          "french": "le hobby",
+          "german": "le passe-temps"
+        },
+        {
+          "french": "les hobbys",
+          "german": "les passes-temps"
+        },
+        {
+          "french": "Quel est ton passe-temps ?",
+          "german": "Was ist dein Hobby?"
+        },
+        {
+          "french": "lire",
+          "german": "lesen"
+        },
+        {
+          "french": "il lit",
+          "german": "er liest"
+        },
+        {
+          "french": "dessiner",
+          "german": "zeichnen"
+        },
+        {
+          "french": "il dessine",
+          "german": "er zeichnet"
+        },
+        {
+          "french": "nager",
+          "german": "schwimmen"
+        },
+        {
+          "french": "il nage",
+          "german": "er schwimmt"
+        },
+        {
+          "french": "faire du cheval",
+          "german": "reiten"
+        },
+        {
+          "french": "il fait du cheval",
+          "german": "er reitet"
+        },
+        {
+          "french": "rencontrer des amis",
+          "german": "Freunde treffen"
+        },
+        {
+          "french": "il rencontre des amis",
+          "german": "er trifft Freunde"
+        },
+        {
+          "french": "jouer du piano",
+          "german": "Klavier spielen"
+        },
+        {
+          "french": "il joue du piano",
+          "german": "er spielt Klavier"
+        },
+        {
+          "french": "écouter de la musique",
+          "german": "Musik hören"
+        },
+        {
+          "french": "il écoute de la musique",
+          "german": "er hört Musik"
+        },
+        {
+          "french": "Quel est ton passe-temps préféré ?",
+          "german": "Was ist dein Lieblingshobby?"
+        },
+        {
+          "french": "la semaine",
+          "german": "die Woche"
+        },
+        {
+          "french": "les semaines",
+          "german": "die Wochen"
+        },
+        {
+          "french": "lundi",
+          "german": "Montag"
+        },
+        {
+          "french": "mardi",
+          "german": "Dienstag"
+        },
+        {
+          "french": "mercredi",
+          "german": "Mittwoch"
+        },
+        {
+          "french": "jeudi",
+          "german": "Donnerstag"
+        },
+        {
+          "french": "vendredi",
+          "german": "Freitag"
+        },
+        {
+          "french": "samedi",
+          "german": "Samstag"
+        },
+        {
+          "french": "dimanche",
+          "german": "Sonntag"
+        },
+        {
+          "french": "Je joue au tennis le lundi.",
+          "german": "Am Montag spiele ich Tennis."
+        },
+        {
+          "french": "le week-end",
+          "german": "das Wochenende"
+        },
+        {
+          "french": "les week-ends",
+          "german": "die Wochenenden"
+        },
+        {
+          "french": "Quand as-tu du temps ?",
+          "german": "Wann hast du Zeit?"
+        },
+        {
+          "french": "Le week-end.",
+          "german": "Am Wochenende."
+        },
+        {
+          "french": "Le mardi.",
+          "german": "Am Dienstag."
+        },
+        {
+          "french": "L'après-midi.",
+          "german": "Am Nachmittag."
+        },
+        {
+          "french": "la classe",
+          "german": "die Klasse"
+        },
+        {
+          "french": "les classes",
+          "german": "die Klassen"
+        },
+        {
+          "french": "l'emploi du temps",
+          "german": "der Stundenplan"
+        },
+        {
+          "french": "les emplois du temps",
+          "german": "die Stundenpläne"
+        },
+        {
+          "french": "la matière",
+          "german": "la branche"
+        },
+        {
+          "french": "la matière",
+          "german": "la branche"
+        },
+        {
+          "french": "la salle scolaire",
+          "german": "la pièce"
+        },
+        {
+          "french": "les salles scolaires",
+          "german": "les pièces"
+        },
+        {
+          "french": "la salle de classe",
+          "german": "das Klassenzimmer"
+        },
+        {
+          "french": "les salles de classe",
+          "german": "die Klassenzimmer"
+        },
+        {
+          "french": "la salle des professeurs",
+          "german": "das Lehrerzimmer"
+        },
+        {
+          "french": "les toilettes",
+          "german": "les WC"
+        },
+        {
+          "french": "la piscine",
+          "german": "das Schwimmbad"
+        },
+        {
+          "french": "les piscines",
+          "german": "die Schwimmbäder"
+        },
+        {
+          "french": "la bibliothèque",
+          "german": "die Bibliothek"
+        },
+        {
+          "french": "les bibliothèques",
+          "german": "die Bibliotheken"
+        },
+        {
+          "french": "la cour de récréation",
+          "german": "der Pausenhof"
+        },
+        {
+          "french": "les cours de récréation",
+          "german": "die Pausenhöfe"
+        },
+        {
+          "french": "la cantine scolaire",
+          "german": "die Schulkantine"
+        },
+        {
+          "french": "les sciences naturelles",
+          "german": "die Naturwissenschaften"
+        },
+        {
+          "french": "enseigner",
+          "german": "unterrichten"
+        },
+        {
+          "french": "il enseigne",
+          "german": "er unterrichtet"
+        },
+        {
+          "french": "la salle de travaux manuels",
+          "german": "l'atelier"
+        },
+        {
+          "french": "les salles de travaux manuels",
+          "german": "les ateliers"
+        },
+        {
+          "french": "la salle informatique",
+          "german": "der Computerraum"
+        },
+        {
+          "french": "les salles informatiques",
+          "german": "die Computerräume"
+        },
+        {
+          "french": "la salle de biologie",
+          "german": "der Biologieraum"
+        },
+        {
+          "french": "les salles de biologie",
+          "german": "die Biologieräume"
+        },
+        {
+          "french": "la salle d'arts visuels",
+          "german": "der Kunstraum"
+        },
+        {
+          "french": "les salles d'arts visuels",
+          "german": "die Kunsträume"
+        },
+        {
+          "french": "la salle de gym",
+          "german": "die Turnhalle"
+        },
+        {
+          "french": "les salle de gym",
+          "german": "die Turnhallen"
+        },
+        {
+          "french": "le bureau",
+          "german": "das Büro"
+        },
+        {
+          "french": "les bureaux",
+          "german": "die Büros"
+        },
+        {
+          "french": "Où est la salle de biologie ?",
+          "german": "Wo ist der Biologieraum?"
+        },
+        {
+          "french": "Au rez-de-chaussée.",
+          "german": "Im Erdgeschoss."
+        },
+        {
+          "french": "Au premier étage.",
+          "german": "Im ersten Stock."
+        },
+        {
+          "french": "Au deuxième étage.",
+          "german": "Im zweiten Stock."
+        },
+        {
+          "french": "le cuisinier",
+          "german": "der Koch"
+        },
+        {
+          "french": "les cuisiniers",
+          "german": "die Köche"
+        },
+        {
+          "french": "la cuisinière",
+          "german": "die Köchin"
+        },
+        {
+          "french": "les cuisinières",
+          "german": "die Köchinnen"
+        },
+        {
+          "french": "le directeur",
+          "german": "der Direktor"
+        },
+        {
+          "french": "les directeurs",
+          "german": "die Direktoren"
+        },
+        {
+          "french": "la directrice",
+          "german": "die Direktorin"
+        },
+        {
+          "french": "les directrices",
+          "german": "die Direktorinnen"
+        },
+        {
+          "french": "le secrétaire",
+          "german": "der Sekretär"
+        },
+        {
+          "french": "les secrétaires",
+          "german": "die Sekretäre"
+        },
+        {
+          "french": "la secrétaire",
+          "german": "die Sekretärin"
+        },
+        {
+          "french": "les secrétaires (femmes)",
+          "german": "die Sekretärinnen"
+        },
+        {
+          "french": "le concierge",
+          "german": "der Hauswart"
+        },
+        {
+          "french": "les concierges",
+          "german": "die Hauswarte"
+        },
+        {
+          "french": "la concierge",
+          "german": "die Hauswärterin"
+        },
+        {
+          "french": "les concierges (femmes)",
+          "german": "die Hauswärterinnen"
         }
       ]
     },
