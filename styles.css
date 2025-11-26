@@ -191,8 +191,8 @@ textarea { min-height: 140px; resize: vertical; }
 
 .tag-dots { display: flex; gap: 6px; margin-top: 6px; }
 .tag-dot {
-  width: 18px;
-  height: 18px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: 2px solid transparent;
   cursor: pointer;
