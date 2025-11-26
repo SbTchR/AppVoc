@@ -1,5 +1,436 @@
 {
   "version": 1,
-  "updatedAt": "2025-11-26T08:25:04.358Z",
-  "lists": []
+  "updatedAt": "2025-11-26T10:07:05.807Z",
+  "lists": [
+    {
+      "id": "default-9h-voc1",
+      "name": "9H - Voc 1",
+      "folder": "9H",
+      "words": [
+        {
+          "french": "l'école",
+          "german": "die Schule"
+        },
+        {
+          "french": "les écoles",
+          "german": "die Schulen"
+        },
+        {
+          "french": "le maître, le professeur, l'enseignant",
+          "german": "der Lehrer"
+        },
+        {
+          "french": "la maîtresse, la professeur, l'enseignante",
+          "german": "die Lehrerin"
+        }
+      ]
+    },
+    {
+      "id": "list-1764151608309",
+      "name": "9H - Voc 4",
+      "words": [
+        {
+          "french": "Joyeux anniversaire !",
+          "german": "Herzlichen Glückwunsch zum Geburtstag!"
+        },
+        {
+          "french": "Joyeuses Pâques!",
+          "german": "Frohe Ostern!"
+        },
+        {
+          "french": "Joyeux Noël",
+          "german": "Frohe Weihnachten!"
+        },
+        {
+          "french": "Tout de bon !",
+          "german": "Alles Gute!"
+        },
+        {
+          "french": "Tu viens ?",
+          "german": "Kommst du ?"
+        },
+        {
+          "french": "Bonne chance !",
+          "german": "Viel Glück!"
+        },
+        {
+          "french": "Bon voyage !",
+          "german": "Gute Reise!"
+        },
+        {
+          "french": "Bon rétablissement !",
+          "german": "Gute Besserung!"
+        },
+        {
+          "french": "Bon appétit !",
+          "german": "Guten Appetit!"
+        },
+        {
+          "french": "l'anniversaire",
+          "german": "der Geburtstag"
+        },
+        {
+          "french": "les anniversaires",
+          "german": "die Geburtstage"
+        },
+        {
+          "french": "Quand as-tu ton anniversaire ?",
+          "german": "Wann hast du Geburtstag ?"
+        },
+        {
+          "french": "J'ai mon anniversaire le ...",
+          "german": "Ich habe am ... Geburtstag."
+        },
+        {
+          "french": "la fête",
+          "german": "die Party"
+        },
+        {
+          "french": "les fêtes",
+          "german": "die Partys"
+        },
+        {
+          "french": "Comment était la fête ?",
+          "german": "Wie war die Party?"
+        },
+        {
+          "french": "la fête était super !",
+          "german": "Die Party war super!"
+        },
+        {
+          "french": "le gâteau",
+          "german": "der Kuchen"
+        },
+        {
+          "french": "les gâteaux",
+          "german": "die Kuchen"
+        },
+        {
+          "french": "le jus",
+          "german": "der Saft"
+        },
+        {
+          "french": "les jus",
+          "german": "die Säfte"
+        },
+        {
+          "french": "le cadeau",
+          "german": "das Geschenk"
+        },
+        {
+          "french": "les cadeaux",
+          "german": "die Geschenke"
+        },
+        {
+          "french": "le thé froid",
+          "german": "der Eistee"
+        },
+        {
+          "french": "les thés froids",
+          "german": "die Eistees"
+        },
+        {
+          "french": "la fête d'anniversaire",
+          "german": "die Geburtstagsparty"
+        },
+        {
+          "french": "fêter",
+          "german": "faire la fête"
+        },
+        {
+          "french": "il fête",
+          "german": "er feiert"
+        },
+        {
+          "french": "Nous faisons la fête dans le jardin.",
+          "german": "Wir feiern im Garten."
+        },
+        {
+          "french": "inviter",
+          "german": "einladen"
+        },
+        {
+          "french": "il invite",
+          "german": "er lädt ein"
+        },
+        {
+          "french": "J'invite mes amis.",
+          "german": "Ich lade meine Freunde ein."
+        },
+        {
+          "french": "Viens donc plus tard !",
+          "german": "Komm doch später!"
+        },
+        {
+          "french": "apporter",
+          "german": "mitbringen"
+        },
+        {
+          "french": "il apporte",
+          "german": "er bringt ... mit"
+        },
+        {
+          "french": "Elle apporte un cadeau.",
+          "german": "Sie bringt ein Geschenk mit."
+        },
+        {
+          "french": "l'excursion",
+          "german": "la sortie"
+        },
+        {
+          "french": "les excursions",
+          "german": "les sorties"
+        },
+        {
+          "french": "Nous faisons une excursion à la montagne.",
+          "german": "Wir machen einen Ausflug in die Berge."
+        },
+        {
+          "french": "l'hôte",
+          "german": "l'invité"
+        },
+        {
+          "french": "les hôtes",
+          "german": "les invités"
+        },
+        {
+          "french": "Hier",
+          "german": "je n'avais pas le temps."
+        },
+        {
+          "french": "Hier",
+          "german": "je n'avais pas envie."
+        },
+        {
+          "french": "se lever tôt",
+          "german": "früh aufstehen"
+        },
+        {
+          "french": "il se lève tôt",
+          "german": "er steht früh auf"
+        },
+        {
+          "french": "dormir longtemps",
+          "german": "lange schlafen"
+        },
+        {
+          "french": "il dort longtemps",
+          "german": "er schläft lange"
+        },
+        {
+          "french": "l'invitation",
+          "german": "die Einladung"
+        },
+        {
+          "french": "les invitations",
+          "german": "die Einladungen"
+        },
+        {
+          "french": "Merci pour ton invitation.",
+          "german": "Danke für deine Einladung."
+        },
+        {
+          "french": "les jeunes",
+          "german": "die Jugendlichen"
+        },
+        {
+          "french": "le roi",
+          "german": "der König"
+        },
+        {
+          "french": "la reine",
+          "german": "die Königin"
+        },
+        {
+          "french": "au printemps",
+          "german": "im Frühling"
+        },
+        {
+          "french": "en été",
+          "german": "im Sommer"
+        },
+        {
+          "french": "en automne",
+          "german": "im Herbst"
+        },
+        {
+          "french": "en hiver",
+          "german": "im Winter"
+        },
+        {
+          "french": "le mois",
+          "german": "der Monat"
+        },
+        {
+          "french": "les mois",
+          "german": "die Monate"
+        },
+        {
+          "french": "en janvier",
+          "german": "im Januar"
+        },
+        {
+          "french": "en février",
+          "german": "im Februar"
+        },
+        {
+          "french": "en mars",
+          "german": "im März"
+        },
+        {
+          "french": "en avril",
+          "german": "im April"
+        },
+        {
+          "french": "en mai",
+          "german": "im Mai"
+        },
+        {
+          "french": "en juin",
+          "german": "im Juni"
+        },
+        {
+          "french": "en juillet",
+          "german": "im Juli"
+        },
+        {
+          "french": "en août",
+          "german": "im August"
+        },
+        {
+          "french": "en septembre",
+          "german": "im September"
+        },
+        {
+          "french": "en octobre",
+          "german": "im Oktober"
+        },
+        {
+          "french": "en novembre",
+          "german": "im November"
+        },
+        {
+          "french": "en décembre",
+          "german": "im Dezember"
+        },
+        {
+          "french": "le calendrier",
+          "german": "der Kalender"
+        },
+        {
+          "french": "la saison",
+          "german": "die Jahreszeit"
+        },
+        {
+          "french": "les saisons",
+          "german": "die Jahreszeiten"
+        },
+        {
+          "french": "Il y a quatre saisons.",
+          "german": "Es gibt vier Jahreszeiten."
+        },
+        {
+          "french": "toujours",
+          "german": "immer"
+        },
+        {
+          "french": "le plus souvent",
+          "german": "la plupart du temps"
+        },
+        {
+          "french": "souvent",
+          "german": "oft"
+        },
+        {
+          "french": "parfois",
+          "german": "manchmal"
+        },
+        {
+          "french": "jamais",
+          "german": "nie"
+        },
+        {
+          "french": "mal",
+          "german": "mauvais"
+        },
+        {
+          "french": "bon",
+          "german": "bien"
+        },
+        {
+          "french": "malade",
+          "german": "krank"
+        },
+        {
+          "french": "Comment vas-tu?",
+          "german": "Wie geht es dir?"
+        },
+        {
+          "french": "Je vais mal.",
+          "german": "Es geht mir schlecht."
+        },
+        {
+          "french": "Je ne vais pas très bien.",
+          "german": "Es geht mir nicht so gut."
+        },
+        {
+          "french": "Je vais mieux.",
+          "german": "Es geht mir besser."
+        },
+        {
+          "french": "J'ai de la fièvre.",
+          "german": "Ich habe Fieber."
+        },
+        {
+          "french": "J'ai mal au ventre.",
+          "german": "Ich habe Bauchweh."
+        },
+        {
+          "french": "Hier",
+          "german": "j'avais mal à la tête."
+        },
+        {
+          "french": "Es-tu de nouveau en forme ?",
+          "german": "Bist du jetzt wieder o. k. ?"
+        },
+        {
+          "french": "l'accident",
+          "german": "der Unfall"
+        },
+        {
+          "french": "les accidents",
+          "german": "die Unfälle"
+        },
+        {
+          "french": "l'hôpital",
+          "german": "das Krankenhaus"
+        },
+        {
+          "french": "les hôpitaux",
+          "german": "die Krankenhäuser"
+        },
+        {
+          "french": "Tu étais à l'hôpital ?",
+          "german": "Warst du im Krankenhaus?"
+        },
+        {
+          "french": "terrible",
+          "german": "horrible"
+        },
+        {
+          "french": "Le test était horrible !",
+          "german": "Der Test war furchtbar!"
+        },
+        {
+          "french": "la catastrophe",
+          "german": "die Katastrophe"
+        },
+        {
+          "french": "les catastrophes",
+          "german": "die Katastrophen"
+        }
+      ],
+      "folder": "9H"
+    }
+  ]
 }
