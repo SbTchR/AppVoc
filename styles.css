@@ -278,6 +278,7 @@ textarea { min-height: 140px; resize: vertical; }
 .feedback { color: var(--muted); margin-top: 6px; min-height: 22px; }
 .feedback.error { color: #b91c1c; }
 .feedback.success { color: #166534; }
+.feedback.answer { font-size: 20px; font-weight: 700; }
 
 .final-screen { text-align: center; padding: 26px 22px; }
 .trophy { font-size: 80px; margin-bottom: 10px; }

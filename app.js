@@ -652,6 +652,7 @@ function renderPassiveWord() {
   });
   updateDots(passiveDots, passiveWords.length, currentIndex, passiveResults);
   updateProgress(passiveProgress, passiveStepLabel, passiveCount, currentIndex, passiveWords.length, 'Passif');
+  passiveFeedback.className = 'feedback';
   passiveFeedback.textContent = '';
 }
 
@@ -673,12 +674,12 @@ function validatePassive() {
     passiveFeedback.className = 'feedback success';
   } else {
     passiveFeedback.textContent = `Réponse attendue : ${word.french}`;
-    passiveFeedback.className = 'feedback error';
+    passiveFeedback.className = 'feedback error answer';
     passiveErrorThisRound = true;
   }
   updateDots(passiveDots, passiveWords.length, currentIndex, passiveResults);
   currentIndex++;
-  setTimeout(renderPassiveWord, isCorrect ? 300 : 700);
+  setTimeout(renderPassiveWord, isCorrect ? 300 : 4000);
 }
 
 function startActivePhase() {
@@ -743,6 +744,7 @@ function renderActiveWord() {
   });
   updateDots(activeDots, activeWords.length, currentIndex, activeResults);
   updateProgress(activeProgress, activeStepLabel, activeCount, currentIndex, activeWords.length, 'Actif');
+  activeFeedback.className = 'feedback';
   activeFeedback.textContent = '';
 }
 
@@ -769,12 +771,12 @@ function validateActive() {
     activeFeedback.className = 'feedback success';
   } else {
     activeFeedback.textContent = `Réponse attendue : ${word.german}`;
-    activeFeedback.className = 'feedback error';
+    activeFeedback.className = 'feedback error answer';
     activeErrorThisRound = true;
   }
   updateDots(activeDots, activeWords.length, currentIndex, activeResults);
   currentIndex++;
-  setTimeout(renderActiveWord, isCorrect ? 300 : 700);
+  setTimeout(renderActiveWord, isCorrect ? 300 : 4000);
 }
 
 function finishSession() {
