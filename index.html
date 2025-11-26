@@ -399,8 +399,8 @@
     <header class="topbar">
       <div class="logo">Voc'Boost</div>
       <div class="tabs">
-        <button class="tab-btn" data-tab="teacher">Espace prof</button>
-        <button class="tab-btn active" data-tab="student">Espace élève</button>
+        <a class="tab-btn" data-tab="teacher" href="teacher.html">Espace prof</a>
+        <button class="tab-btn active" data-tab="student" type="button">Espace élève</button>
       </div>
     </header>
 
@@ -917,6 +917,11 @@
 
     function loadTeacherLists() {
       teacherLists = safeParse(STORAGE_KEY, []);
+      // Si l'utilisateur a créé des listes via teacher.html (stockées sous une autre clé), on les importe.
+      if (!teacherLists.length) {
+        const alt = safeParse('voc-app-lists-prof', []);
+        if (alt && alt.length) teacherLists = alt;
+      }
       teacherLists = ensureDefaultPresence(teacherLists);
       saveTeacherLists();
     }
@@ -1751,10 +1756,6 @@
     function initTabs() {
       tabButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
-          if (btn.dataset.tab === 'teacher') {
-            window.location.href = 'teacher.html';
-            return;
-          }
           tabButtons.forEach((b) => b.classList.remove('active'));
           btn.classList.add('active');
           const tab = btn.dataset.tab;
@@ -1884,6 +1885,13 @@
         const localPayload = await fetchLocalLists();
         if (localPayload) applyRemotePayload(localPayload, 'lists.json local');
         await syncFromGithub();
+        if (!lists.length) {
+          lists = ensureDefaultPresence([]);
+          savePublishedLists();
+          renderFolderFilter();
+          renderListSelector();
+          renderWordSelection();
+        }
       } catch (err) {
         console.error('Erreur au démarrage', err);
         setStatus(syncStatus, 'Erreur de chargement. Données locales utilisées.', false);
