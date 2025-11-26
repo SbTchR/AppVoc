@@ -1751,6 +1751,10 @@
     function initTabs() {
       tabButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
+          if (btn.dataset.tab === 'teacher') {
+            window.location.href = 'teacher.html';
+            return;
+          }
           tabButtons.forEach((b) => b.classList.remove('active'));
           btn.classList.add('active');
           const tab = btn.dataset.tab;

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voc'Boost · Espace prof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #2563eb;
+      --shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 0; font-family: 'Poppins','Segoe UI',system-ui,-apple-system,sans-serif;
+      background: linear-gradient(140deg, #eef2ff, #f8fafc 50%, #e0f2fe);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .app { max-width: 900px; margin: 0 auto; padding: 24px 18px 64px; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px; }
+    .logo { font-weight:700; font-size:22px; letter-spacing:0.4px; }
+    .btn {
+      border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer;
+      background: linear-gradient(135deg, #2563eb, #3b82f6); color:#fff; box-shadow: var(--shadow);
+    }
+    .btn.secondary { background:#e2e8f0; color:var(--text); box-shadow:none; border:1px solid #cbd5e1; }
+    .btn.danger { background: linear-gradient(135deg, #f97316, #ef4444); color:#fff; }
+    .card { background: var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; margin-bottom:14px; box-shadow: var(--shadow); }
+    .card-title { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px; }
+    .field { display:flex; flex-direction:column; gap:6px; margin-bottom:10px; }
+    input, textarea { border:1px solid var(--border); border-radius:12px; padding:12px 14px; font-size:15px; background:#f8fafc; }
+    textarea { min-height:140px; resize:vertical; }
+    label { font-weight:600; color:#1f2937; }
+    .muted { color: var(--muted); font-size:14px; }
+    .list-item { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid var(--border); }
+    .chip { border:1px solid var(--border); background:#eef2ff; border-radius:999px; padding:8px 12px; font-weight:600; cursor:pointer; }
+    .badge { padding:6px 10px; border-radius:8px; background:#e0f2fe; color:#0f172a; font-weight:600; }
+    .row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+    .status { min-height:20px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="topbar">
+      <div class="logo">Voc'Boost · Prof</div>
+      <div class="row">
+        <a class="btn secondary" href="index.html">Espace élève</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        <div>
+          <div class="muted" style="text-transform:uppercase; letter-spacing:1px;">Création</div>
+          <h2 style="margin:4px 0 0;">Créer / éditer une liste</h2>
+          <p class="muted">Collez un tableau (Excel/Sheets) : une colonne français, une colonne allemand.</p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="list-name">Nom de la liste</label>
+        <input id="list-name" type="text" placeholder="Ex: 9H - Voc 1" />
+      </div>
+      <div class="field">
+        <label for="folder-name">Dossier / classe</label>
+        <input id="folder-name" type="text" placeholder="Ex: 9H, 10H, Révision" />
+      </div>
+      <div class="field">
+        <label for="list-raw">Liste (séparateur tabulation, point-virgule ou virgule)</label>
+        <textarea id="list-raw" placeholder="français;allemand"></textarea>
+      </div>
+      <div class="row">
+        <button class="btn" id="save-list">Enregistrer</button>
+        <button class="btn secondary" id="reset-form">Effacer</button>
+        <button class="btn secondary" id="cancel-edit" style="display:none;">Annuler l'édition</button>
+      </div>
+      <p class="muted" id="edit-status"></p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        <div>
+          <div class="muted" style="text-transform:uppercase; letter-spacing:1px;">Vos listes</div>
+          <h3 style="margin:4px 0 0;">Listes disponibles</h3>
+        </div>
+        <button class="btn secondary" id="download-json">Télécharger lists.json</button>
+      </div>
+      <div id="existing-lists"></div>
+      <p class="status" id="status"></p>
+      <p class="muted">Pour partager aux élèves : cliquez sur “Télécharger lists.json” puis commitez ce fichier dans le dépôt (branche servie par GitHub Pages). Les élèves chargeront automatiquement ce JSON.</p>
+    </div>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'voc-app-lists-prof';
+    const NOTES_KEY = 'voc-app-notes-v1';
+
+    const defaultWords = [
+      { french: "l'école", german: "die Schule" },
+      { french: "les écoles", german: "die Schulen" },
+      { french: "le maître, le professeur, l'enseignant", german: "der Lehrer" },
+      { french: "la maîtresse, la professeur, l'enseignante", german: "die Lehrerin" }
+    ];
+    const defaultList = { id: 'default-9h-voc1', name: '9H - Voc 1', folder: '9H', words: defaultWords };
+
+    let lists = [];
+    let editingListId = null;
+
+    const listNameInput = document.getElementById('list-name');
+    const folderInput = document.getElementById('folder-name');
+    const listRawInput = document.getElementById('list-raw');
+    const saveBtn = document.getElementById('save-list');
+    const resetBtn = document.getElementById('reset-form');
+    const cancelEditBtn = document.getElementById('cancel-edit');
+    const editStatus = document.getElementById('edit-status');
+    const existingListsEl = document.getElementById('existing-lists');
+    const downloadJsonBtn = document.getElementById('download-json');
+    const statusEl = document.getElementById('status');
+
+    function setStatus(msg, ok = true) {
+      statusEl.textContent = msg || '';
+      statusEl.style.color = ok ? '#166534' : '#b91c1c';
+    }
+
+    function safeParse(key, fallback) {
+      try {
+        const raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : fallback;
+      } catch (e) {
+        localStorage.removeItem(key);
+        return fallback;
+      }
+    }
+
+    function loadLists() {
+      lists = safeParse(STORAGE_KEY, []);
+      if (!lists.find((l) => l.id === defaultList.id)) {
+        lists.unshift(defaultList);
+      }
+      saveLists();
+    }
+
+    function saveLists() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(lists));
+    }
+
+    function parseRawList(raw) {
+      const lines = raw.split(/\n/).map((l) => l.trim()).filter(Boolean);
+      const parsed = [];
+      lines.forEach((line) => {
+        const parts = line.split(/\t|;|,/);
+        if (parts.length >= 2) {
+          const french = parts[0].trim();
+          const german = parts[1].trim();
+          if (french && german) parsed.push({ french, german });
+        }
+      });
+      return parsed;
+    }
+
+    function renderLists() {
+      existingListsEl.innerHTML = '';
+      lists.forEach((list) => {
+        const row = document.createElement('div');
+        row.className = 'list-item';
+        const meta = document.createElement('div');
+        meta.innerHTML = `<strong>${list.name}</strong><div class="muted" style="font-size:13px;">${list.words.length} mot(s) · ${list.folder || 'Sans dossier'}</div>`;
+        const actions = document.createElement('div');
+        actions.className = 'row';
+
+        const editBtn = document.createElement('button');
+        editBtn.className = 'chip';
+        editBtn.textContent = 'Éditer';
+        editBtn.addEventListener('click', () => loadListInForm(list.id));
+        actions.appendChild(editBtn);
+
+        const duplicateBtn = document.createElement('button');
+        duplicateBtn.className = 'chip';
+        duplicateBtn.textContent = 'Dupliquer';
+        duplicateBtn.addEventListener('click', () => duplicateList(list.id));
+        actions.appendChild(duplicateBtn);
+
+        if (list.id !== defaultList.id) {
+          const del = document.createElement('button');
+          del.className = 'chip';
+          del.textContent = 'Supprimer';
+          del.addEventListener('click', () => deleteList(list.id));
+          actions.appendChild(del);
+        } else {
+          const base = document.createElement('div');
+          base.className = 'badge';
+          base.textContent = 'Base';
+          actions.appendChild(base);
+        }
+
+        row.appendChild(meta);
+        row.appendChild(actions);
+        existingListsEl.appendChild(row);
+      });
+    }
+
+    function addList(name, words, folder) {
+      const id = 'list-' + Date.now();
+      lists.push({ id, name, words, folder: folder || 'Sans dossier' });
+      saveLists();
+      renderLists();
+      exitEditMode();
+      setStatus('Liste ajoutée.');
+    }
+
+    function updateList(id, name, words, folder) {
+      const target = lists.find((l) => l.id === id);
+      if (!target) return;
+      target.name = name;
+      target.folder = folder || 'Sans dossier';
+      target.words = words;
+      saveLists();
+      renderLists();
+      exitEditMode();
+      setStatus('Liste mise à jour.');
+    }
+
+    function deleteList(id) {
+      lists = lists.filter((l) => l.id !== id);
+      saveLists();
+      renderLists();
+      if (editingListId === id) exitEditMode();
+      setStatus('Liste supprimée.');
+    }
+
+    function duplicateList(id) {
+      const target = lists.find((l) => l.id === id);
+      if (!target) return;
+      addList(`${target.name} (copie)`, target.words.slice(), target.folder);
+    }
+
+    function loadListInForm(id) {
+      const target = lists.find((l) => l.id === id);
+      if (!target) return;
+      editingListId = id;
+      listNameInput.value = target.name;
+      folderInput.value = target.folder || '';
+      listRawInput.value = target.words.map((w) => `${w.french};${w.german}`).join('\n');
+      saveBtn.textContent = 'Mettre à jour';
+      cancelEditBtn.style.display = 'inline-flex';
+      editStatus.textContent = `Édition : ${target.name}`;
+    }
+
+    function exitEditMode() {
+      editingListId = null;
+      listNameInput.value = '';
+      folderInput.value = '';
+      listRawInput.value = '';
+      saveBtn.textContent = 'Enregistrer';
+      cancelEditBtn.style.display = 'none';
+      editStatus.textContent = '';
+    }
+
+    function downloadJson() {
+      const payload = {
+        version: 1,
+        updatedAt: new Date().toISOString(),
+        lists
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'lists.json';
+      a.click();
+      URL.revokeObjectURL(url);
+      setStatus('lists.json téléchargé. Commitez-le pour les élèves.');
+    }
+
+    async function loadLocalJsonFile() {
+      try {
+        const res = await fetch('./lists.json', { cache: 'no-store' });
+        if (!res.ok) return;
+        const payload = await res.json();
+        if (payload && Array.isArray(payload.lists)) {
+          lists = payload.lists;
+          if (!lists.find((l) => l.id === defaultList.id)) lists.unshift(defaultList);
+          saveLists();
+          renderLists();
+          setStatus('Listes chargées depuis lists.json.');
+        }
+      } catch (e) {
+        // ignore
+      }
+    }
+
+    function initEvents() {
+      saveBtn.addEventListener('click', () => {
+        const name = listNameInput.value.trim();
+        const folder = folderInput.value.trim() || 'Sans dossier';
+        const parsed = parseRawList(listRawInput.value);
+        if (!name) { alert('Ajoute un nom de liste.'); return; }
+        if (!parsed.length) { alert('Ajoute au moins une ligne.'); return; }
+        if (editingListId) updateList(editingListId, name, parsed, folder);
+        else addList(name, parsed, folder);
+      });
+      resetBtn.addEventListener('click', exitEditMode);
+      cancelEditBtn.addEventListener('click', exitEditMode);
+      downloadJsonBtn.addEventListener('click', downloadJson);
+    }
+
+    async function bootstrap() {
+      loadLists();
+      renderLists();
+      initEvents();
+      await loadLocalJsonFile();
+    }
+
+    bootstrap();
+  </script>
+</body>
+</html>
