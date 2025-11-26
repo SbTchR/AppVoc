@@ -155,7 +155,7 @@
       const lines = raw.split(/\n/).map((l) => l.trim()).filter(Boolean);
       const parsed = [];
       lines.forEach((line) => {
-        const parts = line.split(/\t|;|,/);
+        const parts = line.split(/\t|;|/);
         if (parts.length >= 2) {
           const french = parts[0].trim();
           const german = parts[1].trim();

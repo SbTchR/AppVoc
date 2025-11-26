@@ -889,7 +889,7 @@ function finishSession() {
   const minutes = Math.floor(elapsed / 60);
   const seconds = elapsed % 60;
   timerResult.textContent = `Temps : ${minutes} min ${seconds < 10 ? '0' : ''}${seconds} sec`;
-  const total = passiveWords.length + activeWords.length;
+  const total = passiveWords.length;
   finalMessage.textContent = `${total} mot(s) validé(s). Tu peux rejouer ou changer de liste.`;
 }
 
