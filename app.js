@@ -187,12 +187,13 @@ const activeStepLabel = document.getElementById('active-step-label');
 const timerResult = document.getElementById('timer-result');
 const finalMessage = document.getElementById('final-message');
 const overlay = document.getElementById('answer-overlay');
-const overlayWord = document.getElementById('overlay-word');
+const overlaySrc = document.getElementById('overlay-src');
+const overlayDst = document.getElementById('overlay-dst');
 const overlayCountdown = document.getElementById('overlay-countdown');
 
 let overlayTimeout = null;
 let overlayInterval = null;
-const ERROR_DELAY = 4000;
+const ERROR_DELAY = 3500;
 
 // Utilitaires
 function safeParse(key, fallback) {
@@ -293,7 +294,8 @@ function cleanupNotes() {
 function hideOverlay() {
   if (!overlay) return;
   overlay.classList.add('hidden');
-  overlayWord.textContent = '';
+  if (overlaySrc) overlaySrc.textContent = '';
+  if (overlayDst) overlayDst.textContent = '';
   overlayCountdown.textContent = '';
   if (overlayTimeout) clearTimeout(overlayTimeout);
   if (overlayInterval) clearInterval(overlayInterval);
@@ -301,13 +303,14 @@ function hideOverlay() {
   overlayInterval = null;
 }
 
-function showOverlay(text, success, onDone) {
+function showOverlay(src, dst, success, onDone) {
   if (!overlay) { onDone && onDone(); return; }
   hideOverlay();
   overlay.classList.remove('hidden');
   overlay.style.pointerEvents = 'auto';
-  overlayWord.textContent = text;
-  overlayWord.style.color = success ? '#16a34a' : '#dc2626';
+  if (overlaySrc) overlaySrc.textContent = src || '';
+  if (overlayDst) overlayDst.textContent = dst || '';
+  if (overlayDst) overlayDst.style.color = success ? '#16a34a' : '#dc2626';
   let remaining = ERROR_DELAY;
   overlayCountdown.textContent = `${(remaining / 1000).toFixed(1)}s`;
   overlayInterval = setInterval(() => {
@@ -724,13 +727,16 @@ function validatePassive() {
     passiveFeedback.className = 'feedback success';
     updateDots(passiveDots, passiveWords.length, currentIndex, passiveResults);
     currentIndex++;
-    setTimeout(renderPassiveWord, 300);
+    setTimeout(() => {
+      passiveFeedback.textContent = '';
+      renderPassiveWord();
+    }, 1000);
     return;
   } else {
     passiveFeedback.textContent = `${word.french}`;
     passiveFeedback.className = 'feedback error answer';
     passiveErrorThisRound = true;
-    showOverlay(word.french, false, () => {
+    showOverlay(word.german, word.french, false, () => {
       updateDots(passiveDots, passiveWords.length, currentIndex, passiveResults);
       currentIndex++;
       renderPassiveWord();
@@ -828,13 +834,16 @@ function validateActive() {
     activeFeedback.className = 'feedback success';
     updateDots(activeDots, activeWords.length, currentIndex, activeResults);
     currentIndex++;
-    setTimeout(renderActiveWord, 300);
+    setTimeout(() => {
+      activeFeedback.textContent = '';
+      renderActiveWord();
+    }, 1000);
     return;
   } else {
     activeFeedback.textContent = `${word.german}`;
     activeFeedback.className = 'feedback error answer';
     activeErrorThisRound = true;
-    showOverlay(word.german, false, () => {
+    showOverlay(word.french, word.german, false, () => {
       updateDots(activeDots, activeWords.length, currentIndex, activeResults);
       currentIndex++;
       renderActiveWord();
