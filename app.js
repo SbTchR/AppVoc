@@ -780,7 +780,7 @@ function validateActive() {
     activeFeedback.textContent = 'Parfait !';
     activeFeedback.className = 'feedback success';
   } else {
-    activeFeedback.textContent = `Réponse attendue : ${word.german}`;
+    activeFeedback.textContent = `${word.german}`;
     activeFeedback.className = 'feedback error answer';
     activeErrorThisRound = true;
   }
