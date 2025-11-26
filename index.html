@@ -904,9 +904,19 @@
       return arr;
     }
 
+    function safeParse(key, fallback) {
+      try {
+        const raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : fallback;
+      } catch (e) {
+        console.warn('Impossible de lire', key, e);
+        localStorage.removeItem(key);
+        return fallback;
+      }
+    }
+
     function loadTeacherLists() {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      teacherLists = stored ? JSON.parse(stored) : [];
+      teacherLists = safeParse(STORAGE_KEY, []);
       teacherLists = ensureDefaultPresence(teacherLists);
       saveTeacherLists();
     }
@@ -916,8 +926,7 @@
     }
 
     function loadPublishedLists() {
-      const stored = localStorage.getItem(PUBLISHED_KEY);
-      lists = stored ? JSON.parse(stored) : [];
+      lists = safeParse(PUBLISHED_KEY, []);
       if (!lists.length) {
         lists = cloneLists(teacherLists.length ? teacherLists : [defaultList]);
       }
@@ -930,8 +939,7 @@
     }
 
     function loadNotes() {
-      const stored = localStorage.getItem(NOTES_KEY);
-      wordNotes = stored ? JSON.parse(stored) : {};
+      wordNotes = safeParse(NOTES_KEY, {});
       // Migration: ancien format string -> objet { note }
       Object.keys(wordNotes).forEach((listId) => {
         Object.keys(wordNotes[listId]).forEach((idx) => {
@@ -1011,15 +1019,8 @@
     }
 
     function loadGithubConfig() {
-      const stored = localStorage.getItem(GITHUB_CONF_KEY);
-      if (stored) {
-        try {
-          const parsed = JSON.parse(stored);
-          githubConfig = { ...githubConfig, ...parsed };
-        } catch (e) {
-          console.warn('Config GitHub illisible, on ignore.');
-        }
-      }
+      const parsed = safeParse(GITHUB_CONF_KEY, null);
+      if (parsed) githubConfig = { ...githubConfig, ...parsed };
       if (githubOwnerInput) githubOwnerInput.value = githubConfig.owner || '';
       if (githubRepoInput) githubRepoInput.value = githubConfig.repo || '';
       if (githubBranchInput) githubBranchInput.value = githubConfig.branch || 'main';
@@ -1757,6 +1758,9 @@
           studentTab.classList.toggle('active', tab === 'student');
         });
       });
+      // assure un état initial propre
+      teacherTab.classList.remove('active');
+      studentTab.classList.add('active');
     }
 
     function initEvents() {
@@ -1858,25 +1862,31 @@
     }
 
     async function bootstrap() {
-      loadTeacherLists();
-      loadGithubConfig();
-      loadPublishedLists();
-      teacherLists = cloneLists(lists);
-      saveTeacherLists();
-      loadNotes();
-      cleanupNotes();
-      renderFolderFilter();
-      renderListSelector();
-      renderExistingLists();
-      renderWordSelection();
-      renderTeacherAccess();
-      initTabs();
-      initEvents();
-      // 1) Essaye de charger lists.json local (servi par le dépôt / GitHub Pages)
-      const localPayload = await fetchLocalLists();
-      if (localPayload) applyRemotePayload(localPayload, 'lists.json local');
-      // 2) Si config GitHub remplie, surcharge avec GitHub
-      await syncFromGithub();
+      try {
+        loadTeacherLists();
+        loadGithubConfig();
+        loadPublishedLists();
+        teacherLists = cloneLists(lists);
+        saveTeacherLists();
+        loadNotes();
+        cleanupNotes();
+        renderFolderFilter();
+        renderListSelector();
+        renderExistingLists();
+        renderWordSelection();
+        renderTeacherAccess();
+        initTabs();
+        initEvents();
+        const localPayload = await fetchLocalLists();
+        if (localPayload) applyRemotePayload(localPayload, 'lists.json local');
+        await syncFromGithub();
+      } catch (err) {
+        console.error('Erreur au démarrage', err);
+        setStatus(syncStatus, 'Erreur de chargement. Données locales utilisées.', false);
+        renderTeacherAccess();
+        initTabs();
+        initEvents();
+      }
     }
 
     bootstrap().catch((e) => {
