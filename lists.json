@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2025-11-26T10:07:05.807Z",
+  "updatedAt": "2025-11-26T11:45:06.824Z",
   "lists": [
     {
       "id": "default-9h-voc1",
@@ -16,11 +16,11 @@
           "german": "die Schulen"
         },
         {
-          "french": "le maître, le professeur, l'enseignant",
+          "french": "le professeur",
           "german": "der Lehrer"
         },
         {
-          "french": "la maîtresse, la professeur, l'enseignante",
+          "french": "la professeur",
           "german": "die Lehrerin"
         }
       ]
