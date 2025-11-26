@@ -2,26 +2,38 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Voc'Boost · Élève</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Voc Bercher · Élève</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <div class="app-shell">
+    <header class="topbar">
+      <div class="logo">Voc Bercher</div>
+      <div class="top-actions">
+        <a class="pill-link" href="help.html" title="Aide / mode d'emploi">❓</a>
+        <a class="pill-link" href="sos" title="Vidéo SOS" target="_blank" rel="noopener">🆘</a>
+        <a class="pill-link" href="phonetique.pdf" title="Phonétique" target="_blank" rel="noopener">💬</a>
+        <a class="pill-link" href="teacher.html" title="Réservé au prof">Espace prof</a>
+      </div>
+    </header>
+
     <main>
       <section id="student" class="tab-panel active">
         <div class="card" id="selection-card">
           <div class="card-title">
             <div>
-              <h2>Voc 🇩🇪 Bercher </h2>
+              <h2>Voc 🇩🇪 Bercher</h2>
             </div>
           </div>
 
           <div class="filters-row">
             <div class="field">
+              <label for="folder-filter">Dossier</label>
               <select id="folder-filter"></select>
             </div>
             <div class="field">
+              <label for="list-selector">Liste</label>
               <select id="list-selector"></select>
               <div class="inline-help" id="list-meta"></div>
             </div>
@@ -32,13 +44,13 @@
             <button class="btn secondary" id="clear-selection" type="button">Tout désélectionner</button>
             <button class="btn secondary" id="toggle-colors" type="button" style="padding:10px 12px; min-width:42px;">🎨</button>
             <div class="tag-dots hidden" id="global-tags" style="margin-left:auto; gap:8px;">
-              <button class="tag-dot tag-blue" data-tag="blue" title="Bleu"></button>
-              <button class="tag-dot tag-pink" data-tag="pink" title="Rose"></button>
-              <button class="tag-dot tag-green" data-tag="green" title="Vert"></button>
-              <button class="tag-dot tag-red" data-tag="red" title="Rouge"></button>
-              <button class="tag-dot" data-tag="black" title="Noir"></button>
+              <button class="tag-dot tag-blue" data-tag="blue" title="Bleu">M</button>
+              <button class="tag-dot tag-pink" data-tag="pink" title="Rose">F</button>
+              <button class="tag-dot tag-green" data-tag="green" title="Vert">N</button>
+              <button class="tag-dot tag-red" data-tag="red" title="Rouge">V</button>
+              <button class="tag-dot" data-tag="black" title="Noir">X</button>
             </div>
-      
+
           </div>
 
           <p class="muted">P = Passif 🇩🇪-->🇫🇷   |    A = Actif 🇩🇪<-->🇫🇷 </p>

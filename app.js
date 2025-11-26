@@ -336,7 +336,7 @@ function updateListMeta() {
     return;
   }
   const folderLabel = current.folder ? `Dossier : ${current.folder} · ` : '';
-  listMeta.textContent = `${folderLabel}${current.words.length} mot(s) disponible(s). Active = passif + actif.`;
+  listMeta.textContent = `${folderLabel}${current.words.length} mot(s) disponible(s).`;
 }
 
 function renderWordSelection() {
@@ -348,6 +348,7 @@ function renderWordSelection() {
     selectionState.set(index, { passive: false, active: false });
     const card = document.createElement('div');
     card.className = 'word-card';
+    card.dataset.index = index;
     const text = document.createElement('div');
     text.className = 'word-text';
     text.innerHTML = `<div class="german">${word.german}</div><div class="french">${word.french}</div>`;
@@ -421,10 +422,18 @@ function ensureNoteObj(listId, index) {
 function cycleNote(listId, index, card) {
   const entry = ensureNoteObj(listId, index);
   if (entry.note === 'easy') entry.note = 'hard';
-  else if (entry.note === 'hard') entry.note = null;
+  else if (entry.note === 'hard') entry.note = 'skip';
+  else if (entry.note === 'skip') entry.note = null;
   else entry.note = 'easy';
   if (!entry.note && !entry.tag) delete wordNotes[listId][index];
   saveNotes();
+  if (entry.note === 'skip') {
+    if (selectionState.has(index)) {
+      selectionState.set(index, { passive: false, active: false });
+    }
+    const chips = card.querySelectorAll('.chip');
+    chips.forEach((chip) => chip.classList.remove('active'));
+  }
   applyNoteClasses(listId, index, card);
 }
 
@@ -433,6 +442,7 @@ function applyNoteClasses(listId, index, card) {
   const note = entry ? entry.note : null;
   card.classList.toggle('note-easy', note === 'easy');
   card.classList.toggle('note-hard', note === 'hard');
+  card.classList.toggle('note-skip', note === 'skip');
 }
 
 const tagColors = {
@@ -673,7 +683,7 @@ function validatePassive() {
     passiveFeedback.textContent = 'Bien joué !';
     passiveFeedback.className = 'feedback success';
   } else {
-    passiveFeedback.textContent = `Réponse attendue : ${word.french}`;
+    passiveFeedback.textContent = `${word.french}`;
     passiveFeedback.className = 'feedback error answer';
     passiveErrorThisRound = true;
   }
