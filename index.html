@@ -406,49 +406,120 @@
 
     <main>
       <section id="teacher" class="tab-panel">
-        <div class="card">
+        <div class="card card-compact" id="teacher-locked-card">
           <div class="card-title">
             <div>
-              <p class="eyebrow">Configuration</p>
-              <h2>Créer une liste</h2>
-              <p class="muted">Collez un tableau (Excel/Sheets) : une colonne français, une colonne allemand.</p>
+              <p class="eyebrow">Accès restreint</p>
+              <h2>Déverrouiller l'espace prof</h2>
+              <p class="muted">Protégez la création/édition. Code par défaut : <strong>prof</strong>.</p>
             </div>
-            <div class="pill">Prof</div>
           </div>
           <div class="field">
-            <label for="list-name">Nom de la liste</label>
-            <input type="text" id="list-name" placeholder="Ex: 9H - Voc 1" />
+            <label for="teacher-code-input">Code prof</label>
+            <div class="button-row" style="gap:8px; flex-wrap:wrap;">
+              <input type="password" id="teacher-code-input" placeholder="Entrer le code" style="flex:1; min-width:180px;" />
+              <button class="btn" id="unlock-teacher" type="button">Déverrouiller</button>
+            </div>
           </div>
-          <div class="field">
-            <label for="folder-name">Dossier / classe</label>
-            <input type="text" id="folder-name" placeholder="Ex: 9H, 10H, Révision" />
-            <div class="inline-help">Les dossiers aident les élèves à retrouver les listes.</div>
-          </div>
-          <div class="field">
-            <label for="list-raw">Liste (une ligne par mot, séparateur tabulation, point-virgule ou virgule)</label>
-            <textarea id="list-raw" placeholder="français;allemand"></textarea>
-            <div class="inline-help">Exemple : <code>l'école	 die Schule</code> ou <code>l'école;die Schule</code>.</div>
-          </div>
-          <div class="button-row">
-            <button class="btn" id="save-list">Enregistrer la liste</button>
-            <button class="btn secondary" id="reset-form">Effacer</button>
-            <button class="btn secondary" id="cancel-edit" style="display:none;">Annuler l'édition</button>
-          </div>
-          <p class="muted" id="edit-status"></p>
+          <p class="muted" id="teacher-lock-status"></p>
         </div>
 
-        <div class="card">
-          <div class="card-title">
-            <div>
-              <p class="eyebrow">Vos listes</p>
-              <h3>Listes disponibles</h3>
+        <div id="teacher-content" style="display:none;">
+          <div class="card">
+            <div class="card-title">
+              <div>
+                <p class="eyebrow">Configuration</p>
+                <h2>Créer une liste</h2>
+                <p class="muted">Collez un tableau (Excel/Sheets) : une colonne français, une colonne allemand.</p>
+              </div>
+              <div class="pill">Prof</div>
             </div>
+            <div class="field">
+              <label for="list-name">Nom de la liste</label>
+              <input type="text" id="list-name" placeholder="Ex: 9H - Voc 1" />
+            </div>
+            <div class="field">
+              <label for="folder-name">Dossier / classe</label>
+              <input type="text" id="folder-name" placeholder="Ex: 9H, 10H, Révision" />
+              <div class="inline-help">Les dossiers aident les élèves à retrouver les listes.</div>
+            </div>
+            <div class="field">
+              <label for="list-raw">Liste (une ligne par mot, séparateur tabulation, point-virgule ou virgule)</label>
+              <textarea id="list-raw" placeholder="français;allemand"></textarea>
+              <div class="inline-help">Exemple : <code>l'école	 die Schule</code> ou <code>l'école;die Schule</code>.</div>
+            </div>
+            <div class="button-row">
+              <button class="btn" id="save-list">Enregistrer la liste</button>
+              <button class="btn secondary" id="reset-form">Effacer</button>
+              <button class="btn secondary" id="cancel-edit" style="display:none;">Annuler l'édition</button>
+            </div>
+            <p class="muted" id="edit-status"></p>
           </div>
-          <div id="existing-lists"></div>
+
+          <div class="card">
+            <div class="card-title">
+              <div>
+                <p class="eyebrow">Vos listes</p>
+                <h3>Listes disponibles</h3>
+              </div>
+              <button class="btn secondary" id="lock-teacher" type="button">Verrouiller</button>
+            </div>
+            <div id="existing-lists"></div>
+          </div>
+
+          <div class="card card-compact">
+            <div class="card-title">
+              <div>
+                <p class="eyebrow">Partage</p>
+                <h3>Rendre disponible aux élèves</h3>
+                <p class="muted">Copiez un code ou un fichier à envoyer aux élèves pour qu'ils se synchronisent.</p>
+              </div>
+            </div>
+            <div class="button-row" style="gap:8px; flex-wrap:wrap;">
+              <button class="btn" id="copy-share-code" type="button">Copier le code</button>
+              <button class="btn secondary" id="download-share-json" type="button">Exporter (.json)</button>
+              <button class="btn secondary" id="publish-now" type="button">Mettre à jour la base élèves</button>
+            </div>
+            <div class="field">
+              <label for="teacher-new-code">Changer le code prof</label>
+              <div class="button-row" style="gap:8px; flex-wrap:wrap;">
+                <input type="password" id="teacher-new-code" placeholder="Nouveau code" style="flex:1; min-width:180px;" />
+                <button class="btn secondary" id="update-teacher-code" type="button">Enregistrer</button>
+              </div>
+              <div class="inline-help">Stocké localement sur chaque appareil. Laissez vide pour garder le code actuel.</div>
+            </div>
+            <p class="muted" id="share-status"></p>
+          </div>
         </div>
       </section>
 
       <section id="student" class="tab-panel active">
+        <div class="card card-compact" id="student-sync-card">
+          <div class="card-title">
+            <div>
+              <p class="eyebrow">Synchronisation</p>
+              <h3>Charger les listes du prof</h3>
+              <p class="muted">Colle le code ou importe le fichier envoyé par le prof pour récupérer toutes les listes.</p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="student-share-code">Code de partage</label>
+            <div class="button-row" style="gap:8px; flex-wrap:wrap;">
+              <input type="text" id="student-share-code" placeholder="Coller le code ici" style="flex:1; min-width:180px;" />
+              <button class="btn secondary" id="apply-share-code" type="button">Importer le code</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="student-file-input">Fichier JSON</label>
+            <div class="button-row" style="gap:8px; flex-wrap:wrap; align-items:center;">
+              <input type="file" id="student-file-input" accept="application/json" style="flex:1;" />
+              <button class="btn secondary" id="apply-share-file" type="button">Importer le fichier</button>
+            </div>
+            <div class="inline-help">Fichier typique : <code>voc-listes.json</code> généré par l'espace prof.</div>
+          </div>
+          <p class="muted" id="student-sync-status"></p>
+        </div>
+
         <div class="card" id="selection-card">
           <div class="card-title">
             <div>
@@ -554,6 +625,8 @@
 
   <script>
     const STORAGE_KEY = 'voc-app-lists-v2';
+    const PUBLISHED_KEY = 'voc-app-published-v1';
+    const TEACHER_CODE_KEY = 'voc-app-teacher-code-v1';
     const NOTES_KEY = 'voc-app-notes-v1';
 
     const defaultWords = [
@@ -678,6 +751,7 @@
 
     const defaultList = { id: 'default-9h-voc1', name: '9H - Voc 1', folder: '9H', words: defaultWords };
 
+    let teacherLists = [];
     let lists = [];
     let wordNotes = {};
     let currentListId = defaultList.id;
@@ -703,6 +777,7 @@
     let currentColorMode = null;
     let editingListId = null;
     let colorPaletteEnabled = false;
+    let teacherUnlocked = false;
 
     const teacherTab = document.getElementById('teacher');
     const studentTab = document.getElementById('student');
@@ -751,6 +826,23 @@
     const cancelEditButton = document.getElementById('cancel-edit');
     const editStatus = document.getElementById('edit-status');
     const existingListsEl = document.getElementById('existing-lists');
+    const teacherLockedCard = document.getElementById('teacher-locked-card');
+    const teacherContent = document.getElementById('teacher-content');
+    const teacherCodeInput = document.getElementById('teacher-code-input');
+    const unlockTeacherBtn = document.getElementById('unlock-teacher');
+    const teacherLockStatus = document.getElementById('teacher-lock-status');
+    const lockTeacherBtn = document.getElementById('lock-teacher');
+    const teacherNewCodeInput = document.getElementById('teacher-new-code');
+    const updateTeacherCodeBtn = document.getElementById('update-teacher-code');
+    const copyShareCodeBtn = document.getElementById('copy-share-code');
+    const downloadShareJsonBtn = document.getElementById('download-share-json');
+    const publishNowBtn = document.getElementById('publish-now');
+    const shareStatus = document.getElementById('share-status');
+    const studentShareCodeInput = document.getElementById('student-share-code');
+    const applyShareCodeBtn = document.getElementById('apply-share-code');
+    const studentFileInput = document.getElementById('student-file-input');
+    const applyShareFileBtn = document.getElementById('apply-share-file');
+    const studentSyncStatus = document.getElementById('student-sync-status');
 
     const alphabet = 'abcdefghijklmnopqrstuvwxyzäöüß';
     const alphabetExtended = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzäöüß ';
@@ -761,6 +853,25 @@
         .replace(/[\u0300-\u036f]/g, '')
         .toLowerCase()
         .replace(/[\s'’\-.,;:!?]/g, '');
+    }
+
+    function encodeSharePayload(payload) {
+      const encoder = new TextEncoder();
+      const bytes = encoder.encode(JSON.stringify(payload));
+      let binary = '';
+      bytes.forEach((b) => { binary += String.fromCharCode(b); });
+      return btoa(binary);
+    }
+
+    function decodeSharePayload(code) {
+      const binary = atob(code);
+      const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+      const decoded = new TextDecoder().decode(bytes);
+      return JSON.parse(decoded);
+    }
+
+    function cloneLists(data) {
+      return JSON.parse(JSON.stringify(data || []));
     }
 
     function shuffle(array) {
@@ -821,20 +932,36 @@
       return { targetRaw: raw, targetNormalized: normalizeAnswer(raw), letters: shuffle(letters), counts };
     }
 
-    function loadLists() {
+    function loadTeacherLists() {
       const stored = localStorage.getItem(STORAGE_KEY);
-      lists = stored ? JSON.parse(stored) : [];
-      const existingDefault = lists.find((l) => l.id === defaultList.id);
+      teacherLists = stored ? JSON.parse(stored) : [];
+      const existingDefault = teacherLists.find((l) => l.id === defaultList.id);
       if (!existingDefault) {
-        lists.unshift(defaultList);
+        teacherLists.unshift(defaultList);
       } else if (!existingDefault.folder) {
         existingDefault.folder = defaultList.folder;
       }
-      saveLists();
+      saveTeacherLists();
     }
 
-    function saveLists() {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(lists));
+    function saveTeacherLists() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(teacherLists));
+    }
+
+    function loadPublishedLists() {
+      const stored = localStorage.getItem(PUBLISHED_KEY);
+      lists = stored ? JSON.parse(stored) : [];
+      const existingDefault = lists.find((l) => l.id === defaultList.id);
+      if (!lists.length) {
+        lists = cloneLists(teacherLists.length ? teacherLists : [defaultList]);
+      } else if (!existingDefault) {
+        lists.unshift(defaultList);
+      }
+      savePublishedLists();
+    }
+
+    function savePublishedLists() {
+      localStorage.setItem(PUBLISHED_KEY, JSON.stringify(lists));
     }
 
     function loadNotes() {
@@ -912,9 +1039,178 @@
       listMeta.textContent = `${folderLabel}${current.words.length} mot(s) disponible(s). Active = passif + actif.`;
     }
 
+    function setStatus(el, message, success = true) {
+      if (!el) return;
+      el.textContent = message || '';
+      el.style.color = message ? (success ? '#166534' : '#b91c1c') : '';
+    }
+
+    function setShareStatus(message, success = true) {
+      setStatus(shareStatus, message, success);
+    }
+
+    function setStudentStatus(message, success = true) {
+      setStatus(studentSyncStatus, message, success);
+    }
+
+    function cleanupNotes() {
+      const validIds = new Set(lists.map((l) => l.id));
+      Object.keys(wordNotes).forEach((id) => {
+        if (!validIds.has(id)) delete wordNotes[id];
+      });
+      saveNotes();
+    }
+
+    function publishListsFromTeacher(silent = false) {
+      lists = cloneLists(teacherLists);
+      savePublishedLists();
+      if (!lists.find((l) => l.id === currentListId) && lists.length) {
+        currentListId = lists[0].id;
+      }
+      cleanupNotes();
+      renderFolderFilter();
+      renderListSelector();
+      renderWordSelection();
+      if (!silent) setShareStatus('Base élèves mise à jour.');
+    }
+
+    function getTeacherCode() {
+      const stored = localStorage.getItem(TEACHER_CODE_KEY);
+      return stored && stored.trim().length ? stored : 'prof';
+    }
+
+    function renderTeacherAccess() {
+      if (!teacherLockedCard || !teacherContent) return;
+      teacherLockedCard.style.display = teacherUnlocked ? 'none' : 'block';
+      teacherContent.style.display = teacherUnlocked ? 'block' : 'none';
+      if (!teacherUnlocked && teacherLockStatus) {
+        setStatus(teacherLockStatus, '');
+      }
+      if (!teacherUnlocked) teacherCodeInput.value = '';
+    }
+
+    function tryUnlockTeacher() {
+      const code = (teacherCodeInput.value || '').trim();
+      if (!code) {
+        setStatus(teacherLockStatus, 'Ajoute le code prof.', false);
+        return;
+      }
+      if (code === getTeacherCode()) {
+        teacherUnlocked = true;
+        setStatus(teacherLockStatus, 'Espace prof déverrouillé.', true);
+        renderTeacherAccess();
+      } else {
+        setStatus(teacherLockStatus, 'Code incorrect.', false);
+      }
+    }
+
+    function lockTeacher() {
+      teacherUnlocked = false;
+      renderTeacherAccess();
+      setShareStatus('Espace prof verrouillé.');
+    }
+
+    function updateTeacherCode() {
+      const newCode = (teacherNewCodeInput.value || '').trim();
+      if (!newCode) {
+        setShareStatus('Ajoute un nouveau code avant d\'enregistrer.', false);
+        return;
+      }
+      localStorage.setItem(TEACHER_CODE_KEY, newCode);
+      teacherNewCodeInput.value = '';
+      setShareStatus('Nouveau code prof enregistré.');
+    }
+
+    function getSharePayload() {
+      return {
+        version: 1,
+        generatedAt: new Date().toISOString(),
+        lists: cloneLists(lists)
+      };
+    }
+
+    function importSharedData(payload, statusTarget = setStudentStatus) {
+      if (!payload || !Array.isArray(payload.lists)) {
+        statusTarget('Données invalides.', false);
+        return;
+      }
+      lists = cloneLists(payload.lists);
+      savePublishedLists();
+      if (!lists.length) lists = [defaultList];
+      currentFolderFilter = 'all';
+      if (!lists.find((l) => l.id === currentListId)) {
+        currentListId = lists[0].id;
+      }
+      teacherLists = cloneLists(lists);
+      saveTeacherLists();
+      cleanupNotes();
+      renderFolderFilter();
+      renderListSelector();
+      renderExistingLists();
+      renderWordSelection();
+      statusTarget('Listes mises à jour.', true);
+    }
+
+    function copyShareCode() {
+      const code = encodeSharePayload(getSharePayload());
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code)
+          .then(() => setShareStatus('Code copié, envoyez-le aux élèves.'))
+          .catch(() => {
+            prompt('Code de partage (copiez-le manuellement)', code);
+            setShareStatus('Copie automatique impossible, code affiché.', false);
+          });
+      } else {
+        prompt('Code de partage (copiez-le manuellement)', code);
+        setShareStatus('Copie non supportée par ce navigateur, code affiché.', false);
+      }
+    }
+
+    function downloadShareJson() {
+      const payload = getSharePayload();
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'voc-listes.json';
+      a.click();
+      URL.revokeObjectURL(url);
+      setShareStatus('Fichier exporté.');
+    }
+
+    function importFromCode(code, statusTarget = setStudentStatus) {
+      if (!code) {
+        statusTarget('Ajoute un code valide.', false);
+        return;
+      }
+      try {
+        const payload = decodeSharePayload(code.trim());
+        importSharedData(payload, statusTarget);
+      } catch (e) {
+        statusTarget('Code invalide ou incomplet.', false);
+      }
+    }
+
+    function importFromFile(file, statusTarget = setStudentStatus) {
+      if (!file) {
+        statusTarget('Choisis un fichier .json.', false);
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        try {
+          const payload = JSON.parse(event.target.result);
+          importSharedData(payload, statusTarget);
+        } catch (e) {
+          statusTarget('Fichier invalide.', false);
+        }
+      };
+      reader.readAsText(file);
+    }
+
     function renderExistingLists() {
       existingListsEl.innerHTML = '';
-      lists.forEach((list) => {
+      teacherLists.forEach((list) => {
         const row = document.createElement('div');
         row.className = 'list-item';
         const meta = document.createElement('div');
@@ -955,16 +1251,14 @@
     }
 
     function deleteList(id) {
-      lists = lists.filter((l) => l.id !== id);
+      teacherLists = teacherLists.filter((l) => l.id !== id);
       if (currentListId === id) currentListId = defaultList.id;
       if (editingListId === id) exitEditMode();
       delete wordNotes[id];
       saveNotes();
-      saveLists();
-      renderFolderFilter();
-      renderListSelector();
+      saveTeacherLists();
+      publishListsFromTeacher(true);
       renderExistingLists();
-      renderWordSelection();
     }
 
     function parseRawList(raw) {
@@ -983,40 +1277,36 @@
 
     function addList(name, words, folder) {
       const id = 'list-' + Date.now();
-      lists.push({ id, name, words, folder: folder || 'Sans dossier' });
+      teacherLists.push({ id, name, words, folder: folder || 'Sans dossier' });
       currentListId = id;
-      saveLists();
-      renderFolderFilter();
-      renderListSelector();
+      saveTeacherLists();
+      publishListsFromTeacher(true);
       renderExistingLists();
-      renderWordSelection();
       exitEditMode();
     }
 
     function updateList(id, name, words, folder) {
-      const target = lists.find((l) => l.id === id);
+      const target = teacherLists.find((l) => l.id === id);
       if (!target) return;
       target.name = name;
       target.folder = folder || 'Sans dossier';
       target.words = words;
       currentListId = id;
-      saveLists();
-      renderFolderFilter();
-      renderListSelector();
+      saveTeacherLists();
+      publishListsFromTeacher(true);
       renderExistingLists();
-      renderWordSelection();
       exitEditMode();
     }
 
     function duplicateList(id) {
-      const target = lists.find((l) => l.id === id);
+      const target = teacherLists.find((l) => l.id === id);
       if (!target) return;
       const cloneName = `${target.name} (copie)`;
       addList(cloneName, target.words.slice(), target.folder);
     }
 
     function loadListInForm(id) {
-      const target = lists.find((l) => l.id === id);
+      const target = teacherLists.find((l) => l.id === id);
       if (!target) return;
       editingListId = id;
       listNameInput.value = target.name;
@@ -1467,6 +1757,22 @@
     }
 
     function initEvents() {
+      if (unlockTeacherBtn) unlockTeacherBtn.addEventListener('click', tryUnlockTeacher);
+      if (lockTeacherBtn) lockTeacherBtn.addEventListener('click', lockTeacher);
+      if (updateTeacherCodeBtn) updateTeacherCodeBtn.addEventListener('click', updateTeacherCode);
+      if (copyShareCodeBtn) copyShareCodeBtn.addEventListener('click', copyShareCode);
+      if (downloadShareJsonBtn) downloadShareJsonBtn.addEventListener('click', downloadShareJson);
+      if (publishNowBtn) publishNowBtn.addEventListener('click', () => publishListsFromTeacher(false));
+      if (applyShareCodeBtn) applyShareCodeBtn.addEventListener('click', () => importFromCode(studentShareCodeInput.value, setStudentStatus));
+      if (applyShareFileBtn) applyShareFileBtn.addEventListener('click', () => importFromFile(studentFileInput.files[0], setStudentStatus));
+      if (studentFileInput) {
+        studentFileInput.addEventListener('change', () => {
+          if (studentFileInput.files.length) {
+            setStudentStatus(`${studentFileInput.files[0].name} sélectionné(e).`);
+          }
+        });
+      }
+
       folderFilter.addEventListener('change', () => {
         currentFolderFilter = folderFilter.value;
         renderListSelector();
@@ -1546,12 +1852,17 @@
     }
 
     function bootstrap() {
-      loadLists();
+      loadTeacherLists();
+      loadPublishedLists();
+      teacherLists = cloneLists(lists);
+      saveTeacherLists();
       loadNotes();
+      cleanupNotes();
       renderFolderFilter();
       renderListSelector();
       renderExistingLists();
       renderWordSelection();
+      renderTeacherAccess();
       initTabs();
       initEvents();
     }
