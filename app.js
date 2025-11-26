@@ -554,40 +554,53 @@ function getSelectedWords() {
 }
 
 // Jeu
-function chunkStringWithSpaces(str) {
+const alphabet = 'abcdefghijklmnopqrstuvwxyzäöüß';
+const alphabetExtended = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzäöüß ';
+
+function chunkWordForPassive(word) {
   const chunks = [];
-  let i = 0;
-  while (i < str.length) {
-    const remaining = str.length - i;
-    let size = remaining % 3 === 1 ? 2 : 3;
-    if (remaining <= 3) size = remaining;
-    chunks.push(str.slice(i, i + size));
-    i += size;
+  const trimmed = word.trim();
+  if (!trimmed.length) return chunks;
+  // première lettre seule
+  chunks.push(trimmed[0]);
+  let rest = trimmed.slice(1);
+  while (rest.length) {
+    const size = Math.min(3, Math.max(1, Math.floor(Math.random() * 3) + 1, rest.length));
+    chunks.push(rest.slice(0, size));
+    rest = rest.slice(size);
   }
   return chunks;
 }
 
-const alphabet = 'abcdefghijklmnopqrstuvwxyzäöüß';
-const alphabetExtended = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzäöüß ';
+function buildIntruderPool(words, exclude) {
+  const pool = [];
+  (words || []).forEach((w) => {
+    if (!w) return;
+    const val = typeof w === 'string' ? w : `${w.french || ''}${w.german || ''}`;
+    if (exclude && val === exclude) return;
+    pool.push(...Array.from(val.replace(/\s+/g, '')));
+  });
+  return pool;
+}
 
-function randomChunk(len) {
+function randomIntruderChunk(pool, len) {
+  if (!pool.length) return null;
   let res = '';
   for (let i = 0; i < len; i++) {
-    res += alphabetExtended[Math.floor(Math.random() * alphabetExtended.length)];
+    res += pool[Math.floor(Math.random() * pool.length)];
   }
   return res;
 }
 
-function buildChunks(word) {
+function buildChunks(word, contextWords = []) {
   const trimmed = word.trim();
-  const chunks = chunkStringWithSpaces(trimmed);
+  const chunks = chunkWordForPassive(trimmed);
   const options = [...chunks];
+  const pool = buildIntruderPool(contextWords, trimmed);
   while (options.length < chunks.length + 3) {
-    const size = Math.random() > 0.5 ? 3 : 2;
-    const candidate = randomChunk(size);
-    if (!options.includes(candidate)) {
-      options.push(candidate);
-    }
+    const size = Math.floor(Math.random() * 3) + 1; // 1 à 3
+    const candidate = randomIntruderChunk(pool, size) || randomIntruderChunk(Array.from(alphabetExtended), size);
+    if (candidate && !options.includes(candidate)) options.push(candidate);
   }
   return { targetRaw: trimmed, targetNormalized: normalizeAnswer(trimmed), options: shuffle(options) };
 }
@@ -596,9 +609,7 @@ function buildLetters(word) {
   const raw = word.trim();
   const chars = Array.from(raw);
   const counts = {};
-  chars.forEach((c) => {
-    counts[c] = (counts[c] || 0) + 1;
-  });
+  chars.forEach((c) => { counts[c] = (counts[c] || 0) + 1; });
   const letters = [...chars];
   while (letters.length < chars.length + 3) {
     const intruder = alphabetExtended[Math.floor(Math.random() * alphabetExtended.length)];
@@ -691,7 +702,8 @@ function renderPassiveWord() {
   }
   const word = passiveQueue[currentIndex];
   germanWordEl.textContent = word.german;
-  const { targetNormalized, options } = buildChunks(word.french);
+  const currentList = lists.find((l) => l.id === currentListId);
+  const { targetNormalized, options } = buildChunks(word.french, currentList ? currentList.words : []);
   targetSanitized = targetNormalized;
   userChunkInput = '';
   chunkStack = [];
@@ -795,10 +807,9 @@ function renderActiveWord() {
   assembledActive.textContent = 'Assemble le mot allemand';
   letterButtons.innerHTML = '';
   const buttonCounts = {};
-  letters.forEach((letter) => {
-    buttonCounts[letter] = (buttonCounts[letter] || 0) + 1;
-  });
-  letters.forEach((letter) => {
+  letters.forEach((letter) => { buttonCounts[letter] = (buttonCounts[letter] || 0) + 1; });
+  const uniqueLetters = shuffle(Array.from(new Set(letters)));
+  uniqueLetters.forEach((letter) => {
     const btn = document.createElement('button');
     btn.className = 'letter-btn';
     btn.textContent = letter === ' ' ? '␣' : letter;
@@ -807,8 +818,7 @@ function renderActiveWord() {
     btn.addEventListener('click', () => {
       if (btn.classList.contains('used')) return;
       const remaining = parseInt(btn.dataset.remaining, 10);
-      const totalUsed = buttonCounts[letter] - remaining;
-      if (totalUsed >= buttonCounts[letter]) return;
+      if (remaining <= 0) return;
       userLetterInput += letter;
       letterStack.push({ letter, btn });
       assembledActive.textContent = userLetterInput;
@@ -846,7 +856,7 @@ function validateActive() {
   const isCorrect = normalizeAnswer(userLetterInput) === targetSanitized;
   activeResults[currentIndex] = isCorrect;
   if (isCorrect) {
-    activeFeedback.textContent = `Réponse : ${word.german}`;
+    activeFeedback.textContent = `${word.german}`;
     activeFeedback.className = 'feedback success';
     updateDots(activeDots, activeWords.length, currentIndex, activeResults);
     currentIndex++;
