@@ -484,7 +484,9 @@
             <div class="button-row" style="gap:8px; flex-wrap:wrap; margin-top:8px;">
               <button class="btn secondary" id="save-github-config" type="button">Sauvegarder la config</button>
               <button class="btn secondary" id="refresh-remote" type="button">Rafraîchir depuis GitHub</button>
+              <button class="btn secondary" id="download-json" type="button">Télécharger lists.json</button>
             </div>
+            <div class="inline-help">Sans token, cliquez sur “Télécharger” puis uploadez/committez <code>lists.json</code> dans le dépôt pour partager aux élèves.</div>
             <p class="muted" id="sync-status"></p>
           </div>
         </div>
@@ -813,6 +815,7 @@
     const githubPathInput = document.getElementById('github-path');
     const githubTokenInput = document.getElementById('github-token');
     const saveGithubConfigBtn = document.getElementById('save-github-config');
+    const downloadJsonBtn = document.getElementById('download-json');
     const refreshRemoteBtn = document.getElementById('refresh-remote');
     const syncStatus = document.getElementById('sync-status');
 
@@ -1034,6 +1037,18 @@
       setStatus(syncStatus, 'Configuration GitHub sauvegardée.');
     }
 
+    async function fetchLocalLists() {
+      try {
+        const res = await fetch('./lists.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('local_fetch_failed');
+        const payload = await res.json();
+        if (!payload || !Array.isArray(payload.lists)) throw new Error('local_bad_payload');
+        return payload;
+      } catch (e) {
+        return null;
+      }
+    }
+
     function githubContentUrl() {
       return `https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${githubConfig.path}?ref=${githubConfig.branch}`;
     }
@@ -1091,6 +1106,24 @@
       };
     }
 
+    function applyRemotePayload(payload, label = 'source') {
+      if (!payload || !Array.isArray(payload.lists)) return false;
+      lists = ensureDefaultPresence(cloneLists(payload.lists || []));
+      teacherLists = cloneLists(lists);
+      saveTeacherLists();
+      savePublishedLists();
+      if (!lists.find((l) => l.id === currentListId) && lists.length) {
+        currentListId = lists[0].id;
+      }
+      cleanupNotes();
+      renderFolderFilter();
+      renderListSelector();
+      renderExistingLists();
+      renderWordSelection();
+      setStatus(syncStatus, `Listes chargées depuis ${label}.`);
+      return true;
+    }
+
     function cleanupNotes() {
       const validIds = new Set(lists.map((l) => l.id));
       Object.keys(wordNotes).forEach((id) => {
@@ -1135,19 +1168,7 @@
       try {
         setStatus(syncStatus, 'Chargement depuis GitHub...');
         const { payload } = await fetchRemoteLists();
-        lists = ensureDefaultPresence(cloneLists(payload.lists || []));
-        teacherLists = cloneLists(lists);
-        saveTeacherLists();
-        savePublishedLists();
-        if (!lists.find((l) => l.id === currentListId) && lists.length) {
-          currentListId = lists[0].id;
-        }
-        cleanupNotes();
-        renderFolderFilter();
-        renderListSelector();
-        renderExistingLists();
-        renderWordSelection();
-        setStatus(syncStatus, 'Listes à jour depuis GitHub.');
+        applyRemotePayload(payload, 'GitHub');
       } catch (e) {
         setStatus(syncStatus, 'Impossible de charger GitHub, utilisation locale.', false);
         publishListsFromTeacher(true);
@@ -1746,6 +1767,17 @@
         saveGithubConfig();
         syncFromGithub();
       });
+      if (downloadJsonBtn) downloadJsonBtn.addEventListener('click', () => {
+        const payload = getRemotePayload();
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'lists.json';
+        a.click();
+        URL.revokeObjectURL(url);
+        setStatus(syncStatus, 'lists.json téléchargé. Commitez-le sur GitHub pour partager.');
+      });
 
       folderFilter.addEventListener('change', () => {
         currentFolderFilter = folderFilter.value;
@@ -1840,6 +1872,10 @@
       renderTeacherAccess();
       initTabs();
       initEvents();
+      // 1) Essaye de charger lists.json local (servi par le dépôt / GitHub Pages)
+      const localPayload = await fetchLocalLists();
+      if (localPayload) applyRemotePayload(localPayload, 'lists.json local');
+      // 2) Si config GitHub remplie, surcharge avec GitHub
       await syncFromGithub();
     }
 
