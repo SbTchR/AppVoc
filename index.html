@@ -55,8 +55,7 @@
         <div id="passive-screen" class="card game-card" style="display:none;">
           <div class="card-title">
             <div>
-              <p class="eyebrow">Phase 1</p>
-              <h3>Apprentissage passif</h3>
+                    <h3>Phase 1 : <span id="passive-step-label"></span></h3>
             </div>
             <div class="button-row">
               <button class="btn secondary" id="back-to-list-passive">Quitter</button>
@@ -64,16 +63,14 @@
           </div>
           <div class="progress-label">
             <span id="passive-step-label"></span>
-            <span id="passive-count"></span>
           </div>
           <div class="progress-shell"><div class="progress-fill" id="passive-progress"></div></div>
           <div class="step-dots" id="passive-dots"></div>
           <div class="word-display" id="german-word"></div>
-          <div class="muted">Compose la traduction en cliquant sur des blocs de 2-3 lettres. 3 intrus se cachent dedans.</div>
-          <div class="assembled" id="assembled-passive"></div>
+           <div class="assembled" id="assembled-passive"></div>
           <div class="chunk-buttons" id="chunk-buttons"></div>
           <div class="button-row">
-            <button class="btn secondary" id="undo-chunk">Retirer le dernier bloc</button>
+            <button class="btn secondary" id="undo-chunk">Effacer</button>
             <button class="btn" id="validate-passive">Valider</button>
           </div>
           <div class="feedback" id="passive-feedback"></div>
@@ -82,21 +79,17 @@
         <div id="active-screen" class="card game-card" style="display:none;">
           <div class="card-title">
             <div>
-              <p class="eyebrow">Phase 2</p>
-              <h3>Apprentissage actif</h3>
+              <h3>Phase 2 : <span id="active-step-label"></span></h3>
             </div>
             <div class="button-row">
               <button class="btn secondary" id="back-to-list-active">Quitter</button>
             </div>
           </div>
           <div class="progress-label">
-            <span id="active-step-label"></span>
-            <span id="active-count"></span>
           </div>
           <div class="progress-shell"><div class="progress-fill" id="active-progress"></div></div>
           <div class="step-dots" id="active-dots"></div>
           <div class="word-display" id="french-word"></div>
-          <div class="muted">Assemble le mot allemand lettre par lettre. Les espaces sont ajoutés automatiquement.</div>
           <div class="assembled" id="assembled-active"></div>
           <div class="letter-buttons" id="letter-buttons"></div>
           <div class="button-row">
@@ -109,15 +102,19 @@
         <div id="final-screen" class="card final-screen" style="display:none;">
           <div class="trophy">🏆</div>
           <h2>Bravo !</h2>
-          <p class="muted" id="final-message"></p>
+          <br>
+          <p id="final-message"></p>
+          <br>
           <p id="timer-result"></p>
           <div class="button-row" style="justify-content:center; margin-top:12px;">
             <button class="btn" id="restart">Revenir à la sélection</button>
           </div>
         </div>
       </section>
+      <div>© S.Bovat</div>
     </main>
   </div>
+  <div> </div>
 
   <script src="./app.js" defer></script>
 </body>

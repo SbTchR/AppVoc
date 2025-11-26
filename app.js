@@ -799,7 +799,7 @@ function finishSession() {
   const seconds = elapsed % 60;
   timerResult.textContent = `Temps : ${minutes} min ${seconds < 10 ? '0' : ''}${seconds} sec`;
   const total = passiveWords.length + activeWords.length;
-  finalMessage.textContent = `${total} passage(s) validé(s). Tu peux rejouer ou changer de liste.`;
+  finalMessage.textContent = `${total} mot(s) validé(s). Tu peux rejouer ou changer de liste.`;
 }
 
 function backToList() {

@@ -42,18 +42,18 @@ body {
 
 .logo {
   font-weight: 700;
-  font-size: 22px;
-  letter-spacing: 0.5px;
-  padding: 10px 14px;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  padding: 8px 12px;
   border-radius: 12px;
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(34, 197, 94, 0.14));
   border: 1px solid #dbeafe;
   box-shadow: var(--shadow);
 }
 
-.top-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.top-actions { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .pill-link {
-  padding: 10px 14px;
+  padding: 8px 12px;
   border-radius: 12px;
   background: #e2e8f0;
   color: var(--text);
@@ -272,7 +272,7 @@ textarea { min-height: 140px; resize: vertical; }
 .chunk-btn:hover, .letter-btn:hover { border-color: rgba(37, 99, 235, 0.4); transform: translateY(-1px); }
 .chunk-btn.used, .letter-btn.used { opacity: 0.4; filter: grayscale(0.3); transform: none; }
 
-.step-dots { display: flex; gap: 6px; flex-wrap: wrap; }
+.step-dots { display: flex; gap: 6px; flex-wrap: wrap; margin-top:10px}
 .dot {
   width: 12px;
   height: 12px;
