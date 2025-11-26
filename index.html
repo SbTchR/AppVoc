@@ -465,8 +465,25 @@
               <button class="btn secondary" id="lock-teacher" type="button">Verrouiller</button>
             </div>
             <div id="existing-lists"></div>
-            <div class="button-row" style="margin-top:10px;">
-              <button class="btn secondary" id="refresh-remote" type="button">Rafraîchir depuis le cloud</button>
+            <div class="divider"></div>
+            <div class="field">
+              <label>Synchronisation GitHub (lecture/écriture du fichier JSON)</label>
+              <div class="button-row" style="gap:8px; flex-wrap:wrap;">
+                <input type="text" id="github-owner" placeholder="Utilisateur/Organisation" style="flex:1; min-width:160px;">
+                <input type="text" id="github-repo" placeholder="Nom du dépôt" style="flex:1; min-width:160px;">
+              </div>
+              <div class="button-row" style="gap:8px; flex-wrap:wrap; margin-top:8px;">
+                <input type="text" id="github-branch" placeholder="Branche (ex: main)" style="flex:1; min-width:140px;">
+                <input type="text" id="github-path" placeholder="Chemin du JSON (ex: lists.json)" style="flex:1; min-width:160px;">
+              </div>
+              <div class="button-row" style="gap:8px; flex-wrap:wrap; margin-top:8px;">
+                <input type="password" id="github-token" placeholder="Token GitHub (écriture)" style="flex:1; min-width:200px;">
+              </div>
+              <div class="inline-help">Le token n'est stocké qu'en local (localStorage). Requis uniquement pour écrire sur GitHub.</div>
+            </div>
+            <div class="button-row" style="gap:8px; flex-wrap:wrap; margin-top:8px;">
+              <button class="btn secondary" id="save-github-config" type="button">Sauvegarder la config</button>
+              <button class="btn secondary" id="refresh-remote" type="button">Rafraîchir depuis GitHub</button>
             </div>
             <p class="muted" id="sync-status"></p>
           </div>
@@ -582,9 +599,7 @@
     const PUBLISHED_KEY = 'voc-app-published-v1';
     const TEACHER_CODE_KEY = 'voc-app-teacher-code-v1';
     const NOTES_KEY = 'voc-app-notes-v1';
-    // Point d'échange commun (JsonBlob public). Si besoin, remplacez par votre propre ID.
-    const REMOTE_BLOB_ID = '019abf29-cd86-7c58-b458-d3470b75faca';
-    const REMOTE_URL = `https://jsonblob.com/api/jsonBlob/${REMOTE_BLOB_ID}`;
+    const GITHUB_CONF_KEY = 'voc-app-github-conf-v1';
 
     const defaultWords = [
       { french: "l'école", german: "die Schule" },
@@ -735,6 +750,7 @@
     let editingListId = null;
     let colorPaletteEnabled = false;
     let teacherUnlocked = false;
+    let githubConfig = { owner: '', repo: '', branch: 'main', path: 'lists.json', token: '' };
 
     const teacherTab = document.getElementById('teacher');
     const studentTab = document.getElementById('student');
@@ -791,6 +807,14 @@
     const lockTeacherBtn = document.getElementById('lock-teacher');
     const refreshRemoteBtn = document.getElementById('refresh-remote');
     const syncStatus = document.getElementById('sync-status');
+    const githubOwnerInput = document.getElementById('github-owner');
+    const githubRepoInput = document.getElementById('github-repo');
+    const githubBranchInput = document.getElementById('github-branch');
+    const githubPathInput = document.getElementById('github-path');
+    const githubTokenInput = document.getElementById('github-token');
+    const saveGithubConfigBtn = document.getElementById('save-github-config');
+    const refreshRemoteBtn = document.getElementById('refresh-remote');
+    const syncStatus = document.getElementById('sync-status');
 
     const alphabet = 'abcdefghijklmnopqrstuvwxyzäöüß';
     const alphabetExtended = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzäöüß ';
@@ -805,6 +829,10 @@
 
     function cloneLists(data) {
       return JSON.parse(JSON.stringify(data || []));
+    }
+
+    function toBase64(str) {
+      return btoa(unescape(encodeURIComponent(str)));
     }
 
     function shuffle(array) {
@@ -979,20 +1007,80 @@
       el.style.color = message ? (success ? '#166534' : '#b91c1c') : '';
     }
 
+    function loadGithubConfig() {
+      const stored = localStorage.getItem(GITHUB_CONF_KEY);
+      if (stored) {
+        try {
+          const parsed = JSON.parse(stored);
+          githubConfig = { ...githubConfig, ...parsed };
+        } catch (e) {
+          console.warn('Config GitHub illisible, on ignore.');
+        }
+      }
+      if (githubOwnerInput) githubOwnerInput.value = githubConfig.owner || '';
+      if (githubRepoInput) githubRepoInput.value = githubConfig.repo || '';
+      if (githubBranchInput) githubBranchInput.value = githubConfig.branch || 'main';
+      if (githubPathInput) githubPathInput.value = githubConfig.path || 'lists.json';
+      if (githubTokenInput) githubTokenInput.value = githubConfig.token || '';
+    }
+
+    function saveGithubConfig() {
+      githubConfig.owner = (githubOwnerInput.value || '').trim();
+      githubConfig.repo = (githubRepoInput.value || '').trim();
+      githubConfig.branch = (githubBranchInput.value || '').trim() || 'main';
+      githubConfig.path = (githubPathInput.value || '').trim() || 'lists.json';
+      githubConfig.token = (githubTokenInput.value || '').trim();
+      localStorage.setItem(GITHUB_CONF_KEY, JSON.stringify(githubConfig));
+      setStatus(syncStatus, 'Configuration GitHub sauvegardée.');
+    }
+
+    function githubContentUrl() {
+      return `https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${githubConfig.path}?ref=${githubConfig.branch}`;
+    }
+
     async function fetchRemoteLists() {
-      const res = await fetch(REMOTE_URL, { cache: 'no-store' });
+      if (!githubConfig.owner || !githubConfig.repo || !githubConfig.path) throw new Error('missing_conf');
+      const res = await fetch(githubContentUrl(), {
+        headers: githubConfig.token ? { Authorization: `Bearer ${githubConfig.token}` } : {}
+      });
+      if (res.status === 404) throw new Error('not_found');
       if (!res.ok) throw new Error('fetch_failed');
-      const payload = await res.json();
-      if (!payload || !Array.isArray(payload.lists)) throw new Error('bad_payload');
-      return payload;
+      const body = await res.json();
+      if (!body.content) throw new Error('bad_payload');
+      const decoded = decodeURIComponent(escape(atob(body.content)));
+      const payload = JSON.parse(decoded);
+      return { payload, sha: body.sha };
     }
 
     async function pushRemoteLists(payload) {
-      await fetch(REMOTE_URL, {
+      if (!githubConfig.owner || !githubConfig.repo || !githubConfig.path || !githubConfig.token) {
+        throw new Error('missing_conf');
+      }
+      // Fetch current sha to avoid conflicts
+      let currentSha = null;
+      try {
+        const metaRes = await fetch(githubContentUrl(), {
+          headers: { Authorization: `Bearer ${githubConfig.token}` }
+        });
+        if (metaRes.ok) {
+          const meta = await metaRes.json();
+          currentSha = meta.sha;
+        }
+      } catch (e) {
+        // ignore
+      }
+      const content = toBase64(JSON.stringify(payload, null, 2));
+      const res = await fetch(githubContentUrl(), {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${githubConfig.token}` },
+        body: JSON.stringify({
+          message: 'Update vocab lists',
+          content,
+          branch: githubConfig.branch || 'main',
+          sha: currentSha || undefined
+        })
       });
+      if (!res.ok) throw new Error('push_failed');
     }
 
     function getRemotePayload() {
@@ -1025,18 +1113,28 @@
     }
 
     async function pushRemoteSilently() {
+      if (!githubConfig.token || !githubConfig.owner || !githubConfig.repo || !githubConfig.path) {
+        setStatus(syncStatus, 'Config GitHub manquante pour pousser.', false);
+        return;
+      }
       try {
         await pushRemoteLists(getRemotePayload());
-        setStatus(syncStatus, 'Synchronisé avec le cloud.');
+        setStatus(syncStatus, 'Synchronisé sur GitHub.');
       } catch (e) {
-        setStatus(syncStatus, 'Synchronisation impossible (hors-ligne ?).', false);
+        setStatus(syncStatus, 'Synchronisation GitHub impossible.', false);
       }
     }
 
-    async function syncFromRemote() {
+    async function syncFromGithub() {
+      if (!githubConfig.owner || !githubConfig.repo || !githubConfig.path) {
+        setStatus(syncStatus, 'Config GitHub incomplète, utilisation locale.', false);
+        publishListsFromTeacher(true);
+        renderExistingLists();
+        return;
+      }
       try {
-        setStatus(syncStatus, 'Chargement depuis le cloud...');
-        const payload = await fetchRemoteLists();
+        setStatus(syncStatus, 'Chargement depuis GitHub...');
+        const { payload } = await fetchRemoteLists();
         lists = ensureDefaultPresence(cloneLists(payload.lists || []));
         teacherLists = cloneLists(lists);
         saveTeacherLists();
@@ -1049,9 +1147,9 @@
         renderListSelector();
         renderExistingLists();
         renderWordSelection();
-        setStatus(syncStatus, 'Listes à jour depuis le cloud.');
+        setStatus(syncStatus, 'Listes à jour depuis GitHub.');
       } catch (e) {
-        setStatus(syncStatus, 'Impossible de charger le cloud, utilisation locale.', false);
+        setStatus(syncStatus, 'Impossible de charger GitHub, utilisation locale.', false);
         publishListsFromTeacher(true);
         renderExistingLists();
       }
@@ -1643,7 +1741,11 @@
     function initEvents() {
       if (unlockTeacherBtn) unlockTeacherBtn.addEventListener('click', tryUnlockTeacher);
       if (lockTeacherBtn) lockTeacherBtn.addEventListener('click', lockTeacher);
-      if (refreshRemoteBtn) refreshRemoteBtn.addEventListener('click', syncFromRemote);
+      if (refreshRemoteBtn) refreshRemoteBtn.addEventListener('click', syncFromGithub);
+      if (saveGithubConfigBtn) saveGithubConfigBtn.addEventListener('click', () => {
+        saveGithubConfig();
+        syncFromGithub();
+      });
 
       folderFilter.addEventListener('change', () => {
         currentFolderFilter = folderFilter.value;
@@ -1725,6 +1827,7 @@
 
     async function bootstrap() {
       loadTeacherLists();
+      loadGithubConfig();
       loadPublishedLists();
       teacherLists = cloneLists(lists);
       saveTeacherLists();
@@ -1737,7 +1840,7 @@
       renderTeacherAccess();
       initTabs();
       initEvents();
-      await syncFromRemote();
+      await syncFromGithub();
     }
 
     bootstrap().catch((e) => {
