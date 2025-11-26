@@ -194,6 +194,7 @@ const overlayCountdown = document.getElementById('overlay-countdown');
 let overlayTimeout = null;
 let overlayInterval = null;
 const ERROR_DELAY = 3500;
+let inputLocked = false;
 
 // Utilitaires
 function safeParse(key, fallback) {
@@ -301,11 +302,13 @@ function hideOverlay() {
   if (overlayInterval) clearInterval(overlayInterval);
   overlayTimeout = null;
   overlayInterval = null;
+  inputLocked = false;
 }
 
 function showOverlay(src, dst, success, onDone) {
   if (!overlay) { onDone && onDone(); return; }
   hideOverlay();
+  inputLocked = true;
   overlay.classList.remove('hidden');
   overlay.style.pointerEvents = 'auto';
   if (overlaySrc) overlaySrc.textContent = src || '';
@@ -643,6 +646,7 @@ function resetGameViews() {
   activeResults = [];
   passiveErrorThisRound = false;
   activeErrorThisRound = false;
+  inputLocked = false;
   hideOverlay();
 }
 
@@ -670,8 +674,17 @@ function renderPassiveWord() {
       currentIndex = 0;
       passiveErrorThisRound = false;
       passiveFeedback.textContent = 'On recommence tous les mots jusqu’à 100% correct.';
+      chunkButtons.innerHTML = '';
+      assembledPassive.textContent = '';
       updateDots(passiveDots, passiveWords.length, currentIndex, passiveResults);
       updateProgress(passiveProgress, passiveStepLabel, passiveCount, currentIndex, passiveWords.length, 'Passif');
+      inputLocked = true;
+      setTimeout(() => {
+        passiveFeedback.textContent = '';
+        inputLocked = false;
+        renderPassiveWord();
+      }, 1000);
+      return;
     } else {
       if (activeWords.length > 0) {
         startActivePhase();
@@ -719,22 +732,25 @@ function undoChunk() {
 }
 
 function validatePassive() {
+  if (inputLocked) return;
   const word = passiveQueue[currentIndex];
   const isCorrect = normalizeAnswer(userChunkInput) === targetSanitized;
   passiveResults[currentIndex] = isCorrect;
   if (isCorrect) {
-    passiveFeedback.textContent = `Réponse : ${word.french}`;
+    passiveFeedback.textContent = `${word.french}`;
     passiveFeedback.className = 'feedback success';
     updateDots(passiveDots, passiveWords.length, currentIndex, passiveResults);
     currentIndex++;
+    inputLocked = true;
     setTimeout(() => {
       passiveFeedback.textContent = '';
+      inputLocked = false;
       renderPassiveWord();
     }, 1000);
     return;
   } else {
-    passiveFeedback.textContent = `${word.french}`;
-    passiveFeedback.className = 'feedback error answer';
+    passiveFeedback.textContent = ``;
+    passiveFeedback.className = 'feedback';
     passiveErrorThisRound = true;
     showOverlay(word.german, word.french, false, () => {
       updateDots(passiveDots, passiveWords.length, currentIndex, passiveResults);
@@ -764,8 +780,17 @@ function renderActiveWord() {
       currentIndex = 0;
       activeErrorThisRound = false;
       activeFeedback.textContent = 'On recommence tous les mots jusqu’à 100% correct.';
+      letterButtons.innerHTML = '';
+      assembledActive.textContent = '';
       updateDots(activeDots, activeWords.length, currentIndex, activeResults);
       updateProgress(activeProgress, activeStepLabel, activeCount, currentIndex, activeWords.length, 'Actif');
+      inputLocked = true;
+      setTimeout(() => {
+        activeFeedback.textContent = '';
+        inputLocked = false;
+        renderActiveWord();
+      }, 1000);
+      return;
     } else {
       finishSession();
       return;
@@ -826,6 +851,7 @@ function eraseLetter() {
 }
 
 function validateActive() {
+  if (inputLocked) return;
   const word = activeQueue[currentIndex];
   const isCorrect = normalizeAnswer(userLetterInput) === targetSanitized;
   activeResults[currentIndex] = isCorrect;
@@ -834,14 +860,16 @@ function validateActive() {
     activeFeedback.className = 'feedback success';
     updateDots(activeDots, activeWords.length, currentIndex, activeResults);
     currentIndex++;
+    inputLocked = true;
     setTimeout(() => {
       activeFeedback.textContent = '';
+      inputLocked = false;
       renderActiveWord();
     }, 1000);
     return;
   } else {
-    activeFeedback.textContent = `${word.german}`;
-    activeFeedback.className = 'feedback error answer';
+    activeFeedback.textContent = ``;
+    activeFeedback.className = 'feedback';
     activeErrorThisRound = true;
     showOverlay(word.french, word.german, false, () => {
       updateDots(activeDots, activeWords.length, currentIndex, activeResults);
