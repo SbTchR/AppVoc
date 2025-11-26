@@ -465,6 +465,10 @@
               <button class="btn secondary" id="lock-teacher" type="button">Verrouiller</button>
             </div>
             <div id="existing-lists"></div>
+            <div class="button-row" style="margin-top:10px;">
+              <button class="btn secondary" id="refresh-remote" type="button">Rafraîchir depuis le cloud</button>
+            </div>
+            <p class="muted" id="sync-status"></p>
           </div>
         </div>
       </section>
@@ -578,6 +582,9 @@
     const PUBLISHED_KEY = 'voc-app-published-v1';
     const TEACHER_CODE_KEY = 'voc-app-teacher-code-v1';
     const NOTES_KEY = 'voc-app-notes-v1';
+    // Point d'échange commun (JsonBlob public). Si besoin, remplacez par votre propre ID.
+    const REMOTE_BLOB_ID = '019abf29-cd86-7c58-b458-d3470b75faca';
+    const REMOTE_URL = `https://jsonblob.com/api/jsonBlob/${REMOTE_BLOB_ID}`;
 
     const defaultWords = [
       { french: "l'école", german: "die Schule" },
@@ -782,6 +789,8 @@
     const unlockTeacherBtn = document.getElementById('unlock-teacher');
     const teacherLockStatus = document.getElementById('teacher-lock-status');
     const lockTeacherBtn = document.getElementById('lock-teacher');
+    const refreshRemoteBtn = document.getElementById('refresh-remote');
+    const syncStatus = document.getElementById('sync-status');
 
     const alphabet = 'abcdefghijklmnopqrstuvwxyzäöüß';
     const alphabetExtended = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzäöüß ';
@@ -856,15 +865,18 @@
       return { targetRaw: raw, targetNormalized: normalizeAnswer(raw), letters: shuffle(letters), counts };
     }
 
+    function ensureDefaultPresence(arr) {
+      const hasDefault = arr.find((l) => l.id === defaultList.id);
+      if (!hasDefault) {
+        return [defaultList, ...arr];
+      }
+      return arr;
+    }
+
     function loadTeacherLists() {
       const stored = localStorage.getItem(STORAGE_KEY);
       teacherLists = stored ? JSON.parse(stored) : [];
-      const existingDefault = teacherLists.find((l) => l.id === defaultList.id);
-      if (!existingDefault) {
-        teacherLists.unshift(defaultList);
-      } else if (!existingDefault.folder) {
-        existingDefault.folder = defaultList.folder;
-      }
+      teacherLists = ensureDefaultPresence(teacherLists);
       saveTeacherLists();
     }
 
@@ -875,12 +887,10 @@
     function loadPublishedLists() {
       const stored = localStorage.getItem(PUBLISHED_KEY);
       lists = stored ? JSON.parse(stored) : [];
-      const existingDefault = lists.find((l) => l.id === defaultList.id);
       if (!lists.length) {
         lists = cloneLists(teacherLists.length ? teacherLists : [defaultList]);
-      } else if (!existingDefault) {
-        lists.unshift(defaultList);
       }
+      lists = ensureDefaultPresence(lists);
       savePublishedLists();
     }
 
@@ -969,6 +979,30 @@
       el.style.color = message ? (success ? '#166534' : '#b91c1c') : '';
     }
 
+    async function fetchRemoteLists() {
+      const res = await fetch(REMOTE_URL, { cache: 'no-store' });
+      if (!res.ok) throw new Error('fetch_failed');
+      const payload = await res.json();
+      if (!payload || !Array.isArray(payload.lists)) throw new Error('bad_payload');
+      return payload;
+    }
+
+    async function pushRemoteLists(payload) {
+      await fetch(REMOTE_URL, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    }
+
+    function getRemotePayload() {
+      return {
+        version: 1,
+        updatedAt: new Date().toISOString(),
+        lists: cloneLists(lists)
+      };
+    }
+
     function cleanupNotes() {
       const validIds = new Set(lists.map((l) => l.id));
       Object.keys(wordNotes).forEach((id) => {
@@ -978,7 +1012,7 @@
     }
 
     function publishListsFromTeacher(silent = false) {
-      lists = cloneLists(teacherLists);
+      lists = ensureDefaultPresence(cloneLists(teacherLists));
       savePublishedLists();
       if (!lists.find((l) => l.id === currentListId) && lists.length) {
         currentListId = lists[0].id;
@@ -987,6 +1021,40 @@
       renderFolderFilter();
       renderListSelector();
       renderWordSelection();
+      if (!silent) pushRemoteSilently();
+    }
+
+    async function pushRemoteSilently() {
+      try {
+        await pushRemoteLists(getRemotePayload());
+        setStatus(syncStatus, 'Synchronisé avec le cloud.');
+      } catch (e) {
+        setStatus(syncStatus, 'Synchronisation impossible (hors-ligne ?).', false);
+      }
+    }
+
+    async function syncFromRemote() {
+      try {
+        setStatus(syncStatus, 'Chargement depuis le cloud...');
+        const payload = await fetchRemoteLists();
+        lists = ensureDefaultPresence(cloneLists(payload.lists || []));
+        teacherLists = cloneLists(lists);
+        saveTeacherLists();
+        savePublishedLists();
+        if (!lists.find((l) => l.id === currentListId) && lists.length) {
+          currentListId = lists[0].id;
+        }
+        cleanupNotes();
+        renderFolderFilter();
+        renderListSelector();
+        renderExistingLists();
+        renderWordSelection();
+        setStatus(syncStatus, 'Listes à jour depuis le cloud.');
+      } catch (e) {
+        setStatus(syncStatus, 'Impossible de charger le cloud, utilisation locale.', false);
+        publishListsFromTeacher(true);
+        renderExistingLists();
+      }
     }
 
     function getTeacherCode() {
@@ -1073,7 +1141,7 @@
       delete wordNotes[id];
       saveNotes();
       saveTeacherLists();
-      publishListsFromTeacher(true);
+      publishListsFromTeacher(false);
       renderExistingLists();
     }
 
@@ -1096,7 +1164,7 @@
       teacherLists.push({ id, name, words, folder: folder || 'Sans dossier' });
       currentListId = id;
       saveTeacherLists();
-      publishListsFromTeacher(true);
+      publishListsFromTeacher(false);
       renderExistingLists();
       exitEditMode();
     }
@@ -1109,7 +1177,7 @@
       target.words = words;
       currentListId = id;
       saveTeacherLists();
-      publishListsFromTeacher(true);
+      publishListsFromTeacher(false);
       renderExistingLists();
       exitEditMode();
     }
@@ -1575,6 +1643,7 @@
     function initEvents() {
       if (unlockTeacherBtn) unlockTeacherBtn.addEventListener('click', tryUnlockTeacher);
       if (lockTeacherBtn) lockTeacherBtn.addEventListener('click', lockTeacher);
+      if (refreshRemoteBtn) refreshRemoteBtn.addEventListener('click', syncFromRemote);
 
       folderFilter.addEventListener('change', () => {
         currentFolderFilter = folderFilter.value;
@@ -1654,7 +1723,7 @@
       cancelEditButton.addEventListener('click', exitEditMode);
     }
 
-    function bootstrap() {
+    async function bootstrap() {
       loadTeacherLists();
       loadPublishedLists();
       teacherLists = cloneLists(lists);
@@ -1668,9 +1737,13 @@
       renderTeacherAccess();
       initTabs();
       initEvents();
+      await syncFromRemote();
     }
 
-    bootstrap();
+    bootstrap().catch((e) => {
+      console.error('Erreur au démarrage', e);
+      setStatus(syncStatus, 'Erreur au démarrage.', false);
+    });
   </script>
 </body>
 </html>
