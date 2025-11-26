@@ -466,60 +466,10 @@
             </div>
             <div id="existing-lists"></div>
           </div>
-
-          <div class="card card-compact">
-            <div class="card-title">
-              <div>
-                <p class="eyebrow">Partage</p>
-                <h3>Rendre disponible aux élèves</h3>
-                <p class="muted">Copiez un code ou un fichier à envoyer aux élèves pour qu'ils se synchronisent.</p>
-              </div>
-            </div>
-            <div class="button-row" style="gap:8px; flex-wrap:wrap;">
-              <button class="btn" id="copy-share-code" type="button">Copier le code</button>
-              <button class="btn secondary" id="download-share-json" type="button">Exporter (.json)</button>
-              <button class="btn secondary" id="publish-now" type="button">Mettre à jour la base élèves</button>
-            </div>
-            <div class="field">
-              <label for="teacher-new-code">Changer le code prof</label>
-              <div class="button-row" style="gap:8px; flex-wrap:wrap;">
-                <input type="password" id="teacher-new-code" placeholder="Nouveau code" style="flex:1; min-width:180px;" />
-                <button class="btn secondary" id="update-teacher-code" type="button">Enregistrer</button>
-              </div>
-              <div class="inline-help">Stocké localement sur chaque appareil. Laissez vide pour garder le code actuel.</div>
-            </div>
-            <p class="muted" id="share-status"></p>
-          </div>
         </div>
       </section>
 
       <section id="student" class="tab-panel active">
-        <div class="card card-compact" id="student-sync-card">
-          <div class="card-title">
-            <div>
-              <p class="eyebrow">Synchronisation</p>
-              <h3>Charger les listes du prof</h3>
-              <p class="muted">Colle le code ou importe le fichier envoyé par le prof pour récupérer toutes les listes.</p>
-            </div>
-          </div>
-          <div class="field">
-            <label for="student-share-code">Code de partage</label>
-            <div class="button-row" style="gap:8px; flex-wrap:wrap;">
-              <input type="text" id="student-share-code" placeholder="Coller le code ici" style="flex:1; min-width:180px;" />
-              <button class="btn secondary" id="apply-share-code" type="button">Importer le code</button>
-            </div>
-          </div>
-          <div class="field">
-            <label for="student-file-input">Fichier JSON</label>
-            <div class="button-row" style="gap:8px; flex-wrap:wrap; align-items:center;">
-              <input type="file" id="student-file-input" accept="application/json" style="flex:1;" />
-              <button class="btn secondary" id="apply-share-file" type="button">Importer le fichier</button>
-            </div>
-            <div class="inline-help">Fichier typique : <code>voc-listes.json</code> généré par l'espace prof.</div>
-          </div>
-          <p class="muted" id="student-sync-status"></p>
-        </div>
-
         <div class="card" id="selection-card">
           <div class="card-title">
             <div>
@@ -832,17 +782,6 @@
     const unlockTeacherBtn = document.getElementById('unlock-teacher');
     const teacherLockStatus = document.getElementById('teacher-lock-status');
     const lockTeacherBtn = document.getElementById('lock-teacher');
-    const teacherNewCodeInput = document.getElementById('teacher-new-code');
-    const updateTeacherCodeBtn = document.getElementById('update-teacher-code');
-    const copyShareCodeBtn = document.getElementById('copy-share-code');
-    const downloadShareJsonBtn = document.getElementById('download-share-json');
-    const publishNowBtn = document.getElementById('publish-now');
-    const shareStatus = document.getElementById('share-status');
-    const studentShareCodeInput = document.getElementById('student-share-code');
-    const applyShareCodeBtn = document.getElementById('apply-share-code');
-    const studentFileInput = document.getElementById('student-file-input');
-    const applyShareFileBtn = document.getElementById('apply-share-file');
-    const studentSyncStatus = document.getElementById('student-sync-status');
 
     const alphabet = 'abcdefghijklmnopqrstuvwxyzäöüß';
     const alphabetExtended = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzäöüß ';
@@ -853,21 +792,6 @@
         .replace(/[\u0300-\u036f]/g, '')
         .toLowerCase()
         .replace(/[\s'’\-.,;:!?]/g, '');
-    }
-
-    function encodeSharePayload(payload) {
-      const encoder = new TextEncoder();
-      const bytes = encoder.encode(JSON.stringify(payload));
-      let binary = '';
-      bytes.forEach((b) => { binary += String.fromCharCode(b); });
-      return btoa(binary);
-    }
-
-    function decodeSharePayload(code) {
-      const binary = atob(code);
-      const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
-      const decoded = new TextDecoder().decode(bytes);
-      return JSON.parse(decoded);
     }
 
     function cloneLists(data) {
@@ -1045,14 +969,6 @@
       el.style.color = message ? (success ? '#166534' : '#b91c1c') : '';
     }
 
-    function setShareStatus(message, success = true) {
-      setStatus(shareStatus, message, success);
-    }
-
-    function setStudentStatus(message, success = true) {
-      setStatus(studentSyncStatus, message, success);
-    }
-
     function cleanupNotes() {
       const validIds = new Set(lists.map((l) => l.id));
       Object.keys(wordNotes).forEach((id) => {
@@ -1071,7 +987,6 @@
       renderFolderFilter();
       renderListSelector();
       renderWordSelection();
-      if (!silent) setShareStatus('Base élèves mise à jour.');
     }
 
     function getTeacherCode() {
@@ -1107,105 +1022,6 @@
     function lockTeacher() {
       teacherUnlocked = false;
       renderTeacherAccess();
-      setShareStatus('Espace prof verrouillé.');
-    }
-
-    function updateTeacherCode() {
-      const newCode = (teacherNewCodeInput.value || '').trim();
-      if (!newCode) {
-        setShareStatus('Ajoute un nouveau code avant d\'enregistrer.', false);
-        return;
-      }
-      localStorage.setItem(TEACHER_CODE_KEY, newCode);
-      teacherNewCodeInput.value = '';
-      setShareStatus('Nouveau code prof enregistré.');
-    }
-
-    function getSharePayload() {
-      return {
-        version: 1,
-        generatedAt: new Date().toISOString(),
-        lists: cloneLists(lists)
-      };
-    }
-
-    function importSharedData(payload, statusTarget = setStudentStatus) {
-      if (!payload || !Array.isArray(payload.lists)) {
-        statusTarget('Données invalides.', false);
-        return;
-      }
-      lists = cloneLists(payload.lists);
-      savePublishedLists();
-      if (!lists.length) lists = [defaultList];
-      currentFolderFilter = 'all';
-      if (!lists.find((l) => l.id === currentListId)) {
-        currentListId = lists[0].id;
-      }
-      teacherLists = cloneLists(lists);
-      saveTeacherLists();
-      cleanupNotes();
-      renderFolderFilter();
-      renderListSelector();
-      renderExistingLists();
-      renderWordSelection();
-      statusTarget('Listes mises à jour.', true);
-    }
-
-    function copyShareCode() {
-      const code = encodeSharePayload(getSharePayload());
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(code)
-          .then(() => setShareStatus('Code copié, envoyez-le aux élèves.'))
-          .catch(() => {
-            prompt('Code de partage (copiez-le manuellement)', code);
-            setShareStatus('Copie automatique impossible, code affiché.', false);
-          });
-      } else {
-        prompt('Code de partage (copiez-le manuellement)', code);
-        setShareStatus('Copie non supportée par ce navigateur, code affiché.', false);
-      }
-    }
-
-    function downloadShareJson() {
-      const payload = getSharePayload();
-      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'voc-listes.json';
-      a.click();
-      URL.revokeObjectURL(url);
-      setShareStatus('Fichier exporté.');
-    }
-
-    function importFromCode(code, statusTarget = setStudentStatus) {
-      if (!code) {
-        statusTarget('Ajoute un code valide.', false);
-        return;
-      }
-      try {
-        const payload = decodeSharePayload(code.trim());
-        importSharedData(payload, statusTarget);
-      } catch (e) {
-        statusTarget('Code invalide ou incomplet.', false);
-      }
-    }
-
-    function importFromFile(file, statusTarget = setStudentStatus) {
-      if (!file) {
-        statusTarget('Choisis un fichier .json.', false);
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        try {
-          const payload = JSON.parse(event.target.result);
-          importSharedData(payload, statusTarget);
-        } catch (e) {
-          statusTarget('Fichier invalide.', false);
-        }
-      };
-      reader.readAsText(file);
     }
 
     function renderExistingLists() {
@@ -1759,19 +1575,6 @@
     function initEvents() {
       if (unlockTeacherBtn) unlockTeacherBtn.addEventListener('click', tryUnlockTeacher);
       if (lockTeacherBtn) lockTeacherBtn.addEventListener('click', lockTeacher);
-      if (updateTeacherCodeBtn) updateTeacherCodeBtn.addEventListener('click', updateTeacherCode);
-      if (copyShareCodeBtn) copyShareCodeBtn.addEventListener('click', copyShareCode);
-      if (downloadShareJsonBtn) downloadShareJsonBtn.addEventListener('click', downloadShareJson);
-      if (publishNowBtn) publishNowBtn.addEventListener('click', () => publishListsFromTeacher(false));
-      if (applyShareCodeBtn) applyShareCodeBtn.addEventListener('click', () => importFromCode(studentShareCodeInput.value, setStudentStatus));
-      if (applyShareFileBtn) applyShareFileBtn.addEventListener('click', () => importFromFile(studentFileInput.files[0], setStudentStatus));
-      if (studentFileInput) {
-        studentFileInput.addEventListener('change', () => {
-          if (studentFileInput.files.length) {
-            setStudentStatus(`${studentFileInput.files[0].name} sélectionné(e).`);
-          }
-        });
-      }
 
       folderFilter.addEventListener('change', () => {
         currentFolderFilter = folderFilter.value;
