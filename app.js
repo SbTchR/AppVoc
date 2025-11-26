@@ -186,6 +186,13 @@ const activeStepLabel = document.getElementById('active-step-label');
 
 const timerResult = document.getElementById('timer-result');
 const finalMessage = document.getElementById('final-message');
+const overlay = document.getElementById('answer-overlay');
+const overlayWord = document.getElementById('overlay-word');
+const overlayCountdown = document.getElementById('overlay-countdown');
+
+let overlayTimeout = null;
+let overlayInterval = null;
+const ERROR_DELAY = 4000;
 
 // Utilitaires
 function safeParse(key, fallback) {
@@ -282,6 +289,38 @@ function cleanupNotes() {
   saveNotes();
 }
 
+// Overlays
+function hideOverlay() {
+  if (!overlay) return;
+  overlay.classList.add('hidden');
+  overlayWord.textContent = '';
+  overlayCountdown.textContent = '';
+  if (overlayTimeout) clearTimeout(overlayTimeout);
+  if (overlayInterval) clearInterval(overlayInterval);
+  overlayTimeout = null;
+  overlayInterval = null;
+}
+
+function showOverlay(text, success, onDone) {
+  if (!overlay) { onDone && onDone(); return; }
+  hideOverlay();
+  overlay.classList.remove('hidden');
+  overlay.style.pointerEvents = 'auto';
+  overlayWord.textContent = text;
+  overlayWord.style.color = success ? '#16a34a' : '#dc2626';
+  let remaining = ERROR_DELAY;
+  overlayCountdown.textContent = `${(remaining / 1000).toFixed(1)}s`;
+  overlayInterval = setInterval(() => {
+    remaining -= 100;
+    if (remaining <= 0) return;
+    overlayCountdown.textContent = `${(remaining / 1000).toFixed(1)}s`;
+  }, 100);
+  overlayTimeout = setTimeout(() => {
+    hideOverlay();
+    if (onDone) onDone();
+  }, ERROR_DELAY);
+}
+
 // Rendu des listes
 function getFolders() {
   const folders = new Set();
@@ -354,17 +393,17 @@ function renderWordSelection() {
     text.innerHTML = `<div class="german">${word.german}</div><div class="french">${word.french}</div>`;
 
     const chipGroup = document.createElement('div');
-    chipGroup.className = 'chip-group';
+  chipGroup.className = 'chip-group';
 
-    const passiveChip = document.createElement('button');
-    passiveChip.className = 'chip';
-    passiveChip.textContent = 'P';
-    passiveChip.addEventListener('click', (e) => { e.stopPropagation(); toggleSelection(index, 'passive', passiveChip, activeChip); });
+  const passiveChip = document.createElement('button');
+  passiveChip.className = 'chip';
+  passiveChip.textContent = 'P';
+  passiveChip.addEventListener('click', (e) => { e.stopPropagation(); toggleSelection(index, 'passive', passiveChip, activeChip); });
 
-    const activeChip = document.createElement('button');
-    activeChip.className = 'chip';
-    activeChip.textContent = 'A';
-    activeChip.addEventListener('click', (e) => { e.stopPropagation(); toggleSelection(index, 'active', passiveChip, activeChip); });
+  const activeChip = document.createElement('button');
+  activeChip.className = 'chip';
+  activeChip.textContent = 'A';
+  activeChip.addEventListener('click', (e) => { e.stopPropagation(); toggleSelection(index, 'active', passiveChip, activeChip); });
 
     chipGroup.appendChild(passiveChip);
     chipGroup.appendChild(activeChip);
@@ -601,6 +640,7 @@ function resetGameViews() {
   activeResults = [];
   passiveErrorThisRound = false;
   activeErrorThisRound = false;
+  hideOverlay();
 }
 
 function startPassivePhase() {
@@ -680,16 +720,23 @@ function validatePassive() {
   const isCorrect = normalizeAnswer(userChunkInput) === targetSanitized;
   passiveResults[currentIndex] = isCorrect;
   if (isCorrect) {
-    passiveFeedback.textContent = 'Bien joué !';
+    passiveFeedback.textContent = `Réponse : ${word.french}`;
     passiveFeedback.className = 'feedback success';
+    updateDots(passiveDots, passiveWords.length, currentIndex, passiveResults);
+    currentIndex++;
+    setTimeout(renderPassiveWord, 300);
+    return;
   } else {
     passiveFeedback.textContent = `${word.french}`;
     passiveFeedback.className = 'feedback error answer';
     passiveErrorThisRound = true;
+    showOverlay(word.french, false, () => {
+      updateDots(passiveDots, passiveWords.length, currentIndex, passiveResults);
+      currentIndex++;
+      renderPassiveWord();
+    });
+    return;
   }
-  updateDots(passiveDots, passiveWords.length, currentIndex, passiveResults);
-  currentIndex++;
-  setTimeout(renderPassiveWord, isCorrect ? 300 : 4000);
 }
 
 function startActivePhase() {
@@ -777,16 +824,23 @@ function validateActive() {
   const isCorrect = normalizeAnswer(userLetterInput) === targetSanitized;
   activeResults[currentIndex] = isCorrect;
   if (isCorrect) {
-    activeFeedback.textContent = 'Parfait !';
+    activeFeedback.textContent = `Réponse : ${word.german}`;
     activeFeedback.className = 'feedback success';
+    updateDots(activeDots, activeWords.length, currentIndex, activeResults);
+    currentIndex++;
+    setTimeout(renderActiveWord, 300);
+    return;
   } else {
     activeFeedback.textContent = `${word.german}`;
     activeFeedback.className = 'feedback error answer';
     activeErrorThisRound = true;
+    showOverlay(word.german, false, () => {
+      updateDots(activeDots, activeWords.length, currentIndex, activeResults);
+      currentIndex++;
+      renderActiveWord();
+    });
+    return;
   }
-  updateDots(activeDots, activeWords.length, currentIndex, activeResults);
-  currentIndex++;
-  setTimeout(renderActiveWord, isCorrect ? 300 : 4000);
 }
 
 function finishSession() {

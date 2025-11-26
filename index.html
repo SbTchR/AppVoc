@@ -67,13 +67,14 @@
           <div class="progress-shell"><div class="progress-fill" id="passive-progress"></div></div>
           <div class="step-dots" id="passive-dots"></div>
           <div class="word-display" id="german-word"></div>
+           <div class="feedback" id="passive-feedback"></div>
            <div class="assembled" id="assembled-passive"></div>
           <div class="chunk-buttons" id="chunk-buttons"></div>
           <div class="button-row">
             <button class="btn secondary" id="undo-chunk">Effacer</button>
             <button class="btn" id="validate-passive">Valider</button>
           </div>
-          <div class="feedback" id="passive-feedback"></div>
+          
         </div>
 
         <div id="active-screen" class="card game-card" style="display:none;">
@@ -90,13 +91,14 @@
           <div class="progress-shell"><div class="progress-fill" id="active-progress"></div></div>
           <div class="step-dots" id="active-dots"></div>
           <div class="word-display" id="french-word"></div>
+          <div class="feedback" id="active-feedback"></div>
           <div class="assembled" id="assembled-active"></div>
           <div class="letter-buttons" id="letter-buttons"></div>
           <div class="button-row">
             <button class="btn secondary" id="erase-letter">Effacer</button>
             <button class="btn" id="validate-active">Valider</button>
           </div>
-          <div class="feedback" id="active-feedback"></div>
+          
         </div>
 
         <div id="final-screen" class="card final-screen" style="display:none;">
@@ -114,7 +116,13 @@
       <div>© S.Bovat</div>
     </main>
   </div>
-  <div> </div>
+
+  <div id="answer-overlay" class="answer-overlay hidden">
+    <div class="answer-box">
+      <div class="answer-word" id="overlay-word"></div>
+      <div class="answer-countdown" id="overlay-countdown"></div>
+    </div>
+  </div>
 
   <script src="./app.js" defer></script>
 </body>
