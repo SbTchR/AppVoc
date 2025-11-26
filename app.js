@@ -671,20 +671,15 @@ function startPassivePhase() {
 function renderPassiveWord() {
   if (currentIndex >= passiveQueue.length) {
     if (passiveErrorThisRound) {
+      passiveQueue = shuffle([...passiveWords]);
+      passiveResults = new Array(passiveQueue.length).fill(null);
       currentIndex = 0;
       passiveErrorThisRound = false;
-      passiveFeedback.textContent = 'On recommence tous les mots jusqu’à 100% correct.';
+      userChunkInput = '';
+      chunkStack = [];
+      assembledPassive.textContent = 'Tape la traduction en français';
       chunkButtons.innerHTML = '';
-      assembledPassive.textContent = '';
-      updateDots(passiveDots, passiveWords.length, currentIndex, passiveResults);
-      updateProgress(passiveProgress, passiveStepLabel, passiveCount, currentIndex, passiveWords.length, 'Passif');
-      inputLocked = true;
-      setTimeout(() => {
-        passiveFeedback.textContent = '';
-        inputLocked = false;
-        renderPassiveWord();
-      }, 1000);
-      return;
+      return renderPassiveWord();
     } else {
       if (activeWords.length > 0) {
         startActivePhase();
@@ -777,20 +772,15 @@ function startActivePhase() {
 function renderActiveWord() {
   if (currentIndex >= activeQueue.length) {
     if (activeErrorThisRound) {
+      activeQueue = shuffle([...activeWords]);
+      activeResults = new Array(activeQueue.length).fill(null);
       currentIndex = 0;
       activeErrorThisRound = false;
-      activeFeedback.textContent = 'On recommence tous les mots jusqu’à 100% correct.';
+      userLetterInput = '';
+      letterStack = [];
+      assembledActive.textContent = 'Assemble le mot allemand';
       letterButtons.innerHTML = '';
-      assembledActive.textContent = '';
-      updateDots(activeDots, activeWords.length, currentIndex, activeResults);
-      updateProgress(activeProgress, activeStepLabel, activeCount, currentIndex, activeWords.length, 'Actif');
-      inputLocked = true;
-      setTimeout(() => {
-        activeFeedback.textContent = '';
-        inputLocked = false;
-        renderActiveWord();
-      }, 1000);
-      return;
+      return renderActiveWord();
     } else {
       finishSession();
       return;

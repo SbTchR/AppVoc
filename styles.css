@@ -36,8 +36,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .logo {
@@ -51,7 +53,7 @@ body {
   box-shadow: var(--shadow);
 }
 
-.top-actions { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.top-actions { display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; }
 .pill-link {
   padding: 8px 12px;
   border-radius: 12px;
