@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2025-11-26T20:17:28.194Z",
+  "updatedAt": "2025-11-26T20:20:56.069Z",
   "lists": [
     {
       "id": "default-9h-voc1",
@@ -880,6 +880,1068 @@
         {
           "french": "les catastrophes",
           "german": "die Katastrophen"
+        }
+      ],
+      "folder": "9H"
+    },
+    {
+      "id": "list-1764188416922",
+      "name": "9H - Voc 3",
+      "words": [
+        {
+          "french": "les parents",
+          "german": "die Eltern"
+        },
+        {
+          "french": "la père",
+          "german": "der Vater"
+        },
+        {
+          "french": "les pères",
+          "german": "die Väter"
+        },
+        {
+          "french": "la mère",
+          "german": "die Mutter"
+        },
+        {
+          "french": "les mères",
+          "german": "die Mütter"
+        },
+        {
+          "french": "le grand-papa",
+          "german": "der Opa"
+        },
+        {
+          "french": "les grands-papas",
+          "german": "die Opas"
+        },
+        {
+          "french": "la grand-maman",
+          "german": "die Oma"
+        },
+        {
+          "french": "les grands-mamans",
+          "german": "die Omas"
+        },
+        {
+          "french": "le frère",
+          "german": "der Bruder"
+        },
+        {
+          "french": "les frères",
+          "german": "die Brüder"
+        },
+        {
+          "french": "la soeur",
+          "german": "die Schwester"
+        },
+        {
+          "french": "les soeurs",
+          "german": "die Schwestern"
+        },
+        {
+          "french": "l'oncle",
+          "german": "der Onkel"
+        },
+        {
+          "french": "les oncles",
+          "german": "die Onkel"
+        },
+        {
+          "french": "die Tanten",
+          "german": "die Tante"
+        },
+        {
+          "french": "le grand-père",
+          "german": "der Grossvater"
+        },
+        {
+          "french": "les grands-pères",
+          "german": "die Grossväter"
+        },
+        {
+          "french": "la grand-mère",
+          "german": "die Grossmutter"
+        },
+        {
+          "french": "les grands-mères",
+          "german": "die Grossmütter"
+        },
+        {
+          "french": "les frères et soeurs",
+          "german": "die Geschwister"
+        },
+        {
+          "french": "la fille",
+          "german": "die Tochter"
+        },
+        {
+          "french": "les filles",
+          "german": "die Töchter"
+        },
+        {
+          "french": "le fils",
+          "german": "der Sohn"
+        },
+        {
+          "french": "les fils",
+          "german": "die Söhne"
+        },
+        {
+          "french": "le cousin",
+          "german": "der Cousin"
+        },
+        {
+          "french": "la cousine",
+          "german": "die Cousine"
+        },
+        {
+          "french": "les cousins",
+          "german": "die Cousins"
+        },
+        {
+          "french": "les cousines",
+          "german": "die Cousinen"
+        },
+        {
+          "french": "marié",
+          "german": "verheiratet"
+        },
+        {
+          "french": "divorcé",
+          "german": "geschieden"
+        },
+        {
+          "french": "vivre",
+          "german": "leben"
+        },
+        {
+          "french": "il vit",
+          "german": "er lebt"
+        },
+        {
+          "french": "amoureux",
+          "german": "verliebt"
+        },
+        {
+          "french": "le métier",
+          "german": "der Beruf"
+        },
+        {
+          "french": "les métiers",
+          "german": "die Berufe"
+        },
+        {
+          "french": "le policier",
+          "german": "der Polizist"
+        },
+        {
+          "french": "les policiers",
+          "german": "die Polizisten"
+        },
+        {
+          "french": "le médecin",
+          "german": "der Arzt"
+        },
+        {
+          "french": "les médecins",
+          "german": "die Ärzte"
+        },
+        {
+          "french": "le chanteur",
+          "german": "der Sänger"
+        },
+        {
+          "french": "les chanteurs",
+          "german": "die Sänger"
+        },
+        {
+          "french": "le coiffeur",
+          "german": "der Frisör"
+        },
+        {
+          "french": "les coiffeurs",
+          "german": "die Frisöre"
+        },
+        {
+          "french": "le boulanger",
+          "german": "der Bäcker"
+        },
+        {
+          "french": "les boulangers",
+          "german": "die Bäcker"
+        },
+        {
+          "french": "le mécanicien",
+          "german": "der Mechaniker"
+        },
+        {
+          "french": "les mécaniciens",
+          "german": "die Mechaniker"
+        },
+        {
+          "french": "l'acteur",
+          "german": "der Schauspieler"
+        },
+        {
+          "french": "les acteurs",
+          "german": "die Schauspieler"
+        },
+        {
+          "french": "le vendeur",
+          "german": "der Verkäufer"
+        },
+        {
+          "french": "les vendeurs",
+          "german": "die Verkäufer"
+        },
+        {
+          "french": "l'informaticien",
+          "german": "der Informatiker"
+        },
+        {
+          "french": "les informaticiens",
+          "german": "die Informatiker"
+        },
+        {
+          "french": "le secrétaire",
+          "german": "der Sekretär"
+        },
+        {
+          "french": "les secrétaires",
+          "german": "die Sekretäre"
+        },
+        {
+          "french": "La secrétaire écrit des lettres.",
+          "german": "Die Sekretärin schreibt Briefe."
+        },
+        {
+          "french": "l'homme au foyer",
+          "german": "der Hausmann"
+        },
+        {
+          "french": "les hommes au foyer",
+          "german": "die Hausmänner"
+        },
+        {
+          "french": "cuisiner",
+          "german": "kochen"
+        },
+        {
+          "french": "il cuisine",
+          "german": "er kocht"
+        },
+        {
+          "french": "peindre",
+          "german": "malen"
+        },
+        {
+          "french": "il peint",
+          "german": "er malt"
+        },
+        {
+          "french": "bricoler",
+          "german": "basteln"
+        },
+        {
+          "french": "il bricole",
+          "german": "er bastelt"
+        },
+        {
+          "french": "grimper",
+          "german": "klettern"
+        },
+        {
+          "french": "il grimpe",
+          "german": "er klettert"
+        },
+        {
+          "french": "rire",
+          "german": "lachen"
+        },
+        {
+          "french": "il rit",
+          "german": "er lacht"
+        },
+        {
+          "french": "dormir",
+          "german": "dormi"
+        },
+        {
+          "french": "il dort",
+          "german": "er schläft"
+        },
+        {
+          "french": "téléphoner",
+          "german": "telefonieren"
+        },
+        {
+          "french": "il téléphone",
+          "german": "er telefoniert"
+        },
+        {
+          "french": "cuire au four",
+          "german": "backen"
+        },
+        {
+          "french": "il cuit au four",
+          "german": "er backt"
+        },
+        {
+          "french": "faire de la gymnastique",
+          "german": "turnen"
+        },
+        {
+          "french": "il fait de la gym",
+          "german": "er turnt"
+        },
+        {
+          "french": "la chambre",
+          "german": "das Zimmer"
+        },
+        {
+          "french": "les chambres",
+          "german": "die Zimmer"
+        },
+        {
+          "french": "le jardin",
+          "german": "der Garten"
+        },
+        {
+          "french": "les jardins",
+          "german": "die Gärten"
+        },
+        {
+          "french": "le salon",
+          "german": "das Wohnzimmer"
+        },
+        {
+          "french": "les salons",
+          "german": "die Wohnzimmer"
+        },
+        {
+          "french": "la chambre à coucher",
+          "german": "das Schlafzimmer"
+        },
+        {
+          "french": "les chambres à coucher",
+          "german": "die Schlafzimmer"
+        },
+        {
+          "french": "la cuisine",
+          "german": "die Küche"
+        },
+        {
+          "french": "les cuisines",
+          "german": "die Küchen"
+        },
+        {
+          "french": "la salle de bain",
+          "german": "das Bad"
+        },
+        {
+          "french": "les salles de bain",
+          "german": "die Bäder"
+        },
+        {
+          "french": "se doucher",
+          "german": "duschen"
+        },
+        {
+          "french": "il se douche",
+          "german": "er duscht"
+        },
+        {
+          "french": "la cave",
+          "german": "der Keller"
+        },
+        {
+          "french": "les caves",
+          "german": "die Keller"
+        },
+        {
+          "french": "laver",
+          "german": "waschen"
+        },
+        {
+          "french": "il lave",
+          "german": "er wäscht"
+        },
+        {
+          "french": "le garage",
+          "german": "die Garage"
+        },
+        {
+          "french": "les garages",
+          "german": "die Garagen"
+        }
+      ],
+      "folder": "9H"
+    },
+    {
+      "id": "list-1764188450106",
+      "name": "9H - Voc 2",
+      "words": [
+        {
+          "french": "la ville",
+          "german": "die Stadt"
+        },
+        {
+          "french": "les villes",
+          "german": "die Städte"
+        },
+        {
+          "french": "la rue",
+          "german": "die Strasse"
+        },
+        {
+          "french": "les rues",
+          "german": "die Strassen"
+        },
+        {
+          "french": "la voiture",
+          "german": "das Auto"
+        },
+        {
+          "french": "les voitures",
+          "german": "die Autos"
+        },
+        {
+          "french": "le métro",
+          "german": "die U-Bahn"
+        },
+        {
+          "french": "les métros",
+          "german": "die U-Bahnen"
+        },
+        {
+          "french": "le bus",
+          "german": "der Bus"
+        },
+        {
+          "french": "les bus",
+          "german": "die Busse"
+        },
+        {
+          "french": "la maison",
+          "german": "das Haus"
+        },
+        {
+          "french": "les maisons",
+          "german": "die Häuser"
+        },
+        {
+          "french": "le cinéma",
+          "german": "das Kino"
+        },
+        {
+          "french": "les cinémas",
+          "german": "die Kinos"
+        },
+        {
+          "french": "aller (à pied)",
+          "german": "gehen"
+        },
+        {
+          "french": "il va (à pied)",
+          "german": "er geht"
+        },
+        {
+          "french": "aller (véhicule)",
+          "german": "fahren"
+        },
+        {
+          "french": "il va (véhicule)",
+          "german": "er fährt"
+        },
+        {
+          "french": "aller à bicyclette",
+          "german": "mit dem Fahrrad fahren"
+        },
+        {
+          "french": "aller en voiture",
+          "german": "mit dem Auto fahren"
+        },
+        {
+          "french": "aller en métro",
+          "german": "mit der U-Bahn fahren"
+        },
+        {
+          "french": "Excusez-moi",
+          "german": "où est le cinéma ?"
+        },
+        {
+          "french": "au centre-ville",
+          "german": "Im Stadtzentrum"
+        },
+        {
+          "french": "l'hôtel",
+          "german": "das Hotel"
+        },
+        {
+          "french": "les hôtels",
+          "german": "die Hotels"
+        },
+        {
+          "french": "le terrain de sport",
+          "german": "der Sportplatz"
+        },
+        {
+          "french": "les terrains de sport",
+          "german": "die Sportplätze"
+        },
+        {
+          "french": "la gare",
+          "german": "der Bahnhof"
+        },
+        {
+          "french": "les gares",
+          "german": "die Bahnhöfe"
+        },
+        {
+          "french": "le billet",
+          "german": "die Fahrkarte"
+        },
+        {
+          "french": "les billets",
+          "german": "die Fahrkarten"
+        },
+        {
+          "french": "attendre",
+          "german": "warten"
+        },
+        {
+          "french": "il attend",
+          "german": "er wartet"
+        },
+        {
+          "french": "le banc",
+          "german": "die Bank"
+        },
+        {
+          "french": "les bancs",
+          "german": "die Bänke"
+        },
+        {
+          "french": "le chemin",
+          "german": "der Weg"
+        },
+        {
+          "french": "les chemins",
+          "german": "die Wege"
+        },
+        {
+          "french": "droite",
+          "german": "rechts"
+        },
+        {
+          "french": "à droite",
+          "german": "nach rechts"
+        },
+        {
+          "french": "gauche",
+          "german": "links"
+        },
+        {
+          "french": "à gauche",
+          "german": "nach links"
+        },
+        {
+          "french": "tout droit",
+          "german": "geradeaus"
+        },
+        {
+          "french": "à",
+          "german": "an"
+        },
+        {
+          "french": "sur",
+          "german": "auf"
+        },
+        {
+          "french": "sous",
+          "german": "unter"
+        },
+        {
+          "french": "devant",
+          "german": "vor"
+        },
+        {
+          "french": "derrière",
+          "german": "hinter"
+        },
+        {
+          "french": "dans",
+          "german": "en"
+        },
+        {
+          "french": "à côté de",
+          "german": "neben"
+        },
+        {
+          "french": "au-dessus de",
+          "german": "über"
+        },
+        {
+          "french": "entre",
+          "german": "zwischen"
+        },
+        {
+          "french": "le croisement",
+          "german": "die Kreuzung"
+        },
+        {
+          "french": "le feu de signalisation",
+          "german": "die Ampel"
+        },
+        {
+          "french": "les feux de signalisation",
+          "german": "die Ampeln"
+        },
+        {
+          "french": "le lieu",
+          "german": "l'endroit"
+        },
+        {
+          "french": "les lieux",
+          "german": "les endroits"
+        },
+        {
+          "french": "l'arrêt",
+          "german": "die Haltestelle"
+        },
+        {
+          "french": "les arrêts",
+          "german": "die Haltestellen"
+        },
+        {
+          "french": "descendre d'un véhicule",
+          "german": "aussteigen"
+        },
+        {
+          "french": "il descend d’un véhicule",
+          "german": "er steigt aus"
+        },
+        {
+          "french": "la place du marché",
+          "german": "der Marktplatz"
+        },
+        {
+          "french": "les places du marché",
+          "german": "die Marktplätze"
+        },
+        {
+          "french": "proche",
+          "german": "nah"
+        },
+        {
+          "french": "loin",
+          "german": "weit"
+        },
+        {
+          "french": "le centre de jeunes",
+          "german": "das Jugendzentrum"
+        },
+        {
+          "french": "les centres de jeunes",
+          "german": "die Jugendzentren"
+        },
+        {
+          "french": "l'hôtel de ville",
+          "german": "das Rathaus"
+        },
+        {
+          "french": "les hôtels de ville",
+          "german": "die Rathäuser"
+        },
+        {
+          "french": "la place de jeu",
+          "german": "der Spielplatz"
+        },
+        {
+          "french": "les places de jeu",
+          "german": "die Spielplätze"
+        },
+        {
+          "french": "le chemin de l'école",
+          "german": "der Schulweg"
+        },
+        {
+          "french": "les chemins de l'école",
+          "german": "die Schulwege"
+        },
+        {
+          "french": "tourner",
+          "german": "virer"
+        },
+        {
+          "french": "il tourne",
+          "german": "il vire"
+        },
+        {
+          "french": "acheter",
+          "german": "kaufen"
+        },
+        {
+          "french": "il achète",
+          "german": "er kauft"
+        },
+        {
+          "french": "coûter",
+          "german": "kosten"
+        },
+        {
+          "french": "cela coûte",
+          "german": "es kostet"
+        },
+        {
+          "french": "le supermarché",
+          "german": "der Supermarkt"
+        },
+        {
+          "french": "les supermarchés",
+          "german": "die Supermärkte"
+        },
+        {
+          "french": "le restaurant",
+          "german": "das Restaurant"
+        },
+        {
+          "french": "les restaurants",
+          "german": "die Restaurants"
+        },
+        {
+          "french": "la boulangerie",
+          "german": "die Bäckerei"
+        },
+        {
+          "french": "les boulangeries",
+          "german": "die Bäckereien"
+        },
+        {
+          "french": "le kiosque",
+          "german": "der Kiosk"
+        },
+        {
+          "french": "les kiosques",
+          "german": "die Kioske"
+        },
+        {
+          "french": "la pharmacie",
+          "german": "die Apotheke"
+        },
+        {
+          "french": "les pharmacies",
+          "german": "die Apotheken"
+        },
+        {
+          "french": "la poste",
+          "german": "die Post"
+        },
+        {
+          "french": "la banque",
+          "german": "die Bank"
+        },
+        {
+          "french": "les banques",
+          "german": "die Banken"
+        },
+        {
+          "french": "faire les courses",
+          "german": "einkaufen"
+        },
+        {
+          "french": "il fait les courses",
+          "german": "er kauft ein"
+        },
+        {
+          "french": "payer",
+          "german": "bezahlen"
+        },
+        {
+          "french": "il paie",
+          "german": "er bezahlt"
+        },
+        {
+          "french": "faire du shopping",
+          "german": "shoppen"
+        },
+        {
+          "french": "il fait du shopping",
+          "german": "er shoppt"
+        },
+        {
+          "french": "le grand magasin",
+          "german": "das Kaufhaus"
+        },
+        {
+          "french": "les grands magasins",
+          "german": "die Kaufhäuser"
+        },
+        {
+          "french": "le magasin",
+          "german": "das Geschäft"
+        },
+        {
+          "french": "les magasins",
+          "german": "die Geschäfte"
+        },
+        {
+          "french": "la caisse",
+          "german": "die Kasse"
+        },
+        {
+          "french": "les caisses",
+          "german": "die Kassen"
+        },
+        {
+          "french": "le shampoing",
+          "german": "das Shampoo"
+        },
+        {
+          "french": "les shampoings",
+          "german": "die Shampoos"
+        },
+        {
+          "french": "la saucisse",
+          "german": "die Wurst"
+        },
+        {
+          "french": "les saucisses",
+          "german": "die Würste"
+        },
+        {
+          "french": "le fromage",
+          "german": "der Käse"
+        },
+        {
+          "french": "la banane",
+          "german": "die Banane"
+        },
+        {
+          "french": "les bananes",
+          "german": "die Bananen"
+        },
+        {
+          "french": "le pain",
+          "german": "das Brot"
+        },
+        {
+          "french": "les pains",
+          "german": "die Brote"
+        },
+        {
+          "french": "le petit pain",
+          "german": "das Brötchen"
+        },
+        {
+          "french": "les petits pains",
+          "german": "die Brötchen"
+        },
+        {
+          "french": "le médicament",
+          "german": "das Medikament"
+        },
+        {
+          "french": "les médicaments",
+          "german": "die Medikamente"
+        },
+        {
+          "french": "le magazine",
+          "german": "die Zeitschrift"
+        },
+        {
+          "french": "les magazines",
+          "german": "die Zeitschriften"
+        },
+        {
+          "french": "le journal",
+          "german": "die Zeitung"
+        },
+        {
+          "french": "les journaux",
+          "german": "die Zeitungen"
+        },
+        {
+          "french": "le cahier",
+          "german": "das Heft"
+        },
+        {
+          "french": "les cahiers",
+          "german": "die Hefte"
+        },
+        {
+          "french": "le livre",
+          "german": "das Buch"
+        },
+        {
+          "french": "les livres",
+          "german": "die Bücher"
+        },
+        {
+          "french": "le papier",
+          "german": "das Papier"
+        },
+        {
+          "french": "les papiers",
+          "german": "die Papiere"
+        },
+        {
+          "french": "le stylo",
+          "german": "der Stift"
+        },
+        {
+          "french": "les stylos",
+          "german": "die Stifte"
+        },
+        {
+          "french": "la feuille",
+          "german": "das Blatt"
+        },
+        {
+          "french": "les feuilles",
+          "german": "die Blätter"
+        },
+        {
+          "french": "le stylo",
+          "german": "der Kuli"
+        },
+        {
+          "french": "les stylos",
+          "german": "die Kulis"
+        },
+        {
+          "french": "le crayon",
+          "german": "der Bleistift"
+        },
+        {
+          "french": "les crayons",
+          "german": "die Bleistifte"
+        },
+        {
+          "french": "la gomme",
+          "german": "der Radiergummi"
+        },
+        {
+          "french": "les gommes",
+          "german": "die Radiergummis"
+        },
+        {
+          "french": "la règle",
+          "german": "das Lineal"
+        },
+        {
+          "french": "les règles",
+          "german": "die Lineale"
+        },
+        {
+          "french": "les ciseaux",
+          "german": "die Schere"
+        },
+        {
+          "french": "Que se passe-t-il ?",
+          "german": "Was ist los ?"
+        },
+        {
+          "french": "d'abord",
+          "german": "zuerst"
+        },
+        {
+          "french": "après",
+          "german": "ensuite"
+        },
+        {
+          "french": "après",
+          "german": "ensuite"
+        },
+        {
+          "french": "être là",
+          "german": "da sein"
+        },
+        {
+          "french": "il est là",
+          "german": "er ist da"
+        },
+        {
+          "french": "être parti",
+          "german": "ne plus être là"
+        },
+        {
+          "french": "il est parti",
+          "german": "er ist weg"
+        },
+        {
+          "french": "avoir de la chance",
+          "german": "Glück haben"
+        },
+        {
+          "french": "il a de la chance",
+          "german": "er hat Glück"
+        },
+        {
+          "french": "Mince alors !",
+          "german": "So ein Mist !"
+        },
+        {
+          "french": "le téléphone portable",
+          "german": "das Handy"
+        },
+        {
+          "french": "les téléphones portables",
+          "german": "die Handys"
+        },
+        {
+          "french": "le porte-monnaie",
+          "german": "das Portemonnaie"
+        },
+        {
+          "french": "les portes-monnaie",
+          "german": "die Portemonnaies"
+        },
+        {
+          "french": "la batterie (rechargeable)",
+          "german": "der Akku"
+        },
+        {
+          "french": "les batteries (rechargeables)",
+          "german": "die Akkus"
+        },
+        {
+          "french": "vide",
+          "german": "leer"
+        },
+        {
+          "french": "sonner",
+          "german": "klingeln"
+        },
+        {
+          "french": "ça sonne",
+          "german": "es klingelt"
+        },
+        {
+          "french": "être trop tard",
+          "german": "zu spät sein"
+        },
+        {
+          "french": "il est en retard",
+          "german": "es ist zu spät"
+        },
+        {
+          "french": "l'homme",
+          "german": "l'être humain"
+        },
+        {
+          "french": "les hommes",
+          "german": "les êtres humains"
+        },
+        {
+          "french": "le robot",
+          "german": "der Roboter"
+        },
+        {
+          "french": "les robots",
+          "german": "die Roboter"
         }
       ],
       "folder": "9H"
