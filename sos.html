@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOS · Voc Bercher</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .subtitle { color: var(--muted); margin: 4px 0 0; }
+    .resource-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+    .resource-buttons .btn { background: #e2e8f0; color: var(--text); box-shadow: none; border: 1px solid #cbd5e1; }
+    .note-block { margin-top: 12px; }
+    .note-block ul { margin: 6px 0 0 18px; color: var(--muted); line-height: 1.5; }
+    .example-box { border: 1px solid var(--border); background: var(--card-strong); border-radius: 12px; padding: 12px 14px; margin-top: 10px; }
+    .example-box strong { color: var(--text); }
+    .video-shell { margin: 12px 0 8px; }
+    .video-shell video { width: 100%; border-radius: 14px; border: 1px solid var(--border); background: #000; box-shadow: var(--shadow); }
+    .helper-link { display: inline-block; margin-top: 8px; }
+    .tips-grid { display: grid; gap: 14px; }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="logo">Voc 🇩🇪 Bercher</div>
+      <div class="top-actions">
+        <a class="pill-link" href="index.html">Retour</a>
+      </div>
+    </header>
+    <main>
+      <div class="card">
+        <div class="card-title">
+          <div>
+            <p class="eyebrow">SOS</p>
+            <h1>Livres de voc</h1>
+          
+          </div>
+        </div>
+        <div class="resource-buttons">
+          <a class="btn" href="Voc%209H.pdf" target="_blank" rel="noopener">📘 9H</a>
+          <a class="btn" href="Voc%2010H.pdf" target="_blank" rel="noopener">📘 10H</a>
+          <a class="btn" href="Voc%2011H.pdf" target="_blank" rel="noopener">📘 11H</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <div>
+            <h1>Ce qu'il faut apprendre</h1>
+      
+          </div>
+        </div>
+        <div class="note-block">
+          <h2>VG niveau 1</h2>
+          <p class="muted">Selon document donné par l'enseignant(e).</p>
+        </div>
+        <div class="note-block">
+          <h2>VG niveau 2</h2>
+          <ul>
+            <li>Voc gris en passif</li>
+            <li>Voc blanc en actif</li>
+            <li>Voc bleu avec un carré en passif</li>
+          </ul>
+        </div>
+        <div class="note-block">
+          <h2>VP</h2>
+          <ul>
+            <li>Voc gris en actif</li>
+            <li>Voc blanc en actif</li>
+            <li>Voc bleu en passif</li>
+          </ul>
+        </div>
+        <div class="note-block">
+          <h3 class="muted" style="margin:12px 0 8px;">Parties des vocs pour les classes de M. Bovat</h3>
+          <div class="resource-buttons">
+            <a class="btn" href="9VGn2.pdf" target="_blank" rel="noopener">9VG niveau 2</a>
+            <a class="btn" href="10VGn1.pdf" target="_blank" rel="noopener">10VG niveau 1</a>
+            <a class="btn" href="11VGn2.pdf" target="_blank" rel="noopener">11VG niveau 2</a>
+            <a class="btn" href="11VP.pdf" target="_blank" rel="noopener">11VP1</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <div>
+            <h1>Conseils et techniques</h1>
+        
+          </div>
+        </div>
+        <div class="video-shell">
+          <video controls preload="metadata" src="sos.mp4"></video>
+          <a class="pill-link helper-link" href="sos.mp4" target="_blank" rel="noopener">Ouvrir la vidéo dans un nouvel onglet</a>
+        </div>
+        <div class="tips-grid">
+          <div class="note-block">
+            <h2>Décortiquer les mots</h2>
+            <p class="muted">Repère les différentes parties d'un mot afin de comprendre comment il est construit. Tu le retiendras plus facilement et tu auras moins de peine à l'orthographier.</p>
+            <div class="example-box">
+              <p class="muted"><strong>"Umweltverschmutzung"</strong> est composé de :</p>
+              <ul>
+                <li>"Umwelt" = environnement
+                  <ul>
+                    <li>"um" = autour</li>
+                    <li>"Welt" = monde</li>
+                  </ul>
+                </li>
+                <li>"Verschmutzung" = pollution
+                  <ul>
+                    <li>"ver" (préfixe)</li>
+                    <li>"Schmutz" = la saleté (schmutzig = sale)</li>
+                    <li>"ung" suffixe</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="note-block">
+            <h2>Comparer les mots</h2>
+            <p class="muted">Ecris les mots par listes thématiques, par exemple :</p>
+            <ul>
+              <li>tous les noms masculin (der), féminins (die) ou neutres (das)</li>
+              <li>tous les verbes</li>
+              <li>tous les verbes à particule</li>
+              <li>tous les mots qui ont le son "ch" ou "r", tous ceux qui ont un "h", etc.</li>
+              <li>les mots que tu as le plus de peine à retenir, ceux que tu confonds</li>
+              <li>...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
