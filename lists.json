@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2025-11-27T09:43:48.333Z",
+  "updatedAt": "2025-11-27T11:02:32.524Z",
   "lists": [
     {
       "id": "default-9h-voc1",
@@ -100,6 +100,222 @@
           "german": "Wie viele Stunden hast du am Montag?"
         },
         {
+          "french": "la classe",
+          "german": "die Klasse"
+        },
+        {
+          "french": "les classes",
+          "german": "die Klassen"
+        },
+        {
+          "french": "l'emploi du temps",
+          "german": "der Stundenplan"
+        },
+        {
+          "french": "les emplois du temps",
+          "german": "die Stundenpläne"
+        },
+        {
+          "french": "la matière, la branche",
+          "german": "das Fach"
+        },
+        {
+          "french": "la matière, la branche",
+          "german": "die Fächer"
+        },
+        {
+          "french": "la salle scolaire, la pièce",
+          "german": "der Raum"
+        },
+        {
+          "french": "les salles scolaires, les pièces",
+          "german": "die Räume"
+        },
+        {
+          "french": "la salle de classe",
+          "german": "das Klassenzimmer"
+        },
+        {
+          "french": "les salles de classe",
+          "german": "die Klassenzimmer"
+        },
+        {
+          "french": "la salle des professeurs",
+          "german": "das Lehrerzimmer"
+        },
+        {
+          "french": "les toilettes, les WC",
+          "german": "die Toiletten"
+        },
+        {
+          "french": "la piscine",
+          "german": "das Schwimmbad"
+        },
+        {
+          "french": "les piscines",
+          "german": "die Schwimmbäder"
+        },
+        {
+          "french": "la bibliothèque",
+          "german": "die Bibliothek, -en"
+        },
+        {
+          "french": "les bibliothèques",
+          "german": "die Bibliotheken"
+        },
+        {
+          "french": "la cour de récréation",
+          "german": "der Pausenhof"
+        },
+        {
+          "french": "les cours de récréation",
+          "german": "die Pausenhöfe"
+        },
+        {
+          "french": "la cantine scolaire",
+          "german": "die Schulkantine"
+        },
+        {
+          "french": "la salle de travaux manuels, l'atelier",
+          "german": "der Werkraum"
+        },
+        {
+          "french": "les salles de travaux manuels, les ateliers",
+          "german": "die Werkräume"
+        },
+        {
+          "french": "la salle informatique",
+          "german": "der Computerraum"
+        },
+        {
+          "french": "les salles informatiques",
+          "german": "die Computerräume"
+        },
+        {
+          "french": "la salle de biologie",
+          "german": "der Biologieraum"
+        },
+        {
+          "french": "les salles de biologie",
+          "german": "die Biologieräume"
+        },
+        {
+          "french": "la salle d'arts visuels",
+          "german": "der Kunstraum"
+        },
+        {
+          "french": "les salles d'arts visuels",
+          "german": "die Kunsträume"
+        },
+        {
+          "french": "la salle de gym",
+          "german": "die Turnhalle"
+        },
+        {
+          "french": "les salle de gym",
+          "german": "die Turnhallen"
+        },
+        {
+          "french": "le bureau",
+          "german": "das Büro"
+        },
+        {
+          "french": "les bureaux",
+          "german": "die Büros"
+        },
+        {
+          "french": "Où est la salle de biologie ?",
+          "german": "Wo ist der Biologieraum?"
+        },
+        {
+          "french": "Au rez-de-chaussée.",
+          "german": "Im Erdgeschoss."
+        },
+        {
+          "french": "Au premier étage.",
+          "german": "Im ersten Stock."
+        },
+        {
+          "french": "Au deuxième étage.",
+          "german": "Im zweiten Stock."
+        },
+        {
+          "french": "le cuisinier",
+          "german": "der Koch"
+        },
+        {
+          "french": "les cuisiniers",
+          "german": "die Köche"
+        },
+        {
+          "french": "la cuisinière",
+          "german": "die Köchin"
+        },
+        {
+          "french": "les cuisinières",
+          "german": "die Köchinnen"
+        },
+        {
+          "french": "le directeur",
+          "german": "der Direktor"
+        },
+        {
+          "french": "les directeurs",
+          "german": "die Direktoren"
+        },
+        {
+          "french": "la directrice",
+          "german": "die Direktorin"
+        },
+        {
+          "french": "les directrices",
+          "german": "die Direktorinnen"
+        },
+        {
+          "french": "le secrétaire",
+          "german": "der Sekretär"
+        },
+        {
+          "french": "les secrétaires",
+          "german": "die Sekretäre"
+        },
+        {
+          "french": "la secrétaire",
+          "german": "die Sekretärin"
+        },
+        {
+          "french": "les secrétaires (femmes)",
+          "german": "die Sekretärinnen"
+        },
+        {
+          "french": "le concierge",
+          "german": "der Hauswart"
+        },
+        {
+          "french": "les concierges",
+          "german": "die Hauswarte"
+        },
+        {
+          "french": "la concierge",
+          "german": "die Hauswärterin"
+        },
+        {
+          "french": "les concierges (femmes)",
+          "german": "die Hauswärterinnen"
+        },
+        {
+          "french": "les sciences naturelles",
+          "german": "die Naturwissenschaften"
+        },
+        {
+          "french": "enseigner",
+          "german": "unterrichten"
+        },
+        {
+          "french": "il enseigne",
+          "german": "er unterrichtet"
+        },
+        {
           "french": "Quelles langues parles-tu ?",
           "german": "Welche Sprachen sprichst du?"
         },
@@ -118,6 +334,30 @@
         {
           "french": "Non, je n'en ai pas.",
           "german": "Nein, ich habe kein Haustier."
+        },
+        {
+          "french": "Name",
+          "german": "nom"
+        },
+        {
+          "french": "Vorname",
+          "german": "prénom"
+        },
+        {
+          "french": "Alter",
+          "german": "âge"
+        },
+        {
+          "french": "Geburtsort",
+          "german": "lieu de naissance"
+        },
+        {
+          "french": "Wohnort",
+          "german": "domicile"
+        },
+        {
+          "french": "Sprachen",
+          "german": "langues"
         },
         {
           "french": "les loisirs",
@@ -260,220 +500,60 @@
           "german": "Am Nachmittag."
         },
         {
-          "french": "la classe",
-          "german": "die Klasse"
+          "french": "l’heure",
+          "german": "die Uhrzeit"
         },
         {
-          "french": "les classes",
-          "german": "die Klassen"
+          "french": "Quelle heure est-il?",
+          "german": "Wie spät ist es?"
         },
         {
-          "french": "l'emploi du temps",
-          "german": "der Stundenplan"
+          "french": "Il est dix heure moins quart.",
+          "german": "Es ist Viertel vor zehn."
         },
         {
-          "french": "les emplois du temps",
-          "german": "die Stundenpläne"
+          "french": "Il est huit heure vingt.",
+          "german": "Es ist zwanzig nach acht."
         },
         {
-          "french": "la matière, la branche",
-          "german": "das Fach"
+          "french": "Il est onze heure et demi.",
+          "german": "Es ist halb zwölf."
         },
         {
-          "french": "la matière, la branche",
-          "german": "die Fächer"
+          "french": "Il est midi.",
+          "german": "Es ist Mittag."
         },
         {
-          "french": "la salle scolaire, la pièce",
-          "german": "der Raum"
+          "french": "Après l’école.",
+          "german": "Nach der Schule."
         },
         {
-          "french": "les salles scolaires, les pièces",
-          "german": "die Räume"
+          "french": "A quatre heures.",
+          "german": "Um vier Uhr."
         },
         {
-          "french": "la salle de classe",
-          "german": "das Klassenzimmer"
+          "french": "l’heure (durée)",
+          "german": "die Stunde"
         },
         {
-          "french": "les salles de classe",
-          "german": "die Klassenzimmer"
+          "french": "les heures (durée)",
+          "german": "die Stunden"
         },
         {
-          "french": "la salle des professeurs",
-          "german": "das Lehrerzimmer"
+          "french": "A bientôt !",
+          "german": "Bis bald!"
         },
         {
-          "french": "les toilettes, les WC",
-          "german": "die Toiletten"
+          "french": "Quand commence l’école ?",
+          "german": "Wann fängt die Schule an?"
         },
         {
-          "french": "la piscine",
-          "german": "das Schwimmbad"
+          "french": "il commence",
+          "german": "er fängt an"
         },
         {
-          "french": "les piscines",
-          "german": "die Schwimmbäder"
-        },
-        {
-          "french": "la bibliothèque",
-          "german": "die Bibliothek, -en"
-        },
-        {
-          "french": "les bibliothèques",
-          "german": "die Bibliotheken"
-        },
-        {
-          "french": "la cour de récréation",
-          "german": "der Pausenhof"
-        },
-        {
-          "french": "les cours de récréation",
-          "german": "die Pausenhöfe"
-        },
-        {
-          "french": "la cantine scolaire",
-          "german": "die Schulkantine"
-        },
-        {
-          "french": "les sciences naturelles",
-          "german": "die Naturwissenschaften"
-        },
-        {
-          "french": "enseigner",
-          "german": "unterrichten"
-        },
-        {
-          "french": "il enseigne",
-          "german": "er unterrichtet"
-        },
-        {
-          "french": "la salle de travaux manuels, l'atelier",
-          "german": "der Werkraum"
-        },
-        {
-          "french": "les salles de travaux manuels, les ateliers",
-          "german": "die Werkräume"
-        },
-        {
-          "french": "la salle informatique",
-          "german": "der Computerraum"
-        },
-        {
-          "french": "les salles informatiques",
-          "german": "die Computerräume"
-        },
-        {
-          "french": "la salle de biologie",
-          "german": "der Biologieraum"
-        },
-        {
-          "french": "les salles de biologie",
-          "german": "die Biologieräume"
-        },
-        {
-          "french": "la salle d'arts visuels",
-          "german": "der Kunstraum"
-        },
-        {
-          "french": "les salles d'arts visuels",
-          "german": "die Kunsträume"
-        },
-        {
-          "french": "la salle de gym",
-          "german": "die Turnhalle"
-        },
-        {
-          "french": "les salle de gym",
-          "german": "die Turnhallen"
-        },
-        {
-          "french": "le bureau",
-          "german": "das Büro"
-        },
-        {
-          "french": "les bureaux",
-          "german": "die Büros"
-        },
-        {
-          "french": "Où est la salle de biologie ?",
-          "german": "Wo ist der Biologieraum?"
-        },
-        {
-          "french": "Au rez-de-chaussée.",
-          "german": "Im Erdgeschoss."
-        },
-        {
-          "french": "Au premier étage.",
-          "german": "Im ersten Stock."
-        },
-        {
-          "french": "Au deuxième étage.",
-          "german": "Im zweiten Stock."
-        },
-        {
-          "french": "le cuisinier",
-          "german": "der Koch"
-        },
-        {
-          "french": "les cuisiniers",
-          "german": "die Köche"
-        },
-        {
-          "french": "la cuisinière",
-          "german": "die Köchin"
-        },
-        {
-          "french": "les cuisinières",
-          "german": "die Köchinnen"
-        },
-        {
-          "french": "le directeur",
-          "german": "der Direktor"
-        },
-        {
-          "french": "les directeurs",
-          "german": "die Direktoren"
-        },
-        {
-          "french": "la directrice",
-          "german": "die Direktorin"
-        },
-        {
-          "french": "les directrices",
-          "german": "die Direktorinnen"
-        },
-        {
-          "french": "le secrétaire",
-          "german": "der Sekretär"
-        },
-        {
-          "french": "les secrétaires",
-          "german": "die Sekretäre"
-        },
-        {
-          "french": "la secrétaire",
-          "german": "die Sekretärin"
-        },
-        {
-          "french": "les secrétaires (femmes)",
-          "german": "die Sekretärinnen"
-        },
-        {
-          "french": "le concierge",
-          "german": "der Hauswart"
-        },
-        {
-          "french": "les concierges",
-          "german": "die Hauswarte"
-        },
-        {
-          "french": "la concierge",
-          "german": "die Hauswärterin"
-        },
-        {
-          "french": "les concierges (femmes)",
-          "german": "die Hauswärterinnen"
+          "french": "L’école commence à huit heures.",
+          "german": "Die Schule fängt um acht Uhr an."
         }
       ]
     },
@@ -568,6 +648,10 @@
         {
           "french": "Excusez-moi, où est le cinéma ?",
           "german": "Entschuldigung, wo ist das Kino ?"
+        },
+        {
+          "french": "le centre",
+          "german": "das Zentrum"
         },
         {
           "french": "au centre-ville",
@@ -776,6 +860,10 @@
         {
           "french": "il tourne, il vire",
           "german": "er biegt ab"
+        },
+        {
+          "french": "Je tourne à gauche.",
+          "german": "Ich biege links ab."
         },
         {
           "french": "acheter",
@@ -1153,7 +1241,7 @@
           "german": "die Eltern"
         },
         {
-          "french": "la père",
+          "french": "le père",
           "german": "der Vater"
         },
         {
@@ -1209,7 +1297,7 @@
           "german": "die Onkel"
         },
         {
-          "french": "die Tanten",
+          "french": "die Tante",
           "german": "die Tante"
         },
         {
@@ -1301,12 +1389,28 @@
           "german": "die Polizisten"
         },
         {
+          "french": "la policière",
+          "german": "die Poolizistin"
+        },
+        {
+          "french": "les policières",
+          "german": "die Poolizistinnen"
+        },
+        {
           "french": "le médecin",
           "german": "der Arzt"
         },
         {
           "french": "les médecins",
           "german": "die Ärzte"
+        },
+        {
+          "french": "la médecin",
+          "german": "die Ärztin"
+        },
+        {
+          "french": "les médecins (femmes)",
+          "german": "die Ärztinnen"
         },
         {
           "french": "le chanteur",
@@ -1317,12 +1421,28 @@
           "german": "die Sänger"
         },
         {
+          "french": "la chanteuse",
+          "german": "die Sängerin"
+        },
+        {
+          "french": "les chanteuses",
+          "german": "die Sängerinnen"
+        },
+        {
           "french": "le coiffeur",
           "german": "der Frisör"
         },
         {
           "french": "les coiffeurs",
           "german": "die Frisöre"
+        },
+        {
+          "french": "la coifeuse",
+          "german": "die Frisörin"
+        },
+        {
+          "french": "les coiffeuses",
+          "german": "die Frisörinnen"
         },
         {
           "french": "le boulanger",
@@ -1333,12 +1453,28 @@
           "german": "die Bäcker"
         },
         {
+          "french": "la boulangère",
+          "german": "de Bäckerin"
+        },
+        {
+          "french": "les boulangères",
+          "german": "de Bäckerinnen"
+        },
+        {
           "french": "le mécanicien",
           "german": "der Mechaniker"
         },
         {
           "french": "les mécaniciens",
           "german": "die Mechaniker"
+        },
+        {
+          "french": "la mécanicienne",
+          "german": "die Mechanikerin"
+        },
+        {
+          "french": "les mécaniciennes",
+          "german": "die Mechanikerinnen"
         },
         {
           "french": "l'acteur",
@@ -1349,12 +1485,28 @@
           "german": "die Schauspieler"
         },
         {
+          "french": "l’actrice",
+          "german": "die Schauspielerin"
+        },
+        {
+          "french": "les actrices",
+          "german": "die Schauspielerinnen"
+        },
+        {
           "french": "le vendeur",
           "german": "der Verkäufer"
         },
         {
           "french": "les vendeurs",
           "german": "die Verkäufer"
+        },
+        {
+          "french": "la vendeuse",
+          "german": "die Verkäuferin"
+        },
+        {
+          "french": "les vendeuses",
+          "german": "die Verkäuferinnen"
         },
         {
           "french": "l'informaticien",
@@ -1365,12 +1517,28 @@
           "german": "die Informatiker"
         },
         {
+          "french": "l’informaticienne",
+          "german": "die Informatikerin"
+        },
+        {
+          "french": "les informaticiennes",
+          "german": "die Informatikerinnen"
+        },
+        {
           "french": "le secrétaire",
           "german": "der Sekretär"
         },
         {
           "french": "les secrétaires",
           "german": "die Sekretäre"
+        },
+        {
+          "french": "la secrétaire",
+          "german": "die Sekretärin"
+        },
+        {
+          "french": "les secrétaires (femmes)",
+          "german": "die Sekretärinnen"
         },
         {
           "french": "La secrétaire écrit des lettres.",
@@ -1383,6 +1551,14 @@
         {
           "french": "les hommes au foyer",
           "german": "die Hausmänner"
+        },
+        {
+          "french": "la femme au foyer",
+          "german": "die Hausfrau"
+        },
+        {
+          "french": "les femmes au foyer",
+          "german": "die Hausfrauen"
         },
         {
           "french": "cuisiner",
@@ -1457,6 +1633,26 @@
           "german": "er turnt"
         },
         {
+          "french": "Mofa fahren",
+          "german": "aller à vélomoteur"
+        },
+        {
+          "french": "Motorrad fahren",
+          "german": "aller en moto"
+        },
+        {
+          "french": "er fährt Mofa",
+          "german": "il va à vélomoteur"
+        },
+        {
+          "french": "das Schlagzeug",
+          "german": "la batterie, les percussions"
+        },
+        {
+          "french": "Er spielt Schlagzeug.",
+          "german": "Il joue de la batterie."
+        },
+        {
           "french": "la chambre",
           "german": "das Zimmer"
         },
@@ -1471,6 +1667,14 @@
         {
           "french": "les jardins",
           "german": "die Gärten"
+        },
+        {
+          "french": "Hausaufgaben machen",
+          "german": "faire ses devoirs"
+        },
+        {
+          "french": "er macht Hausaufgaben",
+          "german": "il fait ses devoirs"
         },
         {
           "french": "le salon",
