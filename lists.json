@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2025-11-26T20:20:56.069Z",
+  "updatedAt": "2025-11-27T06:47:19.028Z",
   "lists": [
     {
       "id": "default-9h-voc1",
@@ -37,7 +37,7 @@
         },
         {
           "french": "l'élève",
-          "german": "der Schüler"
+          "german": "der Schüler, -"
         },
         {
           "french": "les élèves",
@@ -64,8 +64,8 @@
           "german": "Ich verstehe das nicht."
         },
         {
-          "french": "Pouvez-vous répéter",
-          "german": "s'il vous plaît?"
+          "french": "Pouvez-vous répéter, s'il vous plaît?",
+          "german": "Können Sie das bitte wiederholen?"
         },
         {
           "french": "Qui est-ce ?",
@@ -112,24 +112,24 @@
           "german": "Hast du ein Haustier?"
         },
         {
-          "french": "Oui",
-          "german": "j'ai un chien"
+          "french": "Oui, j'ai un chien",
+          "german": "Ja, ich habe einen Hund"
         },
         {
-          "french": "Non",
-          "german": "je n'en ai pas."
+          "french": "Non, je n'en ai pas.",
+          "german": "Nein, ich habe kein Haustier."
         },
         {
           "french": "les loisirs",
           "german": "die Freizeit"
         },
         {
-          "french": "le hobby",
-          "german": "le passe-temps"
+          "french": "le hobby, le passe-temps",
+          "german": "das Hobby"
         },
         {
-          "french": "les hobbys",
-          "german": "les passes-temps"
+          "french": "les hobbys, les passes-temps",
+          "german": "die Hobbys"
         },
         {
           "french": "Quel est ton passe-temps ?",
@@ -276,20 +276,20 @@
           "german": "die Stundenpläne"
         },
         {
-          "french": "la matière",
-          "german": "la branche"
+          "french": "la matière, la branche",
+          "german": "das Fach"
         },
         {
-          "french": "la matière",
-          "german": "la branche"
+          "french": "la matière, la branche",
+          "german": "die Fächer"
         },
         {
-          "french": "la salle scolaire",
-          "german": "la pièce"
+          "french": "la salle scolaire, la pièce",
+          "german": "der Raum"
         },
         {
-          "french": "les salles scolaires",
-          "german": "les pièces"
+          "french": "les salles scolaires, les pièces",
+          "german": "die Räume"
         },
         {
           "french": "la salle de classe",
@@ -304,8 +304,8 @@
           "german": "das Lehrerzimmer"
         },
         {
-          "french": "les toilettes",
-          "german": "les WC"
+          "french": "les toilettes, les WC",
+          "german": "die Toiletten"
         },
         {
           "french": "la piscine",
@@ -317,7 +317,7 @@
         },
         {
           "french": "la bibliothèque",
-          "german": "die Bibliothek"
+          "german": "die Bibliothek, -en"
         },
         {
           "french": "les bibliothèques",
@@ -348,12 +348,12 @@
           "german": "er unterrichtet"
         },
         {
-          "french": "la salle de travaux manuels",
-          "german": "l'atelier"
+          "french": "la salle de travaux manuels, l'atelier",
+          "german": "der Werkraum"
         },
         {
-          "french": "les salles de travaux manuels",
-          "german": "les ateliers"
+          "french": "les salles de travaux manuels, les ateliers",
+          "german": "die Werkräume"
         },
         {
           "french": "la salle informatique",
@@ -478,414 +478,674 @@
       ]
     },
     {
-      "id": "list-1764151608309",
-      "name": "9H - Voc 4",
+      "id": "list-1764188450106",
+      "name": "9H - Voc 2",
       "words": [
         {
-          "french": "Joyeux anniversaire !",
-          "german": "Herzlichen Glückwunsch zum Geburtstag!"
+          "french": "la ville",
+          "german": "die Stadt"
         },
         {
-          "french": "Joyeuses Pâques!",
-          "german": "Frohe Ostern!"
+          "french": "les villes",
+          "german": "die Städte"
         },
         {
-          "french": "Joyeux Noël",
-          "german": "Frohe Weihnachten!"
+          "french": "la rue",
+          "german": "die Strasse"
         },
         {
-          "french": "Tout de bon !",
-          "german": "Alles Gute!"
+          "french": "les rues",
+          "german": "die Strassen"
         },
         {
-          "french": "Tu viens ?",
-          "german": "Kommst du ?"
+          "french": "la voiture",
+          "german": "das Auto"
         },
         {
-          "french": "Bonne chance !",
-          "german": "Viel Glück!"
+          "french": "les voitures",
+          "german": "die Autos"
         },
         {
-          "french": "Bon voyage !",
-          "german": "Gute Reise!"
+          "french": "le métro",
+          "german": "die U-Bahn"
         },
         {
-          "french": "Bon rétablissement !",
-          "german": "Gute Besserung!"
+          "french": "les métros",
+          "german": "die U-Bahnen"
         },
         {
-          "french": "Bon appétit !",
-          "german": "Guten Appetit!"
+          "french": "le bus",
+          "german": "der Bus"
         },
         {
-          "french": "l'anniversaire",
-          "german": "der Geburtstag"
+          "french": "les bus",
+          "german": "die Busse"
         },
         {
-          "french": "les anniversaires",
-          "german": "die Geburtstage"
+          "french": "la maison",
+          "german": "das Haus"
         },
         {
-          "french": "Quand as-tu ton anniversaire ?",
-          "german": "Wann hast du Geburtstag ?"
+          "french": "les maisons",
+          "german": "die Häuser"
         },
         {
-          "french": "J'ai mon anniversaire le ...",
-          "german": "Ich habe am ... Geburtstag."
+          "french": "le cinéma",
+          "german": "das Kino"
         },
         {
-          "french": "la fête",
-          "german": "die Party"
+          "french": "les cinémas",
+          "german": "die Kinos"
         },
         {
-          "french": "les fêtes",
-          "german": "die Partys"
+          "french": "aller (à pied)",
+          "german": "gehen"
         },
         {
-          "french": "Comment était la fête ?",
-          "german": "Wie war die Party?"
+          "french": "il va (à pied)",
+          "german": "er geht"
         },
         {
-          "french": "la fête était super !",
-          "german": "Die Party war super!"
+          "french": "aller (véhicule)",
+          "german": "fahren"
         },
         {
-          "french": "le gâteau",
-          "german": "der Kuchen"
+          "french": "il va (véhicule)",
+          "german": "er fährt"
         },
         {
-          "french": "les gâteaux",
-          "german": "die Kuchen"
+          "french": "aller à bicyclette",
+          "german": "mit dem Fahrrad fahren"
         },
         {
-          "french": "le jus",
-          "german": "der Saft"
+          "french": "aller en voiture",
+          "german": "mit dem Auto fahren"
         },
         {
-          "french": "les jus",
-          "german": "die Säfte"
+          "french": "aller en métro",
+          "german": "mit der U-Bahn fahren"
         },
         {
-          "french": "le cadeau",
-          "german": "das Geschenk"
+          "french": "Excusez-moi, où est le cinéma ?",
+          "german": "Entschuldigung, wo ist das Kino ?"
         },
         {
-          "french": "les cadeaux",
-          "german": "die Geschenke"
+          "french": "au centre-ville",
+          "german": "Im Stadtzentrum"
         },
         {
-          "french": "le thé froid",
-          "german": "der Eistee"
+          "french": "l'hôtel",
+          "german": "das Hotel"
         },
         {
-          "french": "les thés froids",
-          "german": "die Eistees"
+          "french": "les hôtels",
+          "german": "die Hotels"
         },
         {
-          "french": "la fête d'anniversaire",
-          "german": "die Geburtstagsparty"
+          "french": "le terrain de sport",
+          "german": "der Sportplatz"
         },
         {
-          "french": "fêter",
-          "german": "faire la fête"
+          "french": "les terrains de sport",
+          "german": "die Sportplätze"
         },
         {
-          "french": "il fête",
-          "german": "er feiert"
+          "french": "la gare",
+          "german": "der Bahnhof"
         },
         {
-          "french": "Nous faisons la fête dans le jardin.",
-          "german": "Wir feiern im Garten."
+          "french": "les gares",
+          "german": "die Bahnhöfe"
         },
         {
-          "french": "inviter",
-          "german": "einladen"
+          "french": "le billet",
+          "german": "die Fahrkarte"
         },
         {
-          "french": "il invite",
-          "german": "er lädt ein"
+          "french": "les billets",
+          "german": "die Fahrkarten"
         },
         {
-          "french": "J'invite mes amis.",
-          "german": "Ich lade meine Freunde ein."
+          "french": "attendre",
+          "german": "warten"
         },
         {
-          "french": "Viens donc plus tard !",
-          "german": "Komm doch später!"
+          "french": "il attend",
+          "german": "er wartet"
         },
         {
-          "french": "apporter",
-          "german": "mitbringen"
+          "french": "le banc",
+          "german": "die Bank"
         },
         {
-          "french": "il apporte",
-          "german": "er bringt ... mit"
+          "french": "les bancs",
+          "german": "die Bänke"
         },
         {
-          "french": "Elle apporte un cadeau.",
-          "german": "Sie bringt ein Geschenk mit."
+          "french": "le chemin",
+          "german": "der Weg"
         },
         {
-          "french": "l'excursion",
-          "german": "la sortie"
+          "french": "les chemins",
+          "german": "die Wege"
         },
         {
-          "french": "les excursions",
-          "german": "les sorties"
+          "french": "droite",
+          "german": "rechts"
         },
         {
-          "french": "Nous faisons une excursion à la montagne.",
-          "german": "Wir machen einen Ausflug in die Berge."
+          "french": "à droite",
+          "german": "nach rechts"
         },
         {
-          "french": "l'hôte",
-          "german": "l'invité"
+          "french": "gauche",
+          "german": "links"
         },
         {
-          "french": "les hôtes",
-          "german": "les invités"
+          "french": "à gauche",
+          "german": "nach links"
         },
         {
-          "french": "Hier",
-          "german": "je n'avais pas le temps."
+          "french": "tout droit",
+          "german": "geradeaus"
         },
         {
-          "french": "Hier",
-          "german": "je n'avais pas envie."
+          "french": "à",
+          "german": "an"
         },
         {
-          "french": "se lever tôt",
-          "german": "früh aufstehen"
+          "french": "sur",
+          "german": "auf"
         },
         {
-          "french": "il se lève tôt",
-          "german": "er steht früh auf"
+          "french": "sous",
+          "german": "unter"
         },
         {
-          "french": "dormir longtemps",
-          "german": "lange schlafen"
+          "french": "devant",
+          "german": "vor"
         },
         {
-          "french": "il dort longtemps",
-          "german": "er schläft lange"
+          "french": "derrière",
+          "german": "hinter"
         },
         {
-          "french": "l'invitation",
-          "german": "die Einladung"
+          "french": "dans, en, à",
+          "german": "in"
         },
         {
-          "french": "les invitations",
-          "german": "die Einladungen"
+          "french": "à côté de",
+          "german": "neben"
         },
         {
-          "french": "Merci pour ton invitation.",
-          "german": "Danke für deine Einladung."
+          "french": "au-dessus de",
+          "german": "über"
         },
         {
-          "french": "les jeunes",
-          "german": "die Jugendlichen"
+          "french": "entre",
+          "german": "zwischen"
         },
         {
-          "french": "le roi",
-          "german": "der König"
+          "french": "le croisement",
+          "german": "die Kreuzung"
         },
         {
-          "french": "la reine",
-          "german": "die Königin"
+          "french": "le feu de signalisation",
+          "german": "die Ampel"
         },
         {
-          "french": "au printemps",
-          "german": "im Frühling"
+          "french": "les feux de signalisation",
+          "german": "die Ampeln"
         },
         {
-          "french": "en été",
-          "german": "im Sommer"
+          "french": "le lieu, l'endroit",
+          "german": "der Ort"
         },
         {
-          "french": "en automne",
-          "german": "im Herbst"
+          "french": "les lieux, les endroits",
+          "german": "die Orte"
         },
         {
-          "french": "en hiver",
-          "german": "im Winter"
+          "french": "l'arrêt",
+          "german": "die Haltestelle"
         },
         {
-          "french": "le mois",
-          "german": "der Monat"
+          "french": "les arrêts",
+          "german": "die Haltestellen"
         },
         {
-          "french": "les mois",
-          "german": "die Monate"
+          "french": "descendre d'un véhicule",
+          "german": "aussteigen"
         },
         {
-          "french": "en janvier",
-          "german": "im Januar"
+          "french": "il descend d’un véhicule",
+          "german": "er steigt aus"
         },
         {
-          "french": "en février",
-          "german": "im Februar"
+          "french": "la place du marché",
+          "german": "der Marktplatz"
         },
         {
-          "french": "en mars",
-          "german": "im März"
+          "french": "les places du marché",
+          "german": "die Marktplätze"
         },
         {
-          "french": "en avril",
-          "german": "im April"
+          "french": "proche",
+          "german": "nah"
         },
         {
-          "french": "en mai",
-          "german": "im Mai"
+          "french": "loin",
+          "german": "weit"
         },
         {
-          "french": "en juin",
-          "german": "im Juni"
+          "french": "le centre de jeunes",
+          "german": "das Jugendzentrum"
         },
         {
-          "french": "en juillet",
-          "german": "im Juli"
+          "french": "les centres de jeunes",
+          "german": "die Jugendzentren"
         },
         {
-          "french": "en août",
-          "german": "im August"
+          "french": "l'hôtel de ville",
+          "german": "das Rathaus"
         },
         {
-          "french": "en septembre",
-          "german": "im September"
+          "french": "les hôtels de ville",
+          "german": "die Rathäuser"
         },
         {
-          "french": "en octobre",
-          "german": "im Oktober"
+          "french": "la place de jeu",
+          "german": "der Spielplatz"
         },
         {
-          "french": "en novembre",
-          "german": "im November"
+          "french": "les places de jeu",
+          "german": "die Spielplätze"
         },
         {
-          "french": "en décembre",
-          "german": "im Dezember"
+          "french": "le chemin de l'école",
+          "german": "der Schulweg"
         },
         {
-          "french": "le calendrier",
-          "german": "der Kalender"
+          "french": "les chemins de l'école",
+          "german": "die Schulwege"
         },
         {
-          "french": "la saison",
-          "german": "die Jahreszeit"
+          "french": "tourner, virer",
+          "german": "abbiegen"
         },
         {
-          "french": "les saisons",
-          "german": "die Jahreszeiten"
+          "french": "il tourne, il vire",
+          "german": "er biegt ab"
         },
         {
-          "french": "Il y a quatre saisons.",
-          "german": "Es gibt vier Jahreszeiten."
+          "french": "acheter",
+          "german": "kaufen"
         },
         {
-          "french": "toujours",
-          "german": "immer"
+          "french": "il achète",
+          "german": "er kauft"
         },
         {
-          "french": "le plus souvent",
-          "german": "la plupart du temps"
+          "french": "coûter",
+          "german": "kosten"
         },
         {
-          "french": "souvent",
-          "german": "oft"
+          "french": "cela coûte",
+          "german": "es kostet"
         },
         {
-          "french": "parfois",
-          "german": "manchmal"
+          "french": "le supermarché",
+          "german": "der Supermarkt"
         },
         {
-          "french": "jamais",
-          "german": "nie"
+          "french": "les supermarchés",
+          "german": "die Supermärkte"
         },
         {
-          "french": "mal",
-          "german": "mauvais"
+          "french": "le restaurant",
+          "german": "das Restaurant"
         },
         {
-          "french": "bon",
-          "german": "bien"
+          "french": "les restaurants",
+          "german": "die Restaurants"
         },
         {
-          "french": "malade",
-          "german": "krank"
+          "french": "la boulangerie",
+          "german": "die Bäckerei"
         },
         {
-          "french": "Comment vas-tu?",
-          "german": "Wie geht es dir?"
+          "french": "les boulangeries",
+          "german": "die Bäckereien"
         },
         {
-          "french": "Je vais mal.",
-          "german": "Es geht mir schlecht."
+          "french": "le kiosque",
+          "german": "der Kiosk"
         },
         {
-          "french": "Je ne vais pas très bien.",
-          "german": "Es geht mir nicht so gut."
+          "french": "les kiosques",
+          "german": "die Kioske"
         },
         {
-          "french": "Je vais mieux.",
-          "german": "Es geht mir besser."
+          "french": "la pharmacie",
+          "german": "die Apotheke"
         },
         {
-          "french": "J'ai de la fièvre.",
-          "german": "Ich habe Fieber."
+          "french": "les pharmacies",
+          "german": "die Apotheken"
         },
         {
-          "french": "J'ai mal au ventre.",
-          "german": "Ich habe Bauchweh."
+          "french": "la poste",
+          "german": "die Post"
         },
         {
-          "french": "Hier",
-          "german": "j'avais mal à la tête."
+          "french": "la banque",
+          "german": "die Bank"
         },
         {
-          "french": "Es-tu de nouveau en forme ?",
-          "german": "Bist du jetzt wieder o. k. ?"
+          "french": "les banques",
+          "german": "die Banken"
         },
         {
-          "french": "l'accident",
-          "german": "der Unfall"
+          "french": "faire les courses",
+          "german": "einkaufen"
         },
         {
-          "french": "les accidents",
-          "german": "die Unfälle"
+          "french": "il fait les courses",
+          "german": "er kauft ein"
         },
         {
-          "french": "l'hôpital",
-          "german": "das Krankenhaus"
+          "french": "payer",
+          "german": "bezahlen"
         },
         {
-          "french": "les hôpitaux",
-          "german": "die Krankenhäuser"
+          "french": "il paie",
+          "german": "er bezahlt"
         },
         {
-          "french": "Tu étais à l'hôpital ?",
-          "german": "Warst du im Krankenhaus?"
+          "french": "faire du shopping",
+          "german": "shoppen"
         },
         {
-          "french": "terrible",
-          "german": "horrible"
+          "french": "il fait du shopping",
+          "german": "er shoppt"
         },
         {
-          "french": "Le test était horrible !",
-          "german": "Der Test war furchtbar!"
+          "french": "le grand magasin",
+          "german": "das Kaufhaus"
         },
         {
-          "french": "la catastrophe",
-          "german": "die Katastrophe"
+          "french": "les grands magasins",
+          "german": "die Kaufhäuser"
         },
         {
-          "french": "les catastrophes",
-          "german": "die Katastrophen"
+          "french": "le magasin",
+          "german": "das Geschäft"
+        },
+        {
+          "french": "les magasins",
+          "german": "die Geschäfte"
+        },
+        {
+          "french": "la caisse",
+          "german": "die Kasse"
+        },
+        {
+          "french": "les caisses",
+          "german": "die Kassen"
+        },
+        {
+          "french": "le shampoing",
+          "german": "das Shampoo"
+        },
+        {
+          "french": "les shampoings",
+          "german": "die Shampoos"
+        },
+        {
+          "french": "la saucisse",
+          "german": "die Wurst"
+        },
+        {
+          "french": "les saucisses",
+          "german": "die Würste"
+        },
+        {
+          "french": "le fromage",
+          "german": "der Käse"
+        },
+        {
+          "french": "la banane",
+          "german": "die Banane"
+        },
+        {
+          "french": "les bananes",
+          "german": "die Bananen"
+        },
+        {
+          "french": "le pain",
+          "german": "das Brot"
+        },
+        {
+          "french": "les pains",
+          "german": "die Brote"
+        },
+        {
+          "french": "le petit pain",
+          "german": "das Brötchen"
+        },
+        {
+          "french": "les petits pains",
+          "german": "die Brötchen"
+        },
+        {
+          "french": "le médicament",
+          "german": "das Medikament"
+        },
+        {
+          "french": "les médicaments",
+          "german": "die Medikamente"
+        },
+        {
+          "french": "le magazine",
+          "german": "die Zeitschrift"
+        },
+        {
+          "french": "les magazines",
+          "german": "die Zeitschriften"
+        },
+        {
+          "french": "le journal",
+          "german": "die Zeitung"
+        },
+        {
+          "french": "les journaux",
+          "german": "die Zeitungen"
+        },
+        {
+          "french": "le cahier",
+          "german": "das Heft"
+        },
+        {
+          "french": "les cahiers",
+          "german": "die Hefte"
+        },
+        {
+          "french": "le livre",
+          "german": "das Buch"
+        },
+        {
+          "french": "les livres",
+          "german": "die Bücher"
+        },
+        {
+          "french": "le papier",
+          "german": "das Papier"
+        },
+        {
+          "french": "les papiers",
+          "german": "die Papiere"
+        },
+        {
+          "french": "le stylo",
+          "german": "der Stift"
+        },
+        {
+          "french": "les stylos",
+          "german": "die Stifte"
+        },
+        {
+          "french": "la feuille",
+          "german": "das Blatt"
+        },
+        {
+          "french": "les feuilles",
+          "german": "die Blätter"
+        },
+        {
+          "french": "le stylo",
+          "german": "der Kuli"
+        },
+        {
+          "french": "les stylos",
+          "german": "die Kulis"
+        },
+        {
+          "french": "le crayon",
+          "german": "der Bleistift"
+        },
+        {
+          "french": "les crayons",
+          "german": "die Bleistifte"
+        },
+        {
+          "french": "la gomme",
+          "german": "der Radiergummi"
+        },
+        {
+          "french": "les gommes",
+          "german": "die Radiergummis"
+        },
+        {
+          "french": "la règle",
+          "german": "das Lineal"
+        },
+        {
+          "french": "les règles",
+          "german": "die Lineale"
+        },
+        {
+          "french": "les ciseaux",
+          "german": "die Schere"
+        },
+        {
+          "french": "Que se passe-t-il ?",
+          "german": "Was ist los ?"
+        },
+        {
+          "french": "d'abord",
+          "german": "zuerst"
+        },
+        {
+          "french": "après, ensuite",
+          "german": "dann"
+        },
+        {
+          "french": "après, ensuite",
+          "german": "danach"
+        },
+        {
+          "french": "être là",
+          "german": "da sein"
+        },
+        {
+          "french": "il est là",
+          "german": "er ist da"
+        },
+        {
+          "french": "être parti, ne plus être là, avoir disparu",
+          "german": "weg sein"
+        },
+        {
+          "french": "il est parti",
+          "german": "er ist weg"
+        },
+        {
+          "french": "avoir de la chance",
+          "german": "Glück haben"
+        },
+        {
+          "french": "il a de la chance",
+          "german": "er hat Glück"
+        },
+        {
+          "french": "Mince alors !",
+          "german": "So ein Mist !"
+        },
+        {
+          "french": "le téléphone portable",
+          "german": "das Handy"
+        },
+        {
+          "french": "les téléphones portables",
+          "german": "die Handys"
+        },
+        {
+          "french": "le porte-monnaie",
+          "german": "das Portemonnaie"
+        },
+        {
+          "french": "les portes-monnaie",
+          "german": "die Portemonnaies"
+        },
+        {
+          "french": "la batterie (rechargeable)",
+          "german": "der Akku"
+        },
+        {
+          "french": "les batteries (rechargeables)",
+          "german": "die Akkus"
+        },
+        {
+          "french": "vide",
+          "german": "leer"
+        },
+        {
+          "french": "sonner",
+          "german": "klingeln"
+        },
+        {
+          "french": "ça sonne",
+          "german": "es klingelt"
+        },
+        {
+          "french": "être trop tard",
+          "german": "zu spät sein"
+        },
+        {
+          "french": "il est en retard",
+          "german": "es ist zu spät"
+        },
+        {
+          "french": "l'homme, l'être humain",
+          "german": "der Mensch"
+        },
+        {
+          "french": "les hommes, les êtres humains",
+          "german": "die Menschen"
+        },
+        {
+          "french": "le robot",
+          "german": "der Roboter"
+        },
+        {
+          "french": "les robots",
+          "german": "die Roboter"
         }
       ],
       "folder": "9H"
     },
     {
-      "id": "list-1764188416922",
+      "id": "list-1764225932841",
       "name": "9H - Voc 3",
       "words": [
         {
@@ -1165,8 +1425,8 @@
           "german": "er lacht"
         },
         {
-          "french": "dormir",
-          "german": "dormi"
+          "french": "dormir, dormi",
+          "german": "schlafen"
         },
         {
           "french": "il dort",
@@ -1280,304 +1540,1146 @@
       "folder": "9H"
     },
     {
-      "id": "list-1764188450106",
-      "name": "9H - Voc 2",
+      "id": "list-1764225954621",
+      "name": "9H - Voc 4",
       "words": [
         {
-          "french": "la ville",
-          "german": "die Stadt"
+          "french": "Joyeux anniversaire !",
+          "german": "Herzlichen Glückwunsch zum Geburtstag!"
         },
         {
-          "french": "les villes",
-          "german": "die Städte"
+          "french": "Joyeuses Pâques!",
+          "german": "Frohe Ostern!"
         },
         {
-          "french": "la rue",
-          "german": "die Strasse"
+          "french": "Joyeux Noël",
+          "german": "Frohe Weihnachten!"
         },
         {
-          "french": "les rues",
-          "german": "die Strassen"
+          "french": "Tout de bon !",
+          "german": "Alles Gute!"
         },
         {
-          "french": "la voiture",
-          "german": "das Auto"
+          "french": "Tu viens ?",
+          "german": "Kommst du ?"
         },
         {
-          "french": "les voitures",
-          "german": "die Autos"
+          "french": "Bonne chance !",
+          "german": "Viel Glück!"
         },
         {
-          "french": "le métro",
-          "german": "die U-Bahn"
+          "french": "Bon voyage !",
+          "german": "Gute Reise!"
         },
         {
-          "french": "les métros",
-          "german": "die U-Bahnen"
+          "french": "Bon rétablissement !",
+          "german": "Gute Besserung!"
         },
         {
-          "french": "le bus",
-          "german": "der Bus"
+          "french": "Bon appétit !",
+          "german": "Guten Appetit!"
         },
         {
-          "french": "les bus",
-          "german": "die Busse"
+          "french": "l'anniversaire",
+          "german": "der Geburtstag"
         },
         {
-          "french": "la maison",
-          "german": "das Haus"
+          "french": "les anniversaires",
+          "german": "die Geburtstage"
         },
         {
-          "french": "les maisons",
-          "german": "die Häuser"
+          "french": "Quand as-tu ton anniversaire ?",
+          "german": "Wann hast du Geburtstag ?"
         },
         {
-          "french": "le cinéma",
-          "german": "das Kino"
+          "french": "J'ai mon anniversaire le ...",
+          "german": "Ich habe am ... Geburtstag."
         },
         {
-          "french": "les cinémas",
-          "german": "die Kinos"
+          "french": "la fête",
+          "german": "die Party"
         },
         {
-          "french": "aller (à pied)",
-          "german": "gehen"
+          "french": "les fêtes",
+          "german": "die Partys"
         },
         {
-          "french": "il va (à pied)",
-          "german": "er geht"
+          "french": "Comment était la fête ?",
+          "german": "Wie war die Party?"
         },
         {
-          "french": "aller (véhicule)",
-          "german": "fahren"
+          "french": "la fête était super !",
+          "german": "Die Party war super!"
         },
         {
-          "french": "il va (véhicule)",
-          "german": "er fährt"
+          "french": "le gâteau",
+          "german": "der Kuchen"
         },
         {
-          "french": "aller à bicyclette",
-          "german": "mit dem Fahrrad fahren"
+          "french": "les gâteaux",
+          "german": "die Kuchen"
         },
         {
-          "french": "aller en voiture",
-          "german": "mit dem Auto fahren"
+          "french": "le jus",
+          "german": "der Saft"
         },
         {
-          "french": "aller en métro",
-          "german": "mit der U-Bahn fahren"
+          "french": "les jus",
+          "german": "die Säfte"
         },
         {
-          "french": "Excusez-moi",
-          "german": "où est le cinéma ?"
+          "french": "le cadeau",
+          "german": "das Geschenk"
         },
         {
-          "french": "au centre-ville",
-          "german": "Im Stadtzentrum"
+          "french": "les cadeaux",
+          "german": "die Geschenke"
         },
         {
-          "french": "l'hôtel",
-          "german": "das Hotel"
+          "french": "le thé froid",
+          "german": "der Eistee"
         },
         {
-          "french": "les hôtels",
-          "german": "die Hotels"
+          "french": "les thés froids",
+          "german": "die Eistees"
         },
         {
-          "french": "le terrain de sport",
-          "german": "der Sportplatz"
+          "french": "la fête d'anniversaire",
+          "german": "die Geburtstagsparty"
         },
         {
-          "french": "les terrains de sport",
-          "german": "die Sportplätze"
+          "french": "fêter, faire la fête",
+          "german": "feiern"
         },
         {
-          "french": "la gare",
-          "german": "der Bahnhof"
+          "french": "il fête",
+          "german": "er feiert"
         },
         {
-          "french": "les gares",
-          "german": "die Bahnhöfe"
+          "french": "Nous faisons la fête dans le jardin.",
+          "german": "Wir feiern im Garten."
         },
         {
-          "french": "le billet",
+          "french": "inviter",
+          "german": "einladen"
+        },
+        {
+          "french": "il invite",
+          "german": "er lädt ein"
+        },
+        {
+          "french": "J'invite mes amis.",
+          "german": "Ich lade meine Freunde ein."
+        },
+        {
+          "french": "Viens donc plus tard !",
+          "german": "Komm doch später!"
+        },
+        {
+          "french": "apporter",
+          "german": "mitbringen"
+        },
+        {
+          "french": "il apporte",
+          "german": "er bringt ... mit"
+        },
+        {
+          "french": "Elle apporte un cadeau.",
+          "german": "Sie bringt ein Geschenk mit."
+        },
+        {
+          "french": "l'excursion, la sortie",
+          "german": "der Ausflug"
+        },
+        {
+          "french": "les excursions, les sorties",
+          "german": "die Ausflüge"
+        },
+        {
+          "french": "Nous faisons une excursion à la montagne.",
+          "german": "Wir machen einen Ausflug in die Berge."
+        },
+        {
+          "french": "l'hôte, l'invité",
+          "german": "der Gast"
+        },
+        {
+          "french": "les hôtes, les invités",
+          "german": "die Gäste"
+        },
+        {
+          "french": "Hier, je n'avais pas le temps.",
+          "german": "Gestern hatte ich keine Zeit."
+        },
+        {
+          "french": "Hier, je n'avais pas envie.",
+          "german": "Gestern hatte ich keine Lust."
+        },
+        {
+          "french": "se lever tôt",
+          "german": "früh aufstehen"
+        },
+        {
+          "french": "il se lève tôt",
+          "german": "er steht früh auf"
+        },
+        {
+          "french": "dormir longtemps",
+          "german": "lange schlafen"
+        },
+        {
+          "french": "il dort longtemps",
+          "german": "er schläft lange"
+        },
+        {
+          "french": "l'invitation",
+          "german": "die Einladung"
+        },
+        {
+          "french": "les invitations",
+          "german": "die Einladungen"
+        },
+        {
+          "french": "Merci pour ton invitation.",
+          "german": "Danke für deine Einladung."
+        },
+        {
+          "french": "les jeunes",
+          "german": "die Jugendlichen"
+        },
+        {
+          "french": "le roi",
+          "german": "der König"
+        },
+        {
+          "french": "la reine",
+          "german": "die Königin"
+        },
+        {
+          "french": "au printemps",
+          "german": "im Frühling"
+        },
+        {
+          "french": "en été",
+          "german": "im Sommer"
+        },
+        {
+          "french": "en automne",
+          "german": "im Herbst"
+        },
+        {
+          "french": "en hiver",
+          "german": "im Winter"
+        },
+        {
+          "french": "le mois",
+          "german": "der Monat"
+        },
+        {
+          "french": "les mois",
+          "german": "die Monate"
+        },
+        {
+          "french": "en janvier",
+          "german": "im Januar"
+        },
+        {
+          "french": "en février",
+          "german": "im Februar"
+        },
+        {
+          "french": "en mars",
+          "german": "im März"
+        },
+        {
+          "french": "en avril",
+          "german": "im April"
+        },
+        {
+          "french": "en mai",
+          "german": "im Mai"
+        },
+        {
+          "french": "en juin",
+          "german": "im Juni"
+        },
+        {
+          "french": "en juillet",
+          "german": "im Juli"
+        },
+        {
+          "french": "en août",
+          "german": "im August"
+        },
+        {
+          "french": "en septembre",
+          "german": "im September"
+        },
+        {
+          "french": "en octobre",
+          "german": "im Oktober"
+        },
+        {
+          "french": "en novembre",
+          "german": "im November"
+        },
+        {
+          "french": "en décembre",
+          "german": "im Dezember"
+        },
+        {
+          "french": "le calendrier",
+          "german": "der Kalender"
+        },
+        {
+          "french": "la saison",
+          "german": "die Jahreszeit"
+        },
+        {
+          "french": "les saisons",
+          "german": "die Jahreszeiten"
+        },
+        {
+          "french": "Il y a quatre saisons.",
+          "german": "Es gibt vier Jahreszeiten."
+        },
+        {
+          "french": "toujours",
+          "german": "immer"
+        },
+        {
+          "french": "le plus souvent, la plupart du temps",
+          "german": "meistens"
+        },
+        {
+          "french": "souvent",
+          "german": "oft"
+        },
+        {
+          "french": "parfois",
+          "german": "manchmal"
+        },
+        {
+          "french": "jamais",
+          "german": "nie"
+        },
+        {
+          "french": "mal, mauvais",
+          "german": "schlecht"
+        },
+        {
+          "french": "bon, bien",
+          "german": "gut"
+        },
+        {
+          "french": "malade",
+          "german": "krank"
+        },
+        {
+          "french": "Comment vas-tu?",
+          "german": "Wie geht es dir?"
+        },
+        {
+          "french": "Je vais mal.",
+          "german": "Es geht mir schlecht."
+        },
+        {
+          "french": "Je ne vais pas très bien.",
+          "german": "Es geht mir nicht so gut."
+        },
+        {
+          "french": "Je vais mieux.",
+          "german": "Es geht mir besser."
+        },
+        {
+          "french": "J'ai de la fièvre.",
+          "german": "Ich habe Fieber."
+        },
+        {
+          "french": "J'ai mal au ventre.",
+          "german": "Ich habe Bauchweh."
+        },
+        {
+          "french": "Hier, j'avais mal à la tête.",
+          "german": "Gestern hatte ich Kopfweh."
+        },
+        {
+          "french": "Es-tu de nouveau en forme ?",
+          "german": "Bist du jetzt wieder o. k. ?"
+        },
+        {
+          "french": "l'accident",
+          "german": "der Unfall"
+        },
+        {
+          "french": "les accidents",
+          "german": "die Unfälle"
+        },
+        {
+          "french": "l'hôpital",
+          "german": "das Krankenhaus"
+        },
+        {
+          "french": "les hôpitaux",
+          "german": "die Krankenhäuser"
+        },
+        {
+          "french": "Tu étais à l'hôpital ?",
+          "german": "Warst du im Krankenhaus?"
+        },
+        {
+          "french": "terrible, horrible",
+          "german": "furchtbar"
+        },
+        {
+          "french": "Le test était horrible !",
+          "german": "Der Test war furchtbar!"
+        },
+        {
+          "french": "la catastrophe",
+          "german": "die Katastrophe"
+        },
+        {
+          "french": "les catastrophes",
+          "german": "die Katastrophen"
+        }
+      ],
+      "folder": "9H"
+    },
+    {
+      "id": "list-1764225975309",
+      "name": "9H - Voc 5",
+      "words": [
+        {
+          "french": "la carte",
+          "german": "die Karte"
+        },
+        {
+          "french": "les cartes",
+          "german": "die Karten"
+        },
+        {
+          "french": "Où est-ce que ça se trouve?",
+          "german": "Wo liegt das ?"
+        },
+        {
+          "french": "au nord",
+          "german": "im Norden"
+        },
+        {
+          "french": "au sud",
+          "german": "im Süden"
+        },
+        {
+          "french": "à l'est",
+          "german": "im Osten"
+        },
+        {
+          "french": "à l'ouest",
+          "german": "im Westen"
+        },
+        {
+          "french": "au milieu",
+          "german": "in der Mitte"
+        },
+        {
+          "french": "vivre",
+          "german": "leben"
+        },
+        {
+          "french": "il vit",
+          "german": "er lebt"
+        },
+        {
+          "french": "Où vit-il ?",
+          "german": "Wo lebt er ?"
+        },
+        {
+          "french": "Il vit à Istanbul.",
+          "german": "Er lebt in Istanbul."
+        },
+        {
+          "french": "la capitale",
+          "german": "die Hauptstadt"
+        },
+        {
+          "french": "les capitales",
+          "german": "die Hauptstädte"
+        },
+        {
+          "french": "Berlin est la capitale de l'Allemagne.",
+          "german": "Berlin ist die Hauptstadt von Deutschland."
+        },
+        {
+          "french": "se trouver",
+          "german": "liegen"
+        },
+        {
+          "french": "il se trouve",
+          "german": "er liegt"
+        },
+        {
+          "french": "Où se trouve Hambourg/Lucerne ?",
+          "german": "Wo liegt Hamburg/Luzern ?"
+        },
+        {
+          "french": "Hambourg est située dans le nord de l'Allemagne.",
+          "german": "Hamburg liegt im Norden von Deutschland."
+        },
+        {
+          "french": "Lucerne est située au centre de la Suisse.",
+          "german": "Luzern liegt in der Mitte von der Schweiz."
+        },
+        {
+          "french": "les vacances",
+          "german": "die Ferien"
+        },
+        {
+          "french": "les vacances",
+          "german": "der Urlaub"
+        },
+        {
+          "french": "le lac",
+          "german": "der See"
+        },
+        {
+          "french": "les lacs",
+          "german": "die Seen"
+        },
+        {
+          "french": "la plage",
+          "german": "der Strand"
+        },
+        {
+          "french": "les plages",
+          "german": "die Strände"
+        },
+        {
+          "french": "cher/chère",
+          "german": "teuer"
+        },
+        {
+          "french": "bon marché",
+          "german": "billig"
+        },
+        {
+          "french": "la carte postale",
+          "german": "die Postkarte"
+        },
+        {
+          "french": "les cartes postales",
+          "german": "die Postkarten"
+        },
+        {
+          "french": "le SMS",
+          "german": "die SMS"
+        },
+        {
+          "french": "l'e-mail",
+          "german": "die Email"
+        },
+        {
+          "french": "les e-mails",
+          "german": "die Emails"
+        },
+        {
+          "french": "où",
+          "german": "wohin"
+        },
+        {
+          "french": "Où allons-nous pendant les vacances ?",
+          "german": "Wohin fahren wir in den Osterferien ?"
+        },
+        {
+          "french": "Nous allons...",
+          "german": "Wir fahren..."
+        },
+        {
+          "french": "en Espagne/à Hamburg",
+          "german": "nach Spanien/Hamburg"
+        },
+        {
+          "french": "en Turquie/Suisse",
+          "german": "in die Türkei/Schweiz"
+        },
+        {
+          "french": "au bord de la mer",
+          "german": "ans Meer"
+        },
+        {
+          "french": "au bord de la mer baltique",
+          "german": "an die Ostsee"
+        },
+        {
+          "french": "au bord du lac",
+          "german": "an den See"
+        },
+        {
+          "french": "dans les Alpes/à la montagne",
+          "german": "in die Alpen/Berge"
+        },
+        {
+          "french": "en train",
+          "german": "mit dem Zug"
+        },
+        {
+          "french": "en voiture",
+          "german": "mit dem Auto"
+        },
+        {
+          "french": "en bateau",
+          "german": "mit dem Schiff"
+        },
+        {
+          "french": "le port",
+          "german": "der Hafen"
+        },
+        {
+          "french": "les ports",
+          "german": "die Häfen"
+        },
+        {
+          "french": "Il y a beaucoup de bateaux au port.",
+          "german": "Im Hafen sind viele Schiffe."
+        },
+        {
+          "french": "Combien coûte la chambre pour une nuit ?",
+          "german": "Wie viel kostet das Zimmer für eine Nacht ?"
+        },
+        {
+          "french": "l'auberge de jeunesse",
+          "german": "das Hostel"
+        },
+        {
+          "french": "les auberges de jeunesse",
+          "german": "die Hostels"
+        },
+        {
+          "french": "l'auberge de jeunesse",
+          "german": "die Jugendherberge"
+        },
+        {
+          "french": "les auberges de jeunesse",
+          "german": "die Jugendherbergen"
+        },
+        {
+          "french": "réserver",
+          "german": "reservieren"
+        },
+        {
+          "french": "il réserve",
+          "german": "er reserviert"
+        },
+        {
+          "french": "Elle réserve une chambre à l'auberge de jeunesse.",
+          "german": "Sie reserviert ein Zimmer im Hostel."
+        },
+        {
+          "french": "passer la nuit",
+          "german": "übernachten"
+        },
+        {
+          "french": "il passe la nuit",
+          "german": "er übernachtet"
+        },
+        {
+          "french": "Nous passons la nuit dans l'auberge de jeunesse.",
+          "german": "Wir übernachten in der Jugendherberge/im Hostel."
+        },
+        {
+          "french": "la nuitée",
+          "german": "die Übernachtung"
+        },
+        {
+          "french": "les nuitées",
+          "german": "die Übernachtungen"
+        },
+        {
+          "french": "le château",
+          "german": "das Schloss"
+        },
+        {
+          "french": "les châteaux",
+          "german": "die Schlösser"
+        },
+        {
+          "french": "arriver",
+          "german": "ankommen"
+        },
+        {
+          "french": "il arrive",
+          "german": "er kommt an"
+        },
+        {
+          "french": "partir (train/bus)",
+          "german": "abfahren"
+        },
+        {
+          "french": "il part",
+          "german": "er fährt ab"
+        },
+        {
+          "french": "Le bus part à 8h.",
+          "german": "Der Bus fährt um 8 Uhr ab."
+        },
+        {
+          "french": "voler, aller en avion",
+          "german": "fliegen"
+        },
+        {
+          "french": "il vole, il prend l'avion",
+          "german": "er fliegt"
+        },
+        {
+          "french": "Il part en Turquie (en avion).",
+          "german": "Er fliegt in die Türkei."
+        },
+        {
+          "french": "l'année dernière",
+          "german": "letztes Jahr"
+        },
+        {
+          "french": "Nous y sommes déjà allé l'année dernière.",
+          "german": "Da waren wir schon letztes Jahr."
+        },
+        {
+          "french": "la destination",
+          "german": "das Reiseziel"
+        },
+        {
+          "french": "les destinations",
+          "german": "die Reiseziele"
+        },
+        {
+          "french": "le château fort",
+          "german": "die Burg"
+        },
+        {
+          "french": "les châteaux forts",
+          "german": "die Burgen"
+        },
+        {
+          "french": "le groupe de jeunes",
+          "german": "die Jugendgruppe"
+        },
+        {
+          "french": "les groupes de jeunes",
+          "german": "die Jugendgruppen"
+        },
+        {
+          "french": "la carte de membre",
+          "german": "die Mitgliedskarte"
+        },
+        {
+          "french": "les cartes de membres",
+          "german": "die Mitgliedskarten"
+        },
+        {
+          "french": "la proposition",
+          "german": "der Vorschlag"
+        },
+        {
+          "french": "les propositions",
+          "german": "die Vorschläge"
+        },
+        {
+          "french": "discuter",
+          "german": "diskutieren"
+        },
+        {
+          "french": "il discute",
+          "german": "er diskutiert"
+        },
+        {
+          "french": "partir (en voyage)",
+          "german": "wegfahren"
+        },
+        {
+          "french": "il part (en voyage)",
+          "german": "er fährt weg"
+        },
+        {
+          "french": "Nous partons en août.",
+          "german": "Wir fahren im August weg."
+        },
+        {
+          "french": "partout",
+          "german": "überall"
+        },
+        {
+          "french": "absolument",
+          "german": "unbedingt"
+        },
+        {
+          "french": "là-bas",
+          "german": "dort"
+        },
+        {
+          "french": "la salade",
+          "german": "der Salat"
+        },
+        {
+          "french": "les salades",
+          "german": "die Salate"
+        },
+        {
+          "french": "le hamburger",
+          "german": "der Hamburger"
+        },
+        {
+          "french": "la soupe",
+          "german": "die Suppe"
+        },
+        {
+          "french": "la pizza",
+          "german": "die Pizza"
+        },
+        {
+          "french": "les frites",
+          "german": "Pommes (frites)"
+        },
+        {
+          "french": "la glace",
+          "german": "das Eis"
+        },
+        {
+          "french": "la glace vanille avec de la sauce au chocolat",
+          "german": "das Vanilleeis mit Schokosauce"
+        },
+        {
+          "french": "l'eau minérale",
+          "german": "das Mineralwasser"
+        },
+        {
+          "french": "le jus de pomme",
+          "german": "der Apfelsaft"
+        },
+        {
+          "french": "le coca",
+          "german": "die Cola"
+        },
+        {
+          "french": "C'est combien, s'il vous plaît ?",
+          "german": "Was kostet das bitte ?"
+        },
+        {
+          "french": "l'assiette",
+          "german": "der Teller"
+        },
+        {
+          "french": "les assiettes",
+          "german": "die Teller"
+        },
+        {
+          "french": "une assiette de soupe",
+          "german": "ein Teller Suppe"
+        },
+        {
+          "french": "la bouteille",
+          "german": "die Flasche"
+        },
+        {
+          "french": "les bouteilles",
+          "german": "die Flaschen"
+        },
+        {
+          "french": "une bouteille d'eau",
+          "german": "eine Flasche Wasser"
+        },
+        {
+          "french": "le verre",
+          "german": "das Glas"
+        },
+        {
+          "french": "les verres",
+          "german": "die Gläser"
+        },
+        {
+          "french": "un verre d'eau minérale",
+          "german": "ein Glas Mineralwasser"
+        },
+        {
+          "french": "la tasse",
+          "german": "die Tasse"
+        },
+        {
+          "french": "les tasses",
+          "german": "die Tassen"
+        },
+        {
+          "french": "une tasse de café",
+          "german": "eine Tasse Kaffee"
+        },
+        {
+          "french": "la canette",
+          "german": "die Dose"
+        },
+        {
+          "french": "les canettes",
+          "german": "die Dosen"
+        },
+        {
+          "french": "une canette de coca",
+          "german": "eine Dose Cola"
+        },
+        {
+          "french": "le morceau",
+          "german": "das Stück"
+        },
+        {
+          "french": "les morceaux",
+          "german": "die Stücke"
+        },
+        {
+          "french": "un morceau de gâteau",
+          "german": "ein Stück Kuchen"
+        },
+        {
+          "french": "la portion",
+          "german": "die Portion"
+        },
+        {
+          "french": "les portions",
+          "german": "die Portionen"
+        },
+        {
+          "french": "une portion de frites",
+          "german": "eine Portion Pommes"
+        },
+        {
+          "french": "le sandwich au fromage",
+          "german": "das Käsebrötchen"
+        },
+        {
+          "french": "j'aimerais",
+          "german": "Ich möchte"
+        },
+        {
+          "french": "j'aimerais bien",
+          "german": "Ich hätte gern"
+        },
+        {
+          "french": "rien",
+          "german": "nichts"
+        },
+        {
+          "french": "Je ne veux rien manger.",
+          "german": "Ich möchte nichts essen."
+        },
+        {
+          "french": "avoir faim",
+          "german": "Hunger haben"
+        },
+        {
+          "french": "Il n'a pas faim.",
+          "german": "Er hat keinen Hunger."
+        },
+        {
+          "french": "avoir soif",
+          "german": "Durst haben"
+        },
+        {
+          "french": "Il n'a pas soif.",
+          "german": "Er hat keine Durst."
+        },
+        {
+          "french": "C'est délicieux.",
+          "german": "Das schmeckt lecker."
+        },
+        {
+          "french": "C'est vraiment bon.",
+          "german": "Das ist echt gut."
+        },
+        {
+          "french": "Je n'aime pas ça.",
+          "german": "Das schmeckt mir nicht."
+        },
+        {
+          "french": "je prends",
+          "german": "Ich nehme"
+        },
+        {
+          "french": "le tout",
+          "german": "alles zusammen"
+        },
+        {
+          "french": "le sandwich au poisson",
+          "german": "das Fischbrötchen"
+        },
+        {
+          "french": "la saucisse au curry",
+          "german": "die Currywurst"
+        },
+        {
+          "french": "cher...",
+          "german": "Lieber..."
+        },
+        {
+          "french": "chère...",
+          "german": "Liebe..."
+        },
+        {
+          "french": "Ici à... c'est...",
+          "german": "hier in... ist es..."
+        },
+        {
+          "french": "Il y a",
+          "german": "Es gibt"
+        },
+        {
+          "french": "On peut manger...",
+          "german": "Das Essen ist..."
+        },
+        {
+          "french": "Il fait beau/mauvais temps.",
+          "german": "Das Wetter ist gut/schlecht."
+        },
+        {
+          "french": "Ici on peut...",
+          "german": "Hier kann man..."
+        },
+        {
+          "french": "Je suis allé nager.",
+          "german": "Ich war schwimmen."
+        },
+        {
+          "french": "Bien le bonjour de...",
+          "german": "Viele Grüsse"
+        },
+        {
+          "french": "Salut",
+          "german": "Tschüs"
+        },
+        {
+          "french": "à bientôt",
+          "german": "Bis bald"
+        },
+        {
+          "french": "J'ai une idée.",
+          "german": "Ich habe eine Idee."
+        },
+        {
+          "french": "Je (ne) trouve ça (pas) bien.",
+          "german": "Das finde ich (nicht) gut."
+        },
+        {
+          "french": "J'aimerais mieux...",
+          "german": "Ich möchte lieber..."
+        },
+        {
+          "french": "Pas envie !",
+          "german": "Keine Lust !"
+        },
+        {
+          "french": "Pas le temps !",
+          "german": "Keine Zeit !"
+        },
+        {
+          "french": "Pas d'argent !",
+          "german": "Kein Geld !"
+        },
+        {
+          "french": "Mais c'est ennuyeux.",
+          "german": "Das ist doch langweilig."
+        },
+        {
+          "french": "super, génial",
+          "german": "klasse"
+        },
+        {
+          "french": "cool",
+          "german": "cool"
+        },
+        {
+          "french": "amusant, marrant",
+          "german": "lustig"
+        },
+        {
+          "french": "C'est beaucoup plus amusant.",
+          "german": "Das ist viel lustiger."
+        },
+        {
+          "french": "bien s'amuser",
+          "german": "Spass haben"
+        },
+        {
+          "french": "il s'amuse bien",
+          "german": "er hat Spass"
+        },
+        {
+          "french": "C'est une bonne idée.",
+          "german": "Das ist eine gute Idee."
+        },
+        {
+          "french": "Ce n'est pas une bonne idée.",
+          "german": "Das ist keine gute Idee."
+        },
+        {
+          "french": "D'accord !",
+          "german": "Einverstanden !"
+        },
+        {
+          "french": "C'est dingue !",
+          "german": "Wahnsinn !"
+        },
+        {
+          "french": "fantastique, formidable",
+          "german": "fantastisch"
+        },
+        {
+          "french": "sensationnel",
+          "german": "sensationell"
+        },
+        {
+          "french": "enfin..., et bien...",
+          "german": "na ja..."
+        },
+        {
+          "french": "bon d'accord",
+          "german": "also gut"
+        },
+        {
+          "french": "Quell bêtise ! N'importe quoi !",
+          "german": "Quatsch !"
+        }
+      ],
+      "folder": "9H"
+    },
+    {
+      "id": "list-1764225996726",
+      "name": "9H - Voc 6",
+      "words": [
+        {
+          "french": "le musée",
+          "german": "das Museum"
+        },
+        {
+          "french": "les musées",
+          "german": "die Museen"
+        },
+        {
+          "french": "le zoo",
+          "german": "der Zoo"
+        },
+        {
+          "french": "les zoos",
+          "german": "die Zoos"
+        },
+        {
+          "french": "le centre",
+          "german": "das Zentrum"
+        },
+        {
+          "french": "les centres",
+          "german": "die Zentren"
+        },
+        {
+          "french": "le billet, le titre de transport",
           "german": "die Fahrkarte"
         },
         {
-          "french": "les billets",
+          "french": "les billets de transport",
           "german": "die Fahrkarten"
-        },
-        {
-          "french": "attendre",
-          "german": "warten"
-        },
-        {
-          "french": "il attend",
-          "german": "er wartet"
-        },
-        {
-          "french": "le banc",
-          "german": "die Bank"
-        },
-        {
-          "french": "les bancs",
-          "german": "die Bänke"
-        },
-        {
-          "french": "le chemin",
-          "german": "der Weg"
-        },
-        {
-          "french": "les chemins",
-          "german": "die Wege"
-        },
-        {
-          "french": "droite",
-          "german": "rechts"
-        },
-        {
-          "french": "à droite",
-          "german": "nach rechts"
-        },
-        {
-          "french": "gauche",
-          "german": "links"
-        },
-        {
-          "french": "à gauche",
-          "german": "nach links"
-        },
-        {
-          "french": "tout droit",
-          "german": "geradeaus"
-        },
-        {
-          "french": "à",
-          "german": "an"
-        },
-        {
-          "french": "sur",
-          "german": "auf"
-        },
-        {
-          "french": "sous",
-          "german": "unter"
-        },
-        {
-          "french": "devant",
-          "german": "vor"
-        },
-        {
-          "french": "derrière",
-          "german": "hinter"
-        },
-        {
-          "french": "dans",
-          "german": "en"
-        },
-        {
-          "french": "à côté de",
-          "german": "neben"
-        },
-        {
-          "french": "au-dessus de",
-          "german": "über"
-        },
-        {
-          "french": "entre",
-          "german": "zwischen"
-        },
-        {
-          "french": "le croisement",
-          "german": "die Kreuzung"
-        },
-        {
-          "french": "le feu de signalisation",
-          "german": "die Ampel"
-        },
-        {
-          "french": "les feux de signalisation",
-          "german": "die Ampeln"
-        },
-        {
-          "french": "le lieu",
-          "german": "l'endroit"
-        },
-        {
-          "french": "les lieux",
-          "german": "les endroits"
-        },
-        {
-          "french": "l'arrêt",
-          "german": "die Haltestelle"
-        },
-        {
-          "french": "les arrêts",
-          "german": "die Haltestellen"
-        },
-        {
-          "french": "descendre d'un véhicule",
-          "german": "aussteigen"
-        },
-        {
-          "french": "il descend d’un véhicule",
-          "german": "er steigt aus"
-        },
-        {
-          "french": "la place du marché",
-          "german": "der Marktplatz"
-        },
-        {
-          "french": "les places du marché",
-          "german": "die Marktplätze"
-        },
-        {
-          "french": "proche",
-          "german": "nah"
-        },
-        {
-          "french": "loin",
-          "german": "weit"
-        },
-        {
-          "french": "le centre de jeunes",
-          "german": "das Jugendzentrum"
-        },
-        {
-          "french": "les centres de jeunes",
-          "german": "die Jugendzentren"
-        },
-        {
-          "french": "l'hôtel de ville",
-          "german": "das Rathaus"
-        },
-        {
-          "french": "les hôtels de ville",
-          "german": "die Rathäuser"
-        },
-        {
-          "french": "la place de jeu",
-          "german": "der Spielplatz"
-        },
-        {
-          "french": "les places de jeu",
-          "german": "die Spielplätze"
-        },
-        {
-          "french": "le chemin de l'école",
-          "german": "der Schulweg"
-        },
-        {
-          "french": "les chemins de l'école",
-          "german": "die Schulwege"
-        },
-        {
-          "french": "tourner",
-          "german": "virer"
-        },
-        {
-          "french": "il tourne",
-          "german": "il vire"
         },
         {
           "french": "acheter",
@@ -1588,360 +2690,1518 @@
           "german": "er kauft"
         },
         {
-          "french": "coûter",
-          "german": "kosten"
+          "french": "il a acheté",
+          "german": "er hat gekauft"
         },
         {
-          "french": "cela coûte",
-          "german": "es kostet"
+          "french": "manger",
+          "german": "essen"
         },
         {
-          "french": "le supermarché",
-          "german": "der Supermarkt"
+          "french": "il mange",
+          "german": "er isst"
         },
         {
-          "french": "les supermarchés",
-          "german": "die Supermärkte"
+          "french": "il a mangé",
+          "german": "er hat gegessen"
         },
         {
-          "french": "le restaurant",
-          "german": "das Restaurant"
+          "french": "visiter",
+          "german": "besuchen"
         },
         {
-          "french": "les restaurants",
-          "german": "die Restaurants"
+          "french": "il visite",
+          "german": "er besucht"
         },
         {
-          "french": "la boulangerie",
-          "german": "die Bäckerei"
+          "french": "il a visité",
+          "german": "er hat besucht"
         },
         {
-          "french": "les boulangeries",
-          "german": "die Bäckereien"
+          "french": "venir avec",
+          "german": "mitkommen"
         },
         {
-          "french": "le kiosque",
-          "german": "der Kiosk"
+          "french": "il vient avec",
+          "german": "er kommt mit"
         },
         {
-          "french": "les kiosques",
-          "german": "die Kioske"
+          "french": "il est venu avec",
+          "german": "er ist mitgekommen"
         },
         {
-          "french": "la pharmacie",
-          "german": "die Apotheke"
+          "french": "Viens-tu avec moi ?",
+          "german": "Kommst du mit ?"
         },
         {
-          "french": "les pharmacies",
-          "german": "die Apotheken"
+          "french": "l'église",
+          "german": "die Kirche"
         },
         {
-          "french": "la poste",
-          "german": "die Post"
+          "french": "les églises",
+          "german": "die Kirchen"
         },
         {
-          "french": "la banque",
-          "german": "die Bank"
+          "french": "la tour",
+          "german": "der Turm"
         },
         {
-          "french": "les banques",
-          "german": "die Banken"
+          "french": "les tours",
+          "german": "die Türme"
         },
         {
-          "french": "faire les courses",
-          "german": "einkaufen"
+          "french": "le pont",
+          "german": "die Brücke"
         },
         {
-          "french": "il fait les courses",
-          "german": "er kauft ein"
+          "french": "les ponts",
+          "german": "die Brücken"
         },
         {
-          "french": "payer",
-          "german": "bezahlen"
+          "french": "Nous traversons le pont.",
+          "german": "Wir gehen über die Brücke."
         },
         {
-          "french": "il paie",
-          "german": "er bezahlt"
+          "french": "le stade",
+          "german": "das Stadion"
         },
         {
-          "french": "faire du shopping",
-          "german": "shoppen"
+          "french": "les stades",
+          "german": "die Stadien"
         },
         {
-          "french": "il fait du shopping",
-          "german": "er shoppt"
+          "french": "le stade de foot",
+          "german": "das Fussballstadion"
         },
         {
-          "french": "le grand magasin",
-          "german": "das Kaufhaus"
+          "french": "les stades de foot",
+          "german": "die Fussballstadien"
         },
         {
-          "french": "les grands magasins",
-          "german": "die Kaufhäuser"
+          "french": "la police",
+          "german": "die Polizei"
         },
         {
-          "french": "le magasin",
-          "german": "das Geschäft"
+          "french": "monter",
+          "german": "steigen"
         },
         {
-          "french": "les magasins",
-          "german": "die Geschäfte"
+          "french": "il monte",
+          "german": "er steigt"
         },
         {
-          "french": "la caisse",
-          "german": "die Kasse"
+          "french": "il est monté",
+          "german": "er ist gestiegen"
         },
         {
-          "french": "les caisses",
-          "german": "die Kassen"
+          "french": "Nous sommes montés sur la tour.",
+          "german": "Wir sind auf den Turm gestiegen."
         },
         {
-          "french": "le shampoing",
-          "german": "das Shampoo"
+          "french": "visiter (tourisme)",
+          "german": "besichtigen"
         },
         {
-          "french": "les shampoings",
-          "german": "die Shampoos"
+          "french": "il visite (tourisme)",
+          "german": "er besichtigt"
         },
         {
-          "french": "la saucisse",
-          "german": "die Wurst"
+          "french": "il a visité (tourisme)",
+          "german": "er hat besichtigt"
         },
         {
-          "french": "les saucisses",
-          "german": "die Würste"
+          "french": "Nous avons visité la ville.",
+          "german": "Wir haben die Stadt besichtigt."
         },
         {
-          "french": "le fromage",
-          "german": "der Käse"
+          "french": "le mètre",
+          "german": "der Meter"
         },
         {
-          "french": "la banane",
-          "german": "die Banane"
+          "french": "les mètres",
+          "german": "die Meter"
         },
         {
-          "french": "les bananes",
-          "german": "die Bananen"
+          "french": "la vieille ville",
+          "german": "die Altstadt"
         },
         {
-          "french": "le pain",
-          "german": "das Brot"
+          "french": "les vieilles villes",
+          "german": "die Altstädte"
         },
         {
-          "french": "les pains",
-          "german": "die Brote"
+          "french": "le musée d'art",
+          "german": "das Kunstmuseum"
         },
         {
-          "french": "le petit pain",
-          "german": "das Brötchen"
+          "french": "les musées d'art",
+          "german": "die Kunstmuseen"
         },
         {
-          "french": "les petits pains",
-          "german": "die Brötchen"
+          "french": "l'attraction touristique",
+          "german": "die Sehenswürdigkeit"
         },
         {
-          "french": "le médicament",
-          "german": "das Medikament"
+          "french": "les attractions touristiques",
+          "german": "die Sehenswürdigkeiten"
         },
         {
-          "french": "les médicaments",
-          "german": "die Medikamente"
+          "french": "plus que",
+          "german": "mehr als"
         },
         {
-          "french": "le magazine",
-          "german": "die Zeitschrift"
+          "french": "Le pont fait plus de 200 mètres.",
+          "german": "Die Brücke ist mehr als 200 meter lang."
         },
         {
-          "french": "les magazines",
-          "german": "die Zeitschriften"
+          "french": "antique",
+          "german": "antik"
         },
         {
-          "french": "le journal",
-          "german": "die Zeitung"
+          "french": "romain",
+          "german": "römisch"
         },
         {
-          "french": "les journaux",
-          "german": "die Zeitungen"
+          "french": "le voyage",
+          "german": "die Reise"
         },
         {
-          "french": "le cahier",
-          "german": "das Heft"
+          "french": "les voyages",
+          "german": "die Reisen"
         },
         {
-          "french": "les cahiers",
-          "german": "die Hefte"
+          "french": "l'argent de poche",
+          "german": "das Taschengeld"
         },
         {
-          "french": "le livre",
-          "german": "das Buch"
+          "french": "le souvenir",
+          "german": "das Souvenir"
         },
         {
-          "french": "les livres",
-          "german": "die Bücher"
+          "french": "les souvenirs",
+          "german": "die Souvenirs"
         },
         {
-          "french": "le papier",
-          "german": "das Papier"
+          "french": "l'internet",
+          "german": "das Internet"
         },
         {
-          "french": "les papiers",
-          "german": "die Papiere"
+          "french": "le wifi",
+          "german": "das WLAN"
         },
         {
-          "french": "le stylo",
-          "german": "der Stift"
+          "french": "gratuit",
+          "german": "gratis"
         },
         {
-          "french": "les stylos",
-          "german": "die Stifte"
+          "french": "A l'auberge, l'accès à internet est gratuit.",
+          "german": "Im Hostel ist das Internet gratis."
         },
         {
-          "french": "la feuille",
-          "german": "das Blatt"
+          "french": "le tram",
+          "german": "das Tram"
         },
         {
-          "french": "les feuilles",
-          "german": "die Blätter"
+          "french": "fatigué",
+          "german": "müde"
         },
         {
-          "french": "le stylo",
-          "german": "der Kuli"
+          "french": "Tous sont fatigués et dorment.",
+          "german": "Alle sind müde und schlafen."
         },
         {
-          "french": "les stylos",
-          "german": "die Kulis"
+          "french": "le départ",
+          "german": "die Abfahrt"
         },
         {
-          "french": "le crayon",
-          "german": "der Bleistift"
+          "french": "les départs",
+          "german": "die Abfahrten"
         },
         {
-          "french": "les crayons",
-          "german": "die Bleistifte"
+          "french": "le point de rencontre",
+          "german": "der Treffpunkt"
         },
         {
-          "french": "la gomme",
-          "german": "der Radiergummi"
+          "french": "les points de rencontre",
+          "german": "die Treffpunkte"
         },
         {
-          "french": "les gommes",
-          "german": "die Radiergummis"
+          "french": "l'arrivée",
+          "german": "die Ankunft"
         },
         {
-          "french": "la règle",
-          "german": "das Lineal"
+          "french": "les arrivées",
+          "german": "die Ankünfte"
         },
         {
-          "french": "les règles",
-          "german": "die Lineale"
+          "french": "le voyage de retour",
+          "german": "die Rückreise"
         },
         {
-          "french": "les ciseaux",
-          "german": "die Schere"
+          "french": "le tramway",
+          "german": "die Strassenbahn"
         },
         {
-          "french": "Que se passe-t-il ?",
-          "german": "Was ist los ?"
+          "french": "les tramways",
+          "german": "die Strassenbahnen"
         },
         {
-          "french": "d'abord",
-          "german": "zuerst"
+          "french": "le silence",
+          "german": "die Ruhe"
         },
         {
-          "french": "après",
-          "german": "ensuite"
+          "french": "A partir de 22 heures, le silence est de rigueur.",
+          "german": "Ab 22 Uhr ist Ruhe."
         },
         {
-          "french": "après",
-          "german": "ensuite"
+          "french": "Il n'a plus d'argent.",
+          "german": "Er hat kein Geld mehr."
         },
         {
-          "french": "être là",
-          "german": "da sein"
+          "french": "être fauché",
+          "german": "pleite sein"
         },
         {
-          "french": "il est là",
-          "german": "er ist da"
+          "french": "il est fauché",
+          "german": "er ist pleite"
         },
         {
-          "french": "être parti",
-          "german": "ne plus être là"
+          "french": "prêter",
+          "german": "leihen"
         },
         {
-          "french": "il est parti",
-          "german": "er ist weg"
+          "french": "il prête",
+          "german": "er leiht"
         },
         {
-          "french": "avoir de la chance",
-          "german": "Glück haben"
+          "french": "il a prêté",
+          "german": "er hat geliehen"
         },
         {
-          "french": "il a de la chance",
-          "german": "er hat Glück"
+          "french": "emprunter",
+          "german": "ausleihen"
         },
         {
-          "french": "Mince alors !",
-          "german": "So ein Mist !"
+          "french": "On peut emprunter des vélos.",
+          "german": "Man kann Fahrräder ausleihen."
         },
         {
-          "french": "le téléphone portable",
-          "german": "das Handy"
+          "french": "les bagages",
+          "german": "das Gepäck"
         },
         {
-          "french": "les téléphones portables",
-          "german": "die Handys"
+          "french": "déposer",
+          "german": "abgeben"
         },
         {
-          "french": "le porte-monnaie",
-          "german": "das Portemonnaie"
+          "french": "il dépose",
+          "german": "er gibt ab"
         },
         {
-          "french": "les portes-monnaie",
-          "german": "die Portemonnaies"
+          "french": "il a déposé",
+          "german": "er hat abgegeben"
         },
         {
-          "french": "la batterie (rechargeable)",
-          "german": "der Akku"
+          "french": "la salle à manger",
+          "german": "der Speisesaal"
         },
         {
-          "french": "les batteries (rechargeables)",
-          "german": "die Akkus"
+          "french": "les salles à manger",
+          "german": "die Speisesäle"
         },
         {
-          "french": "vide",
-          "german": "leer"
+          "french": "le cadeau",
+          "german": "das Geschenk"
         },
         {
-          "french": "sonner",
-          "german": "klingeln"
+          "french": "les cadeaux",
+          "german": "die Geschenke"
         },
         {
-          "french": "ça sonne",
-          "german": "es klingelt"
+          "french": "cuisiner",
+          "german": "kochen"
         },
         {
-          "french": "être trop tard",
-          "german": "zu spät sein"
+          "french": "il cuisine",
+          "german": "er kocht"
         },
         {
-          "french": "il est en retard",
-          "german": "es ist zu spät"
+          "french": "il a cuisiné",
+          "german": "er hat gekocht"
         },
         {
-          "french": "l'homme",
-          "german": "l'être humain"
+          "french": "er probiert",
+          "german": "probieren"
         },
         {
-          "french": "les hommes",
-          "german": "les êtres humains"
+          "french": "il essaie",
+          "german": "er probiert"
         },
         {
-          "french": "le robot",
-          "german": "der Roboter"
+          "french": "il a essayé",
+          "german": "er hat probiert"
         },
         {
-          "french": "les robots",
-          "german": "die Roboter"
+          "french": "montrer",
+          "german": "zeigen"
+        },
+        {
+          "french": "il montre",
+          "german": "er zeigt"
+        },
+        {
+          "french": "il a montré",
+          "german": "er hat gezeigt"
+        },
+        {
+          "french": "déballer",
+          "german": "auspacken"
+        },
+        {
+          "french": "il déballe",
+          "german": "er packt aus"
+        },
+        {
+          "french": "il a déballé",
+          "german": "er hat ausgepackt"
+        },
+        {
+          "french": "Viktor a ouvert les cadeaux.",
+          "german": "Viktor hat die Geschenke ausgepackt."
+        },
+        {
+          "french": "parler",
+          "german": "reden"
+        },
+        {
+          "french": "il parle",
+          "german": "er redet"
+        },
+        {
+          "french": "il a parlé",
+          "german": "er hat geredet"
+        },
+        {
+          "french": "écouter de la musique",
+          "german": "Musik hören"
+        },
+        {
+          "french": "il écoute",
+          "german": "er hört"
+        },
+        {
+          "french": "il a écouté",
+          "german": "er hat gehört"
+        },
+        {
+          "french": "danser",
+          "german": "tanzen"
+        },
+        {
+          "french": "il danse",
+          "german": "er tanzt"
+        },
+        {
+          "french": "il a dansé",
+          "german": "er hat getanzt"
+        },
+        {
+          "french": "ranger",
+          "german": "aufräumen"
+        },
+        {
+          "french": "il range",
+          "german": "er räumt auf"
+        },
+        {
+          "french": "il a rangé",
+          "german": "er hat aufgeräumt"
+        },
+        {
+          "french": "Jens et Martina ont rangé la cuisine.",
+          "german": "Jens und Martina haben die Küche aufgeräumt."
+        },
+        {
+          "french": "embrasser",
+          "german": "küssen"
+        },
+        {
+          "french": "il embrasse",
+          "german": "er küsst"
+        },
+        {
+          "french": "il a embrassé",
+          "german": "er hat geküsst"
+        },
+        {
+          "french": "Qui a embrassé Jens ?",
+          "german": "Wer hat Jens geküsst ?"
+        },
+        {
+          "french": "être juste",
+          "german": "stimmen"
+        },
+        {
+          "french": "C'est vrai.",
+          "german": "Das stimmt."
+        },
+        {
+          "french": "Ce n'est pas vrai.",
+          "german": "Das stimmt nicht."
+        },
+        {
+          "french": "être fâché",
+          "german": "sauer sein"
+        },
+        {
+          "french": "Alexandra est fâchée.",
+          "german": "Alexandra ist sauer."
+        },
+        {
+          "french": "la quantité",
+          "german": "die Menge"
+        },
+        {
+          "french": "Nous avons fait pas mal de choses.",
+          "german": "Wir haben eine ganze Menge gemacht."
+        },
+        {
+          "french": "la fin",
+          "german": "der Schluss"
+        },
+        {
+          "french": "A onze heures, c'est/c'était fini.",
+          "german": "Um elf ist/war Schluss."
+        },
+        {
+          "french": "ne... que...",
+          "german": "erst"
+        },
+        {
+          "french": "La fête ne s'est terminée qu'à onze heures.",
+          "german": "Das Fest war erst um elf Uhr zu Ende."
+        },
+        {
+          "french": "fini",
+          "german": "vorbei"
+        },
+        {
+          "french": "La fête est finie.",
+          "german": "Die Party ist vorbei."
+        },
+        {
+          "french": "Excusez-moi !",
+          "german": "Entschuldigung !"
+        },
+        {
+          "french": "J'aimerais bien...",
+          "german": "Ich hätte gern..."
+        },
+        {
+          "french": "Combien coûte... ?",
+          "german": "Wie viel kostet... ?"
+        },
+        {
+          "french": "Quelle heure est-il?",
+          "german": "Wie spät ist es ?"
+        },
+        {
+          "french": "Où sont les toilettes?",
+          "german": "Wo ist die Toilette?"
+        },
+        {
+          "french": "Comment est-ce que je vais à la police?",
+          "german": "Wie komme ich zur Polizei ?"
+        },
+        {
+          "french": "Comment est-ce que je vais à la gare?",
+          "german": "Wie komme ich zum Bahnhof?"
+        },
+        {
+          "french": "Quel bus va dans le centre?",
+          "german": "Welcher Bus fährt ins Zentrum?"
+        },
+        {
+          "french": "A quelle heure part...?",
+          "german": "Wann fährt... ?"
+        },
+        {
+          "french": "Y a-t-il des billets ici?",
+          "german": "Gibt es hier Fahrkarten?"
+        },
+        {
+          "french": "Peut-on ..... ici?",
+          "german": "Kann man hier... ?"
+        },
+        {
+          "french": "Pourrais-je avoir encore un coca, s'il vous plaît?",
+          "german": "Kann ich bitte noch eine Cola haben ?"
+        }
+      ],
+      "folder": "9H"
+    },
+    {
+      "id": "list-1764226012959",
+      "name": "9H - Voc 7",
+      "words": [
+        {
+          "french": "l'ami",
+          "german": "der Freund"
+        },
+        {
+          "french": "les amis",
+          "german": "die Freunde"
+        },
+        {
+          "french": "l'amie",
+          "german": "die Freundin"
+        },
+        {
+          "french": "les amies",
+          "german": "die Freundinnen"
+        },
+        {
+          "french": "le garçon",
+          "german": "der Junge"
+        },
+        {
+          "french": "les garçons",
+          "german": "die Jungen"
+        },
+        {
+          "french": "la fille",
+          "german": "das Mädchen"
+        },
+        {
+          "french": "les filles",
+          "german": "die Mädchen"
+        },
+        {
+          "french": "la chanson",
+          "german": "das Lied"
+        },
+        {
+          "french": "les chansons",
+          "german": "die Lieder"
+        },
+        {
+          "french": "danser",
+          "german": "tanzen"
+        },
+        {
+          "french": "il danse",
+          "german": "er tanzt"
+        },
+        {
+          "french": "il a dansé",
+          "german": "er hat getanzt"
+        },
+        {
+          "french": "ennuyeux",
+          "german": "langweilig"
+        },
+        {
+          "french": "faire la connaissance de",
+          "german": "kennenlernen"
+        },
+        {
+          "french": "il fait la connaissance de",
+          "german": "er lernt kennen"
+        },
+        {
+          "french": "il a fait la connaissance de",
+          "german": "er hat kennengelernt"
+        },
+        {
+          "french": "se rencontrer",
+          "german": "sich treffen"
+        },
+        {
+          "french": "ils se rencontrent",
+          "german": "sie treffen sich"
+        },
+        {
+          "french": "ils se sont rencontrés",
+          "german": "sie haben sich getroffen"
+        },
+        {
+          "french": "Martina et Jens se sont rencontrés.",
+          "german": "Martina und Jens haben sich getroffen."
+        },
+        {
+          "french": "parler",
+          "german": "sprechen"
+        },
+        {
+          "french": "il parle",
+          "german": "er spricht"
+        },
+        {
+          "french": "il a parlé",
+          "german": "er hat gesprochen"
+        },
+        {
+          "french": "Alexandra a parlé avec Martina.",
+          "german": "Alexandra hat mit Martina gesprochen."
+        },
+        {
+          "french": "regarder la télé",
+          "german": "fernsehen"
+        },
+        {
+          "french": "il regarde la télé",
+          "german": "er sieht fern"
+        },
+        {
+          "french": "il a regardé la télé",
+          "german": "er hat ferngesehen"
+        },
+        {
+          "french": "mon meilleur ami",
+          "german": "mein bester Freund"
+        },
+        {
+          "french": "ma meilleure amie",
+          "german": "meine beste Freundin"
+        },
+        {
+          "french": "Nous sommes les meilleur(e)s ami(e)s.",
+          "german": "Wir sind beste Freunde/Freundinnen."
+        },
+        {
+          "french": "la lettre",
+          "german": "der Brief"
+        },
+        {
+          "french": "les lettres",
+          "german": "die Briefe"
+        },
+        {
+          "french": "Alexandra a écrit une lettre.",
+          "german": "Alexandra hat einen Brief geschrieben."
+        },
+        {
+          "french": "sans",
+          "german": "ohne"
+        },
+        {
+          "french": "depuis",
+          "german": "seit"
+        },
+        {
+          "french": "Nous nous connaissons depuis 5 jours/semaines/mois/ans.",
+          "german": "Wir kennen uns seit 5 Tagen/Wochen/Monaten/Jahren."
+        },
+        {
+          "french": "ensemble",
+          "german": "zusammen"
+        },
+        {
+          "french": "Nous jouons au football ensemble.",
+          "german": "Wir spielen zusammen Fussball."
+        },
+        {
+          "french": "Qu'est-ce qui s'est passé?",
+          "german": "Was ist passiert ?"
+        },
+        {
+          "french": "aller",
+          "german": "gehen"
+        },
+        {
+          "french": "il va",
+          "german": "er geht"
+        },
+        {
+          "french": "il est allé",
+          "german": "er ist gegangen"
+        },
+        {
+          "french": "Martina et Jens sont allés au cinéma.",
+          "german": "Martina und Jens sind ins Kino gegangen."
+        },
+        {
+          "french": "être",
+          "german": "sein"
+        },
+        {
+          "french": "il est",
+          "german": "er ist"
+        },
+        {
+          "french": "il a été",
+          "german": "er ist gewesen"
+        },
+        {
+          "french": "Sophie a aussi été au cinéma.",
+          "german": "Sophie ist auch im Kino gewesen."
+        },
+        {
+          "french": "écouter",
+          "german": "zuhören"
+        },
+        {
+          "french": "il écoute",
+          "german": "er hört zu"
+        },
+        {
+          "french": "il a écouté",
+          "german": "er hat zugehört"
+        },
+        {
+          "french": "mentir",
+          "german": "lügen"
+        },
+        {
+          "french": "il ment",
+          "german": "er lügt"
+        },
+        {
+          "french": "il a menti",
+          "german": "er hat gelogen"
+        },
+        {
+          "french": "Martina a menti.",
+          "german": "Martina hat gelogen."
+        },
+        {
+          "french": "l'amitié",
+          "german": "die Freundschaft"
+        },
+        {
+          "french": "les amitiés",
+          "german": "die Freundschaften"
+        },
+        {
+          "french": "le journal intime",
+          "german": "das Tagebuch"
+        },
+        {
+          "french": "les journaux intimes",
+          "german": "die Tagebücher"
+        },
+        {
+          "french": "furieux",
+          "german": "wütend"
+        },
+        {
+          "french": "Alexandra est furieuse.",
+          "german": "Alexandra ist wütend."
+        },
+        {
+          "french": "aider",
+          "german": "helfen"
+        },
+        {
+          "french": "il aide",
+          "german": "er hilft"
+        },
+        {
+          "french": "il a aidé",
+          "german": "er hat geholfen"
+        },
+        {
+          "french": "le début",
+          "german": "der Anfang"
+        },
+        {
+          "french": "les débuts",
+          "german": "die Anfänge"
+        },
+        {
+          "french": "le conseil",
+          "german": "der Tipp"
+        },
+        {
+          "french": "les conseils",
+          "german": "die Tipps"
+        },
+        {
+          "french": "déçu",
+          "german": "enttäuscht"
+        },
+        {
+          "french": "la dispute",
+          "german": "der Streit"
+        },
+        {
+          "french": "Alexandra et Martina ont eu une dispute.",
+          "german": "Alexandra und Martina haben Streit."
+        },
+        {
+          "french": "amis pour la vie",
+          "german": "Freunde fürs Leben"
+        },
+        {
+          "french": "ne... plus",
+          "german": "nicht mehr"
+        },
+        {
+          "french": "ne plus être ensemble",
+          "german": "nicht mehr zusammen sein"
+        },
+        {
+          "french": "ne plus être ami(e)s",
+          "german": "keine Freunde/Freundinnen mehr sein"
+        },
+        {
+          "french": "Que dois-je faire ?",
+          "german": "Was soll ich nur machen ?"
+        },
+        {
+          "french": "se sentir",
+          "german": "sich fühlen"
+        },
+        {
+          "french": "il se sent",
+          "german": "er fühlt sich"
+        },
+        {
+          "french": "il s'est senti",
+          "german": "er hat sich gefühlt"
+        },
+        {
+          "french": "manquer",
+          "german": "fehlen"
+        },
+        {
+          "french": "tu me manques",
+          "german": "du fehlst mir"
+        },
+        {
+          "french": "tu m'as manqué",
+          "german": "du hast mir gefehlt"
+        },
+        {
+          "french": "sportif",
+          "german": "sportlich"
+        },
+        {
+          "french": "pas sportif",
+          "german": "unsportlich"
+        },
+        {
+          "french": "intelligent",
+          "german": "intelligent"
+        },
+        {
+          "french": "bête",
+          "german": "dumm"
+        },
+        {
+          "french": "drôle",
+          "german": "lustig"
+        },
+        {
+          "french": "triste",
+          "german": "traurig"
+        },
+        {
+          "french": "sympathique",
+          "german": "sympathisch"
+        },
+        {
+          "french": "pas sympa",
+          "german": "unsympathisch"
+        },
+        {
+          "french": "juste",
+          "german": "fair"
+        },
+        {
+          "french": "injuste",
+          "german": "unfair"
+        },
+        {
+          "french": "heureux",
+          "german": "glücklich"
+        },
+        {
+          "french": "malheureux",
+          "german": "unglücklich"
+        },
+        {
+          "french": "aimable",
+          "german": "freundlich"
+        },
+        {
+          "french": "peu aimable",
+          "german": "unfreundlich"
+        },
+        {
+          "french": "patient",
+          "german": "geduldig"
+        },
+        {
+          "french": "impatient",
+          "german": "ungeduldig"
+        },
+        {
+          "french": "ponctuel",
+          "german": "pünktlich"
+        },
+        {
+          "french": "en retard",
+          "german": "unpünktlich"
+        },
+        {
+          "french": "courageux",
+          "german": "mutig"
+        },
+        {
+          "french": "lâche",
+          "german": "feige"
+        },
+        {
+          "french": "honnête",
+          "german": "ehrlich"
+        },
+        {
+          "french": "pas franc, déloyal",
+          "german": "unehrlich"
+        },
+        {
+          "french": "drôle, bizarre",
+          "german": "komisch"
+        },
+        {
+          "french": "Tu es drôle.",
+          "german": "Du bist lustig."
+        },
+        {
+          "french": "Ton t-shirt est cool.",
+          "german": "Dein T-Shirt ist cool."
+        },
+        {
+          "french": "le compliment",
+          "german": "das Kompliment"
+        },
+        {
+          "french": "les compliments",
+          "german": "die Komplimente"
+        },
+        {
+          "french": "faire des compliments",
+          "german": "Komplimente machen"
+        },
+        {
+          "french": "il fait des compliments",
+          "german": "er macht Komplimente"
+        },
+        {
+          "french": "il a fait des compliments",
+          "german": "er hat Komplimente gemacht"
+        },
+        {
+          "french": "plaire",
+          "german": "gefallen"
+        },
+        {
+          "french": "elle lui plaît",
+          "german": "sie gefällt ihm"
+        },
+        {
+          "french": "elle lui a plu",
+          "german": "sie hat ihm gefallen"
+        },
+        {
+          "french": "Tu sais bien chanter.",
+          "german": "Du khans gut singen."
+        },
+        {
+          "french": "Je te trouve gentil.",
+          "german": "Ich finde dich nett."
+        },
+        {
+          "french": "J'aime bien ton rire.",
+          "german": "Ich mag dein Lachen."
+        }
+      ],
+      "folder": "9H"
+    },
+    {
+      "id": "list-1764226033688",
+      "name": "9H - Voc 8",
+      "words": [
+        {
+          "french": "la chambre",
+          "german": "das Zimmer"
+        },
+        {
+          "french": "les chambres",
+          "german": "die Zimmer"
+        },
+        {
+          "french": "le jardin",
+          "german": "der Garten"
+        },
+        {
+          "french": "les jardins",
+          "german": "die Gärten"
+        },
+        {
+          "french": "la cave",
+          "german": "der Keller"
+        },
+        {
+          "french": "les caves",
+          "german": "die Keller"
+        },
+        {
+          "french": "la place préférée, l'endroit préféré",
+          "german": "der Lieblingsplatz"
+        },
+        {
+          "french": "les places préférées, les endroits préférés",
+          "german": "die Lieblingsplätze"
+        },
+        {
+          "french": "la chaise",
+          "german": "der Stuhl"
+        },
+        {
+          "french": "les chaises",
+          "german": "die Stühle"
+        },
+        {
+          "french": "la lampe",
+          "german": "die Lampe"
+        },
+        {
+          "french": "les lampes",
+          "german": "die Lampen"
+        },
+        {
+          "french": "l'étagère",
+          "german": "das Regal"
+        },
+        {
+          "french": "les étagères",
+          "german": "die Regale"
+        },
+        {
+          "french": "le poster",
+          "german": "das Poster"
+        },
+        {
+          "french": "les posters",
+          "german": "die Poster"
+        },
+        {
+          "french": "le lit",
+          "german": "das Bett"
+        },
+        {
+          "french": "les lits",
+          "german": "die Betten"
+        },
+        {
+          "french": "le bureau",
+          "german": "der Schreibtisch"
+        },
+        {
+          "french": "les bureaux",
+          "german": "die Schreibtische"
+        },
+        {
+          "french": "la porte",
+          "german": "die Tür"
+        },
+        {
+          "french": "les portes",
+          "german": "die Türen"
+        },
+        {
+          "french": "l'armoire",
+          "german": "der Schrank"
+        },
+        {
+          "french": "les armoires",
+          "german": "die Schränke"
+        },
+        {
+          "french": "le portemanteau",
+          "german": "die Garderobe"
+        },
+        {
+          "french": "les portemanteaux",
+          "german": "die Garderoben"
+        },
+        {
+          "french": "le tapis",
+          "german": "der Teppich"
+        },
+        {
+          "french": "les tapis",
+          "german": "die Teppiche"
+        },
+        {
+          "french": "le mur",
+          "german": "die Wand"
+        },
+        {
+          "french": "les murs",
+          "german": "die Wände"
+        },
+        {
+          "french": "la fenêtre",
+          "german": "das Fenster"
+        },
+        {
+          "french": "les fenêtres",
+          "german": "die Fenster"
+        },
+        {
+          "french": "ouvert",
+          "german": "offen"
+        },
+        {
+          "french": "La fenêtre est ouverte.",
+          "german": "Das Fenster ist offen."
+        },
+        {
+          "french": "dehors",
+          "german": "draussen"
+        },
+        {
+          "french": "le balcon",
+          "german": "der Balkon"
+        },
+        {
+          "french": "les balcons",
+          "german": "die Balkone"
+        },
+        {
+          "french": "la corbeille à papier",
+          "german": "der Papierkorb"
+        },
+        {
+          "french": "les corbeilles à papier",
+          "german": "die Papierkörbe"
+        },
+        {
+          "french": "le sol",
+          "german": "der Boden"
+        },
+        {
+          "french": "les sols",
+          "german": "die Böden"
+        },
+        {
+          "french": "le coin",
+          "german": "die Ecke"
+        },
+        {
+          "french": "les coins",
+          "german": "die Ecken"
+        },
+        {
+          "french": "le plafond",
+          "german": "die Decke"
+        },
+        {
+          "french": "les plafonds",
+          "german": "die Decken"
+        },
+        {
+          "french": "le hamac",
+          "german": "die Hängematte"
+        },
+        {
+          "french": "les hamacs",
+          "german": "die Hängematten"
+        },
+        {
+          "french": "le fauteuil",
+          "german": "der Sessel"
+        },
+        {
+          "french": "les fauteuils",
+          "german": "die Sessel"
+        },
+        {
+          "french": "les fringues",
+          "german": "die Klamotten"
+        },
+        {
+          "french": "Mes fringues sont dans l'armoire.",
+          "german": "Meine Klamotten sind im Schrank."
+        },
+        {
+          "french": "l'ordinateur portable",
+          "german": "der Laptop"
+        },
+        {
+          "french": "les ordinateurs portables",
+          "german": "die Laptops"
+        },
+        {
+          "french": "le classeur",
+          "german": "der Ordner"
+        },
+        {
+          "french": "les classeurs",
+          "german": "die Ordner"
+        },
+        {
+          "french": "ordonné",
+          "german": "ordentlich"
+        },
+        {
+          "french": "désordonné",
+          "german": "unordentlich"
+        },
+        {
+          "french": "propre",
+          "german": "sauber"
+        },
+        {
+          "french": "sale",
+          "german": "schmutzig"
+        },
+        {
+          "french": "rangé",
+          "german": "aufgeräumt"
+        },
+        {
+          "french": "chaotique",
+          "german": "chaotisch"
+        },
+        {
+          "french": "ranger",
+          "german": "aufräumen"
+        },
+        {
+          "french": "il range",
+          "german": "er räumt auf"
+        },
+        {
+          "french": "il a rangé",
+          "german": "er hat aufgeräumt"
+        },
+        {
+          "french": "Je dois ranger ma chambre.",
+          "german": "Ich muss mein Zimmer aufräumen."
+        },
+        {
+          "french": "le chaos",
+          "german": "das Chaos"
+        },
+        {
+          "french": "confortable, agréable",
+          "german": "gemütlich"
+        },
+        {
+          "french": "l'ordre",
+          "german": "die Ordnung"
+        },
+        {
+          "french": "les ordres",
+          "german": "die Ordnungen"
+        },
+        {
+          "french": "le désordre",
+          "german": "die Unordnung"
+        },
+        {
+          "french": "les désordres",
+          "german": "die Unordnungen"
+        },
+        {
+          "french": "énerver",
+          "german": "nerven"
+        },
+        {
+          "french": "il énerve",
+          "german": "er nervt"
+        },
+        {
+          "french": "il a énervé",
+          "german": "er hat genervt"
+        },
+        {
+          "french": "Ca énerve mes parents.",
+          "german": "Das nervt meine Eltern."
+        },
+        {
+          "french": "romantique",
+          "german": "romantisch"
+        },
+        {
+          "french": "J'habite à...",
+          "german": "Ich wohne in..."
+        },
+        {
+          "french": "la maison",
+          "german": "das Haus"
+        },
+        {
+          "french": "les maisons",
+          "german": "die Häuser"
+        },
+        {
+          "french": "habiter",
+          "german": "wohnen"
+        },
+        {
+          "french": "il habite",
+          "german": "er wohnt"
+        },
+        {
+          "french": "il a habité",
+          "german": "er hat gewohnt"
+        },
+        {
+          "french": "au centre-ville",
+          "german": "im Stadtzentrum"
+        },
+        {
+          "french": "la rue",
+          "german": "die Strasse"
+        },
+        {
+          "french": "les rues",
+          "german": "die Strassen"
+        },
+        {
+          "french": "l'appartement",
+          "german": "die Wohnung"
+        },
+        {
+          "french": "les appartements",
+          "german": "die Wohnungen"
+        },
+        {
+          "french": "dans la ville, en ville",
+          "german": "in der Stadt"
+        },
+        {
+          "french": "à la campagne",
+          "german": "auf dem Land"
+        },
+        {
+          "french": "le village",
+          "german": "das Dorf"
+        },
+        {
+          "french": "les villages",
+          "german": "die Dörfer"
+        },
+        {
+          "french": "J'habite dans un village.",
+          "german": "Ich wohne in einem Dorf."
+        },
+        {
+          "french": "la nature",
+          "german": "die Natur"
+        },
+        {
+          "french": "l'arbre",
+          "german": "der Baum"
+        },
+        {
+          "french": "les arbres",
+          "german": "die Bäume"
+        },
+        {
+          "french": "la fleur",
+          "german": "die Blume"
+        },
+        {
+          "french": "les fleurs",
+          "german": "die Blumen"
+        },
+        {
+          "french": "la vieille ville",
+          "german": "die Altstadt"
+        },
+        {
+          "french": "les vieilles villes",
+          "german": "die Altstädte"
+        },
+        {
+          "french": "le loyer",
+          "german": "die Miete"
+        },
+        {
+          "french": "les loyers",
+          "german": "die Mieten"
+        },
+        {
+          "french": "Le loyer est très cher.",
+          "german": "Die Miete ist sehr teuer."
+        },
+        {
+          "french": "le voisin",
+          "german": "der Nachbar"
+        },
+        {
+          "french": "les voisins",
+          "german": "die Nachbarn"
+        },
+        {
+          "french": "la voisine",
+          "german": "die Nachbarin"
+        },
+        {
+          "french": "les voisines",
+          "german": "die Nachbarinnen"
+        },
+        {
+          "french": "l'immeuble",
+          "german": "das Hochhaus"
+        },
+        {
+          "french": "les immeubles",
+          "german": "die Hochhäuser"
+        },
+        {
+          "french": "la maison mitoyenne",
+          "german": "das Reihenhaus"
+        },
+        {
+          "french": "les maisons mitoyennes",
+          "german": "die Reihenhäuser"
+        },
+        {
+          "french": "la construction ancienne",
+          "german": "der Altbau"
+        },
+        {
+          "french": "les constructions anciennes",
+          "german": "die Altbauten"
+        },
+        {
+          "french": "la ferme",
+          "german": "der Bauernhof"
+        },
+        {
+          "french": "les fermes",
+          "german": "die Bauernhöfe"
+        },
+        {
+          "french": "l'écurie, l'étable",
+          "german": "der Stall"
+        },
+        {
+          "french": "les étables, les écuries",
+          "german": "die Ställe"
+        },
+        {
+          "french": "partager une chambre",
+          "german": "ein Zimmer teilen"
+        },
+        {
+          "french": "la rue principale",
+          "german": "die Hauptstrasse"
+        },
+        {
+          "french": "les rues principales",
+          "german": "die Hauptstrassen"
+        },
+        {
+          "french": "à proximité",
+          "german": "in der Nähe"
         }
       ],
       "folder": "9H"
